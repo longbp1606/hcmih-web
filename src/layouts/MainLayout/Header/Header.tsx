@@ -7,16 +7,18 @@ import {
   MobileMenuButton,
   MobileMenu
 } from './Header.styled';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   const navItems = [
-    { label: 'Trang chủ', href: '/', isActive: true },
+    { label: 'Trang chủ', href: '/' },
     { label: 'Giới thiệu', href: '/gioi-thieu' },
     { label: 'Tra cứu', href: '/tra-cuu' },
     { label: 'Hệ thống tư tưởng', href: '/he-thong-tu-tuong' },
-    { label: 'Học & Tương tác', href: '/hoc-tuong-tac' }
+    { label: 'Học & Tương tác', href: '/quizes' }
   ];
 
   const toggleMobileMenu = () => {
@@ -34,7 +36,7 @@ const Header = () => {
           <NavItem 
             key={index}
             href={item.href}
-            $isActive={item.isActive}
+            $isActive={pathname === item.href}
           >
             {item.label}
           </NavItem>
@@ -50,7 +52,7 @@ const Header = () => {
           <NavItem 
             key={index}
             href={item.href}
-            $isActive={item.isActive}
+            $isActive={pathname === item.href}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {item.label}

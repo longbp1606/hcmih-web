@@ -1,0 +1,58 @@
+{
+  "quizes": [
+    {
+      "id": 1,
+      "title": "Độc lập dân tộc",
+      "questions": [
+        {
+          "id": 101,
+          "order": 1,
+          "text": "abcdefghijklmnopqrstuvwxyzgjgsjf",
+          "answers": [
+            { "key": "A", "text": "Phương án A" },
+            { "key": "B", "text": "Phương án B" },
+            { "key": "C", "text": "Phương án C" },
+            { "key": "D", "text": "Phương án D" }
+          ],
+          "correct": "A"
+        },
+        {
+          "id": 102,
+          "order": 2,
+          "text": "Câu hỏi 2 demo",
+          "answers": [
+            { "key": "A", "text": "A2" },
+            { "key": "B", "text": "B2" },
+            { "key": "C", "text": "C2" },
+            { "key": "D", "text": "D2" }
+          ],
+          "correct": "C"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Dân chủ",
+      "questions": [
+        {
+          "id": 201,
+          "order": 1,
+          "text": "Câu hỏi DC 1",
+          "answers": [
+            { "key": "A", "text": "A" },
+            { "key": "B", "text": "B" },
+            { "key": "C", "text": "C" },
+            { "key": "D", "text": "D" }
+          ],
+          "correct": "B"
+        }
+      ]
+    },
+  { "id": 3, "title": "Chủ nghĩa xã hội", "questions": [] },
+  { "id": 4, "title": "Văn hóa", "questions": [] },
+  { "id": 5, "title": "Đạo đức", "questions": [] },
+  { "id": 6, "title": "Kinh tế", "questions": [] },
+  { "id": 7, "title": "Ngoại giao", "questions": [] },
+  { "id": 8, "title": "Giáo dục", "questions": [] }
+  ]
+}
