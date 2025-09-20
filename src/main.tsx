@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import 'antd/dist/reset.css';
 import App from './App.tsx';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
@@ -8,6 +9,8 @@ import { createStyledBreakpointsTheme } from 'styled-breakpoints';
 import GlobalStyles from './themes/globalStyles.ts';
 import { store } from './store/index.ts';
 import LanguageProvider from './lang/LanguageProvider.tsx';
+import { ConfigProvider } from 'antd';
+import { AntdThemeConfig } from './themes/index.ts';
 
 export const breakpoints = {
   xs: '360px',
@@ -27,7 +30,9 @@ createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <LanguageProvider>
-          <App />
+          <ConfigProvider theme={AntdThemeConfig}>
+            <App />
+          </ConfigProvider>
         </LanguageProvider>
       </Provider>
       <GlobalStyles />
