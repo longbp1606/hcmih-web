@@ -128,3 +128,13 @@ export const DesktopNav = styled(Navigation)`
     display: none;
   }
 `;
+
+export const HeaderActions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
+`;

@@ -9,14 +9,18 @@ import {
   RightArchitecture,
   BackgroundOverlay
 } from './Footer.styled';
+import logoImage from '../../../assets/logo.png';
+import { useTranslation } from '../../../lang/LanguageProvider';
 
 const Footer = () => {
+  const { i18n } = useTranslation();
+  
   const navItems = [
-    { label: 'Trang chủ', href: '/' },
-    { label: 'Giới thiệu', href: '/gioi-thieu' },
-    { label: 'Tra cứu', href: '/tra-cuu' },
-    { label: 'Hệ thống tư tưởng', href: '/he-thong-tu-tuong' },
-    { label: 'Học & Tương tác', href: '/hoc-tuong-tac' }
+    { label: i18n.t('navigation.home'), href: '/' },
+    { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
+    { label: i18n.t('navigation.search'), href: '/tra-cuu' },
+    { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
+    { label: i18n.t('navigation.learning'), href: '/hoc-tuong-tac' }
   ];
 
   return (
@@ -27,7 +31,7 @@ const Footer = () => {
       
       <FooterContent>
         <CommunistSymbol>
-          <img src="/src/assets/logo.png" alt="HCMIH Logo" />
+          <img src={logoImage} alt="HCMIH Logo" />
         </CommunistSymbol>
         
         <FooterNavigation>
@@ -42,7 +46,7 @@ const Footer = () => {
         </FooterNavigation>
         
         <Copyright>
-          Copyright © 2025 HCMIH. All rights reserved.
+          {i18n.t('footer.copyright')}
         </Copyright>
       </FooterContent>
     </FooterContainer>

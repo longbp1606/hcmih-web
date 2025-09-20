@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import bottomLeftFooterImage from '../../../assets/bottom-left-footer.png';
+import bottomRightFooterImage from '../../../assets/bottom-right-footer.png';
 
 export const FooterContainer = styled.footer`
   position: relative;
@@ -112,7 +114,7 @@ export const LeftArchitecture = styled.div`
   left: 0;
   width: 300px;
   height: 200px;
-  background-image: url('/src/assets/bottom-left-footer.png');
+  background-image: url(${bottomLeftFooterImage});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -131,7 +133,7 @@ export const RightArchitecture = styled.div`
   right: 0;
   width: 300px;
   height: 200px;
-  background-image: url('/src/assets/bottom-right-footer.png');
+  background-image: url(${bottomRightFooterImage});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom right;

@@ -3,9 +3,12 @@ import reactLogo from '@/assets/react.svg'
 import viteLogo from '/vite.svg'
 import { HomeWrapper } from './Home.styled'
 import { useDocumentTitle } from '@/hooks'
+import { useTranslation } from '@/lang/LanguageProvider'
 
 const Home = () => {
-    useDocumentTitle('Name title document here!');
+    const { i18n } = useTranslation();
+    // Compose title from translations so it updates when locale changes
+    useDocumentTitle(`${i18n.t('appName')} | ${i18n.t('navigation.home')}`);
     const [count, setCount] = useState(0);
 
     return (

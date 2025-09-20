@@ -1,3 +1,19 @@
 {
-    "appName": "Place your app name here"
+    "appName": "HCMIH",
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "search": "Search",
+        "ideology": "Ideology System",
+        "learning": "Learning & Interaction"
+    },
+    "footer": {
+        "copyright": "Copyright © 2025 HCMIH. All rights reserved."
+    },
+    "language": {
+        "vietnamese": "Tiếng Việt",
+        "english": "English",
+        "japanese": "日本語",
+        "switchTo": "Switch to"
+    }
 }

@@ -1,3 +1,19 @@
 {
-    "appName": "Đặt tên app của bạn ở đây"
+    "appName": "HCMIH",
+    "navigation": {
+        "home": "Trang chủ",
+        "about": "Giới thiệu",
+        "search": "Tra cứu",
+        "ideology": "Hệ thống tư tưởng",
+        "learning": "Học & Tương tác"
+    },
+    "footer": {
+        "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
+    },
+    "language": {
+        "vietnamese": "Tiếng Việt",
+        "english": "English",
+        "japanese": "日本語",
+        "switchTo": "Chuyển sang"
+    }
 }
