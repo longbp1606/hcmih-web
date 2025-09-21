@@ -3,6 +3,8 @@ const routes = {
     home: "/",
     quizes: "/quizes",
     quizDetail: "/quizes/:id",
+    search: "/search",
+    searchDetail: "/search/:id",
   },
   api: {
     loginGoogle: "/auth/signin",

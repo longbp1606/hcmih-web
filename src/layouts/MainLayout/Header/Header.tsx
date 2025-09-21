@@ -27,7 +27,8 @@ const Header = () => {
     }> = [
         { label: i18n.t('navigation.home'), href: '/', matchers: ['/'] },
         { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
-        { label: i18n.t('navigation.search'), href: '/tra-cuu' },
+        
+        { label: i18n.t('navigation.search'), href: '/search', matchers: ['/search', '/tra-cuu'] },
         { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
         // Consider both /quizes and a possible redirected alias /hoc-tuong-tac as active
         { label: i18n.t('navigation.learning'), href: '/quizes', matchers: ['/quizes', '/hoc-tuong-tac'] }
@@ -38,7 +39,7 @@ const Header = () => {
         // Normalize: ensure path has no trailing slash (except root)
         const normalize = (p: string) => (p !== '/' && p.endsWith('/') ? p.slice(0, -1) : p);
         const path = normalize(currentPath);
-
+        
         const prefixes = [itemHref, ...(extraMatchers || [])];
 
         return prefixes.some((prefix) => {
