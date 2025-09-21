@@ -1,55 +1,19 @@
 import { useState } from "react";
+import { mockNews as baseNews } from "../../data/news/mockNews";
 
-// Tạo dữ liệu mẫu cho 85 items
-const generateMockNews = () => {
-  const newsTemplates = [
-    {
-      title: "Tin tức 1",
-      desc: "Khái niệm, đối tượng, phương pháp nghiên cứu và ý nghĩa học tập môn Tư tưởng Hồ Chí Minh",
-    },
-    {
-      title: "Tin tức 2",
-      desc: "Cơ sở, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh",
-    },
-    {
-      title: "Tin tức 3",
-      desc: "Tư tưởng Hồ Chí Minh về độc lập dân tộc và chủ nghĩa xã hội",
-    },
-    {
-      title: "Tin tức 4",
-      desc: "Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và nhà nước của nhân dân, do nhân dân, vì nhân dân",
-    },
-    {
-      title: "Tin tức 5",
-      desc: "Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế",
-    },
-    {
-      title: "Tin tức 6",
-      desc: "Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc và đoàn kết quốc tế",
-    },
-  ];
+// Sử dụng trực tiếp dữ liệu từ mockNews
+const newsData = baseNews.map(news => ({
+  id: news.id,
+  title: news.title,
+  desc: news.desc,
+  img: news.img,
+}));
 
-  const allNews = [];
-  for (let i = 1; i <= 85; i++) {
-    const template = newsTemplates[(i - 1) % newsTemplates.length];
-    allNews.push({
-      id: i,
-      title: `${template.title} (${i})`,
-      desc: template.desc,
-      img: "https://via.placeholder.com/150",
-    });
-  }
-  return allNews;
-};
-
-const mockNews = generateMockNews();
-
-const TOTAL_ITEMS = mockNews.length;
+const TOTAL_ITEMS = newsData.length;
 
 export default function NewsPage() {
   const [page, setPage] = useState(1); // Trang 1 như hình
-  const [pageSize, setPageSize] = useState(6);
-  const [goToPage, setGoToPage] = useState("");
+  const pageSize = 9; // Cố định 9 tin tức mỗi trang
 
   // Tính toán số trang dựa trên pageSize
   const totalPages = Math.ceil(TOTAL_ITEMS / pageSize);
@@ -57,7 +21,7 @@ export default function NewsPage() {
   // Tính toán dữ liệu cho trang hiện tại
   const startIndex = (page - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const currentPageNews = mockNews.slice(startIndex, endIndex);
+  const currentPageNews = newsData.slice(startIndex, endIndex);
 
   // Xử lý chuyển trang
   const handlePageChange = (newPage: number) => {
@@ -66,21 +30,9 @@ export default function NewsPage() {
     }
   };
 
-  // Xử lý thay đổi pageSize
-  const handlePageSizeChange = (newPageSize: number) => {
-    setPageSize(newPageSize);
-    // Reset về trang 1 khi thay đổi pageSize
-    setPage(1);
-  };
 
-  // Xử lý "Go to"
-  const handleGoToPage = () => {
-    const pageNum = parseInt(goToPage);
-    if (pageNum && pageNum >= 1 && pageNum <= totalPages) {
-      setPage(pageNum);
-      setGoToPage("");
-    }
-  };
+
+
 
   return (
     <div
@@ -128,27 +80,29 @@ export default function NewsPage() {
               transition: "box-shadow 0.2s",
             }}
             onClick={() => (window.location.href = `/news/${news.id}`)}
-            title={news.title.replace(/ \(\d+\)/, "")}
+            title={news.title}
           >
             <div
               style={{
                 background: "#fff",
                 borderRadius: "10px",
                 margin: "24px 24px 0 24px",
-                padding: "16px 0",
+                padding: "20px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
               }}
             >
               <img
                 src={news.img}
                 alt={news.title}
                 style={{
-                  width: "120px",
-                  height: "90px",
-                  objectFit: "contain",
+                  width: "160px",
+                  height: "120px",
+                  objectFit: "cover",
                   display: "block",
+                  borderRadius: "8px",
                 }}
               />
             </div>
@@ -162,7 +116,7 @@ export default function NewsPage() {
                   textAlign: "left",
                 }}
               >
-                {news.title.replace(/ \(\d+\)/, "")}
+                {news.title}
               </h2>
               <p
                 style={{
@@ -201,7 +155,6 @@ export default function NewsPage() {
             fontWeight: 500,
           }}
         >
-          <span style={{ marginRight: 12 }}>Total {TOTAL_ITEMS} items</span>
           {/* Prev */}
           <button
             style={{
@@ -343,46 +296,6 @@ export default function NewsPage() {
           >
             &#62;
           </button>
-          {/* Dropdown */}
-          <select
-            style={{
-              marginLeft: 12,
-              background: "#fbe3c0",
-              border: "1.5px solid #b8860b",
-              borderRadius: 6,
-              color: "#7a5a2e",
-              fontWeight: 500,
-              padding: "2px 8px",
-              fontSize: "1rem",
-            }}
-            value={pageSize}
-            onChange={(e) => handlePageSizeChange(Number(e.target.value))}
-          >
-            <option value={6}>6 / page</option>
-            <option value={10}>10 / page</option>
-            <option value={20}>20 / page</option>
-          </select>
-          {/* Go to */}
-          <span style={{ marginLeft: 12 }}>Go to</span>
-          <input
-            type="number"
-            min={1}
-            max={totalPages}
-            style={{
-              width: 48,
-              background: "#fbe3c0",
-              border: "1.5px solid #b8860b",
-              borderRadius: 6,
-              color: "#7a5a2e",
-              fontWeight: 500,
-              fontSize: "1rem",
-              padding: "2px 8px",
-              marginLeft: 4,
-            }}
-            value={goToPage}
-            onChange={(e) => setGoToPage(e.target.value)}
-            onKeyPress={(e) => e.key === "Enter" && handleGoToPage()}
-          />
         </div>
       </div>
     </div>
