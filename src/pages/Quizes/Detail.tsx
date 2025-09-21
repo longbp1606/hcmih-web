@@ -3,6 +3,7 @@ import { Button, Card, Col, Row, Typography, Space } from 'antd';
 import { LeftOutlined } from '@ant-design/icons';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { useDocumentTitle } from '@/hooks';
+import styles from './QuizDetail.module.css';
 
 const { Title, Text } = Typography;
 
@@ -82,43 +83,35 @@ export default function QuizDetailPage() {
     }
   };
 
+  const total = quiz?.questions.length ?? 0;
+  const completed = Math.min(index + (submitted ? 1 : 0), total);
+  const progressPct = total ? Math.round((completed / total) * 100) : 0;
+
   const Badge = ({ letter }: { letter: string }) => (
-    <div
-      style={{
-        width: 32,
-        height: 32,
-        background: '#f3c14b',
-        borderRadius: 10,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontWeight: 800,
-        marginRight: 12,
-      }}
-    >
-      {letter}
-    </div>
+    <div className={styles.answerBadge}>{letter}</div>
   );
 
   return (
-    <div style={{ padding: 24, background: '#f7f2e7', minHeight: '100vh' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <Button type="primary" ghost icon={<LeftOutlined />} onClick={() => navigate(-1)}>
-          Back
-        </Button>
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <Button type="primary" ghost icon={<LeftOutlined />} onClick={() => navigate(-1)}>
+            Back
+          </Button>
+        </div>
 
-        <Title level={1} style={{ textAlign: 'center', margin: '24px 0', color: '#7b2e20' }}>
+        <Title level={1} className={styles.title}>
           Quiz: {quizTitle}
         </Title>
 
-        <div
-          style={{
-            background: '#e9dcc5',
-            padding: 24,
-            borderRadius: 12,
-            boxShadow: 'inset 0 0 20px rgba(0,0,0,0.05)',
-          }}
-        >
+        <div className={styles.progressWrap}>
+          <div className={styles.progressBar}>
+            <div className={styles.progressInner} style={{ width: `${progressPct}%` }} />
+          </div>
+          <div className={styles.progressText}>{completed}/{total} hoàn thành</div>
+        </div>
+
+        <div className={styles.quizShell}>
           {loading && <div style={{ marginBottom: 12 }}>Đang tải quiz...</div>}
           {error && <div style={{ color: 'red', marginBottom: 12 }}>{error}</div>}
           {!question ? (
@@ -129,11 +122,9 @@ export default function QuizDetailPage() {
           <>
           <Card
             styles={{ body: { padding: 16 } }}
-            style={{ background: '#8f2216', border: 'none', borderRadius: 12, marginBottom: 24 }}
+            className={styles.questionCard}
           >
-            <div style={{ color: 'white', opacity: 0.9, fontWeight: 600, marginBottom: 4 }}>
-              Câu hỏi {question.order}:
-            </div>
+            <div className={styles.questionLabel}>Câu hỏi {question.order}:</div>
             <Title level={4} style={{ color: 'white', margin: 0, textAlign: 'center' }}>
               {question.text}
             </Title>
@@ -142,33 +133,20 @@ export default function QuizDetailPage() {
           <Row gutter={[24, 24]}>
             {question.answers.map((a) => {
               const isActive = selected === a.key;
+              const isCorrect = submitted && a.key === correctKey;
+              const isWrong = submitted && a.key === selected && a.key !== correctKey;
+              const classNames = [styles.answerCard];
+              if (isCorrect) classNames.push(styles.correct);
+              else if (isWrong) classNames.push(styles.wrong);
+              else if (!submitted && isActive) classNames.push(styles.selected);
+
               return (
                 <Col xs={24} md={12} key={a.key}>
                   <Card
                     hoverable
                     onClick={() => !submitted && setSelected(a.key)}
                     styles={{ body: { padding: 16 } }}
-                    style={{
-                      background: submitted
-                        ? a.key === correctKey
-                          ? '#e6fffb'
-                          : a.key === selected
-                            ? '#fff1f0'
-                            : '#f7e9d6'
-                        : '#f7e9d6',
-                      border: 'none',
-                      borderRadius: 14,
-                      boxShadow: submitted
-                        ? a.key === correctKey
-                          ? '0 0 0 2px #13c2c2 inset'
-                          : a.key === selected
-                            ? '0 0 0 2px #ff4d4f inset'
-                            : '0 1px 0 rgba(0,0,0,0.02)'
-                        : isActive
-                          ? '0 0 0 2px #a73a2a inset'
-                          : '0 1px 0 rgba(0,0,0,0.02)',
-                      cursor: 'pointer',
-                    }}
+                    className={classNames.join(' ')}
                   >
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                       <Badge letter={a.key} />
@@ -180,7 +158,7 @@ export default function QuizDetailPage() {
             })}
           </Row>
 
-          <Space style={{ marginTop: 16 }}>
+          <Space className={styles.actions}>
             {!submitted ? (
               <Button
                 type="primary"
@@ -191,7 +169,7 @@ export default function QuizDetailPage() {
               </Button>
             ) : (
               <>
-                <Text>
+                <Text className={styles.feedback}>
                   {selected === correctKey ? 'Chính xác! 🎉' : 'Chưa đúng. Hãy thử lại câu sau.'}
                 </Text>
                 <Button type="primary" onClick={onNext} disabled={index + 1 >= (quiz?.questions.length ?? 0)}>
