@@ -7,13 +7,77 @@
         "ideology": "Hệ thống tư tưởng",
         "learning": "Học & Tương tác"
     },
+    "timeline": {
+        "title": "Lược sử",
+        "periods": [
+            { "range": "Từ 1890–1911", "desc": "Thời kỳ hình thành tư tưởng yêu nước và chí hướng cách mạng." },
+            { "range": "Từ 1911–1920", "desc": "Thời kỳ tìm tòi con đường cứu nước giải phóng dân tộc." },
+            { "range": "Từ 1921–1930", "desc": "Thời kỳ hình thành cơ bản tư tưởng Hồ Chí Minh" },
+            { "range": "Từ 1930–1945", "desc": "Thời kỳ thử thách, kiên trì giữ vững quan điểm" },
+            { "range": "Từ 1945–1969", "desc": "Thời kỳ phát triển mới về tư tưởng kháng chiến và kiến quốc." }
+        ]
+    ,
+        "explore": {
+            "title": "Bắt đầu khám phá",
+            "items": {
+                "content": "Nội dung",
+                "news": "Tin tức",
+                "quiz": "Câu đố"
+            }
+        }
+    },
     "footer": {
         "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
     },
+    "home": {
+        "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
+        "featuredTitle": "Các chủ đề nổi bật",
+        "topics": {
+            "history": {
+                "title": "Cuộc đời & sự nghiệp",
+                "desc": "Khám phá cuộc đời, gia đình và con đường cách mạng của Chủ tịch Hồ Chí Minh."
+            },
+            "ideology": {
+                "title": "Hệ thống tư tưởng",
+                "desc": "Các luận điểm cốt lõi, giá trị và sự vận dụng trong thời đại mới."
+            },
+            "quotes": {
+                "title": "Danh ngôn & trích dẫn",
+                "desc": "Tập hợp những câu nói, bài viết tiêu biểu, dễ tìm và trích dẫn."
+            },
+            "timeline": {
+                "title": "Dòng thời gian",
+                "desc": "Các mốc sự kiện quan trọng, gắn với bối cảnh lịch sử Việt Nam và thế giới."
+            },
+            "works": {
+                "title": "Tác phẩm tiêu biểu",
+                "desc": "Giới thiệu các tác phẩm, thư từ và văn kiện quan trọng."
+            },
+            "learning": {
+                "title": "Học & tương tác",
+                "desc": "Bài học tương tác, trắc nghiệm, sơ đồ tư duy và hoạt động trải nghiệm."
+            }
+        }
+    },
+    "research": {
+        "title": "Tra cứu nhanh",
+        "searchPlaceholder": "Nhập từ khóa (ví dụ: tư tưởng, độc lập, dân chủ…)",
+        "searchButton": "Tìm kiếm",
+        "tags": [
+            "Tư tưởng",
+            "Độc lập",
+            "Dân chủ",
+            "Đạo đức",
+            "Văn hóa",
+            "Thanh niên",
+            "Cách mạng",
+            "Nhân dân"
+        ]
+    },
     "language": {
         "vietnamese": "Tiếng Việt",
-        "english": "English",
-        "japanese": "日本語",
+        "english": "Tiếng Anh",
+        "japanese": "Tiếng Nhật",
         "switchTo": "Chuyển sang"
     }
 }

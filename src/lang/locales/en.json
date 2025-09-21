@@ -7,13 +7,77 @@
         "ideology": "Ideology System",
         "learning": "Learning & Interaction"
     },
+    "timeline": {
+        "title": "Timeline",
+        "periods": [
+            { "range": "1890–1911", "desc": "Formation of patriotism and revolutionary aspiration." },
+            { "range": "1911–1920", "desc": "Searching for the path to national liberation." },
+            { "range": "1921–1930", "desc": "Fundamental formation of Ho Chi Minh's thought on Vietnam's revolution: both scientific and practical." },
+            { "range": "1930–1945", "desc": "A period of trials, steadfast in viewpoint; upholding the ideas of independence, freedom, and fundamental national rights." },
+            { "range": "1945–1969", "desc": "New development in the thought of resistance and nation-building." }
+        ]
+        ,
+        "explore": {
+            "title": "Start Exploring",
+            "items": {
+                "content": "Content",
+                "news": "News",
+                "quiz": "Quiz"
+            }
+        }
+    },
     "footer": {
         "copyright": "Copyright © 2025 HCMIH. All rights reserved."
     },
+    "home": {
+        "heroTitle": "Approach Ho Chi Minh's thought in a modern, visual, and easy-to-understand way.",
+        "featuredTitle": "Featured Topics",
+        "topics": {
+            "history": {
+                "title": "Life & Career",
+                "desc": "Explore the life, family, and revolutionary journey of President Ho Chi Minh."
+            },
+            "ideology": {
+                "title": "Ideological System",
+                "desc": "Core theses, values, and modern applications."
+            },
+            "quotes": {
+                "title": "Quotes & Sayings",
+                "desc": "A curated set of notable quotes and writings, ready to reference."
+            },
+            "timeline": {
+                "title": "Timeline",
+                "desc": "Key milestones aligned with Vietnam and world history."
+            },
+            "works": {
+                "title": "Notable Works",
+                "desc": "Highlighted works, letters, and important documents."
+            },
+            "learning": {
+                "title": "Learning & Interaction",
+                "desc": "Interactive lessons, quizzes, mind maps, and experiential activities."
+            }
+        }
+    },
+    "research": {
+        "title": "Quick Research",
+        "searchPlaceholder": "Type keywords (e.g., ideology, independence, democracy…)",
+        "searchButton": "Search",
+        "tags": [
+            "Ideology",
+            "Independence",
+            "Democracy",
+            "Ethics",
+            "Culture",
+            "Youth",
+            "Revolution",
+            "People"
+        ]
+    },
     "language": {
-        "vietnamese": "Tiếng Việt",
+        "vietnamese": "Vietnamese",
         "english": "English",
-        "japanese": "日本語",
+        "japanese": "Japanese",
         "switchTo": "Switch to"
     }
 }
