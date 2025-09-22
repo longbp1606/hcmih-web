@@ -1,34 +1,34 @@
 {
-    "appName": "HCMIH",
-    "navigation": {
-        "home": "Trang chủ",
-        "about": "Giới thiệu",
-        "search": "Tra cứu",
-        "ideology": "Hệ thống tư tưởng",
-        "learning": "Học & Tương tác"
-    },
-    "footer": {
-        "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
-    },
-    "language": {
-        "vietnamese": "Tiếng Việt",
-        "english": "English",
-        "japanese": "日本語",
-        "switchTo": "Chuyển sang"
-    },
-    "news": {
-        "title": "Tin tức",
-        "relatedNews": "Tin tức liên quan",
-        "readOriginal": "Xem bài viết gốc",
-        "content": "Nội dung chi tiết",
-        "date": "Ngày đăng",
-        "source": "Nguồn",
-        "backToNews": "Quay lại danh sách tin tức",
-        "noNewsFound": "Không tìm thấy tin tức!",
-        "pagination": {
-            "previous": "Trước",
-            "next": "Tiếp theo",
-            "page": "Trang"
-        }
+  "appName": "HCMIH",
+  "navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "search": "Tra cứu",
+    "ideology": "Hệ thống tư tưởng",
+    "learning": "Học & Tương tác"
+  },
+  "footer": {
+    "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
+  },
+  "language": {
+    "vietnamese": "Tiếng Việt",
+    "english": "English",
+    "japanese": "日本語",
+    "switchTo": "Chuyển sang"
+  },
+  "news": {
+    "title": "Tin tức",
+    "relatedNews": "Tin tức liên quan",
+    "readOriginal": "Xem bài viết gốc",
+    "content": "Nội dung chi tiết",
+    "date": "Ngày đăng",
+    "source": "Nguồn",
+    "backToNews": "Quay lại danh sách tin tức",
+    "noNewsFound": "Không tìm thấy tin tức!",
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp theo",
+      "page": "Trang"
     }
+  }
 }

@@ -1,34 +1,34 @@
 {
-    "appName": "HCMIH",
-    "navigation": {
-        "home": "Home",
-        "about": "About",
-        "search": "Search",
-        "ideology": "Ideology System",
-        "learning": "Learning & Interaction"
-    },
-    "footer": {
-        "copyright": "Copyright © 2025 HCMIH. All rights reserved."
-    },
-    "language": {
-        "vietnamese": "Tiếng Việt",
-        "english": "English",
-        "japanese": "日本語",
-        "switchTo": "Switch to"
-    },
-    "news": {
-        "title": "News",
-        "relatedNews": "Related News",
-        "readOriginal": "Read Original Article",
-        "content": "Detailed Content",
-        "date": "Published Date",
-        "source": "Source",
-        "backToNews": "Back to News List",
-        "noNewsFound": "News not found!",
-        "pagination": {
-            "previous": "Previous",
-            "next": "Next",
-            "page": "Page"
-        }
+  "appName": "HCMIH",
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "search": "Search",
+    "ideology": "Ideology System",
+    "learning": "Learning & Interaction"
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 HCMIH. All rights reserved."
+  },
+  "language": {
+    "vietnamese": "Tiếng Việt",
+    "english": "English",
+    "japanese": "日本語",
+    "switchTo": "Switch to"
+  },
+  "news": {
+    "title": "News",
+    "relatedNews": "Related News",
+    "readOriginal": "Read Original Article",
+    "content": "Detailed Content",
+    "date": "Published Date",
+    "source": "Source",
+    "backToNews": "Back to News List",
+    "noNewsFound": "News not found!",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
     }
+  }
 }

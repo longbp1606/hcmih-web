@@ -13,9 +13,9 @@ export interface NewsItem {
 
 // Chuyển đổi dữ liệu đa ngôn ngữ thành dữ liệu đơn ngôn ngữ
 export const getLocalizedNews = (locale: string): NewsItem[] => {
-  const lang = (locale as keyof NewsItemMultilang['title']) || 'vi';
-  
-  return mockNewsMultilang.map(news => ({
+  const lang = (locale as keyof NewsItemMultilang["title"]) || "vi";
+
+  return mockNewsMultilang.map((news) => ({
     id: news.id,
     title: news.title[lang] || news.title.vi,
     desc: news.desc[lang] || news.desc.vi,
@@ -23,17 +23,20 @@ export const getLocalizedNews = (locale: string): NewsItem[] => {
     img: news.img,
     source: news.source,
     content: news.content?.[lang] || news.content?.vi,
-    url: news.url
+    url: news.url,
   }));
 };
 
 // Lấy một tin tức theo ID và ngôn ngữ
-export const getLocalizedNewsById = (id: number, locale: string): NewsItem | undefined => {
-  const news = mockNewsMultilang.find(n => n.id === id);
+export const getLocalizedNewsById = (
+  id: number,
+  locale: string
+): NewsItem | undefined => {
+  const news = mockNewsMultilang.find((n) => n.id === id);
   if (!news) return undefined;
-  
-  const lang = (locale as keyof NewsItemMultilang['title']) || 'vi';
-  
+
+  const lang = (locale as keyof NewsItemMultilang["title"]) || "vi";
+
   return {
     id: news.id,
     title: news.title[lang] || news.title.vi,
@@ -42,6 +45,6 @@ export const getLocalizedNewsById = (id: number, locale: string): NewsItem | und
     img: news.img,
     source: news.source,
     content: news.content?.[lang] || news.content?.vi,
-    url: news.url
+    url: news.url,
   };
 };
