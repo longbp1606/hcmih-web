@@ -1,14 +1,14 @@
-import config from "@/config";
-import MainLayout from "@/layouts/MainLayout";
+import config from '@/config';
+import MainLayout from '@/layouts/MainLayout';
+import Home from '@/pages/Home';
 import LearningPage from '@/pages/Learning';
-import QuizesPage from "@/pages/Quizes";
-import QuizDetailPage from "@/pages/Quizes/Detail";
-import NewsPage from "@/pages/News";
-import NewsDetailPage from "@/pages/News/Detail";
-import Home from "@/pages/Home";
+import NewsPage from '@/pages/News';
+import NewsDetailPage from '@/pages/News/Detail';
+import QuizesPage from '@/pages/Quizes';
+import QuizDetailPage from '@/pages/Quizes/Detail';
 
 const MainRouter = () => {
-  return <MainLayout />;
+    return <MainLayout />;
 };
 
 const publicRoutes = {
@@ -17,13 +17,15 @@ const publicRoutes = {
         { path: config.routes.public.learning, element: <LearningPage />},
         { path: config.routes.public.quizes, element: <QuizesPage />},
         { path: config.routes.public.quizDetail, element: <QuizDetailPage />},
+        { path: config.routes.public.news, element: <NewsPage /> },
+        { path: config.routes.public.newsDetail, element: <NewsDetailPage /> },
     ]
 };
 
 const MainRoutes = {
-  path: "/",
-  element: <MainRouter />,
-  children: [publicRoutes],
+    path: '/',
+    element: <MainRouter />,
+    children: [publicRoutes],
 };
 
 export default MainRoutes;

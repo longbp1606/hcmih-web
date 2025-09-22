@@ -75,5 +75,20 @@
     "english": "英語",
     "japanese": "日本語",
     "switchTo": "切り替え"
+  },
+  "news": {
+    "title": "ニュース",
+    "relatedNews": "関連ニュース",
+    "readOriginal": "元記事を読む",
+    "content": "詳細内容",
+    "date": "公開日",
+    "source": "出典",
+    "backToNews": "ニュース一覧に戻る",
+    "noNewsFound": "ニュースが見つかりません！",
+    "pagination": {
+      "previous": "前へ",
+      "next": "次へ",
+      "page": "ページ"
+    }
   }
 }

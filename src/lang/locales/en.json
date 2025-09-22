@@ -93,5 +93,20 @@
     "english": "English",
     "japanese": "Japanese",
     "switchTo": "Switch to"
+  },
+  "news": {
+    "title": "News",
+    "relatedNews": "Related News",
+    "readOriginal": "Read Original Article",
+    "content": "Detailed Content",
+    "date": "Published Date",
+    "source": "Source",
+    "backToNews": "Back to News List",
+    "noNewsFound": "News not found!",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
+    }
   }
 }
