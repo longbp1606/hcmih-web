@@ -19,7 +19,7 @@ const Footer = () => {
   const navItems = [
     { label: i18n.t('navigation.home'), href: '/' },
     { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
-    { label: i18n.t('navigation.search'), href: '/tra-cuu' },
+    { label: i18n.t('navigation.search'), href: '/search', matchers: ['/search', '/tra-cuu'] },
     { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
     { label: i18n.t('navigation.learning'), href: config.routes.public.learning }
   ];

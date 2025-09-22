@@ -6,6 +6,8 @@ const routes = {
     quizDetail: "/quizes/:id",
     news: "/news",
     newsDetail: "/news/:id",
+    search: "/search",
+    searchDetail: "/search/:id",
   },
   api: {
     loginGoogle: "/auth/signin",
