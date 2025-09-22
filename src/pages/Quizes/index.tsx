@@ -1,8 +1,22 @@
 import { useEffect, useMemo, useState } from "react";
-import { Card, Col, Row, Typography, theme, Space, Button } from "antd";
+import { Col, Typography, theme, Space, Button } from "antd";
 import { Link } from "react-router-dom";
 import config from "@/config";
 import { useDocumentTitle } from "@/hooks";
+import {
+  QuizPage,
+  QuizContainer,
+  QuizHero,
+  QuizTitleGradient,
+  QuizSubtitle,
+  QuizCardsRow,
+  QuizCard,
+  QuizBadge,
+  QuizCTA,
+  QuizArrow,
+  QuizChipRow,
+  QuizChip,
+} from "./Quizes.styled";
 
 type Quiz = {
   id: number;
@@ -10,7 +24,7 @@ type Quiz = {
   questions?: Array<{ id: number }>;
 };
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 export default function QuizesPage() {
   useDocumentTitle("Danh sách Quiz");
@@ -39,27 +53,23 @@ export default function QuizesPage() {
   const current = useMemo(() => data.slice(0, 2), [data]);
 
   return (
-    <div className="quiz-page">
-      <div className="quiz-container">
-        <div className="quiz-hero">
-          <Title
-            level={1}
-            className="quiz-title-gradient"
-            style={{ marginBottom: 8, fontSize: 48 }}
-          >
+    <QuizPage>
+      <QuizContainer>
+        <QuizHero>
+          <QuizTitleGradient level={1} style={{ marginBottom: 8, fontSize: 48 }}>
             Danh sách Quiz
-          </Title>
-          <Text className="quiz-subtitle" style={{ fontSize: 16 }}>
+          </QuizTitleGradient>
+          <QuizSubtitle style={{ fontSize: 16 }}>
             Chọn một bài kiểm tra ngắn để bắt đầu
-          </Text>
-        </div>
+          </QuizSubtitle>
+        </QuizHero>
 
         {loading && (
           <div style={{ marginBottom: 12 }}>Đang tải danh sách quiz...</div>
         )}
         {error && <div style={{ color: "red", marginBottom: 12 }}>{error}</div>}
 
-        <Row gutter={[28, 24]} className="quiz-cardsRow">
+        <QuizCardsRow gutter={[28, 24]}>
           {current.map((item, idx) => {
             const questionsCount = item.questions?.length ?? 10;
             const estimatedMin = Math.max(3, Math.round(questionsCount * 0.6));
@@ -74,18 +84,11 @@ export default function QuizesPage() {
                   state={{ title: item.title }}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  <Card
-                    hoverable
-                    className="quiz-card"
-                    styles={{ body: { padding: 28 } }}
-                    style={{ background: "#f5e6d3" }}
-                  >
+                  <QuizCard hoverable styles={{ body: { padding: 28 } }} style={{ background: "#f5e6d3" }}>
                     <div
                       style={{ display: "flex", alignItems: "center", gap: 20 }}
                     >
-                      <div className="quiz-badge" aria-hidden>
-                        {idx + 1}
-                      </div>
+                      <QuizBadge aria-hidden>{idx + 1}</QuizBadge>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div
                           style={{
@@ -114,23 +117,21 @@ export default function QuizesPage() {
                               • {questionsCount} câu hỏi • ~{estimatedMin} phút
                             </Text>
                           </div>
-                          <div className="quiz-cta" aria-hidden>
+                          <QuizCTA aria-hidden>
                             Bắt đầu
-                            <span className="quiz-arrow">➔</span>
-                          </div>
+                            <QuizArrow>➔</QuizArrow>
+                          </QuizCTA>
                         </div>
                         <div style={{ marginTop: 8 }}>
                           <Text type="secondary" style={{ fontSize: 15 }}>
                             {excerpt}
                           </Text>
                         </div>
-                        <div className="quiz-chipRow">
+                        <QuizChipRow>
                           {chips.map((c) => (
-                            <span className="quiz-chip" key={c}>
-                              {c}
-                            </span>
+                            <QuizChip key={c}>{c}</QuizChip>
                           ))}
-                        </div>
+                        </QuizChipRow>
                         <div style={{ marginTop: 16 }}>
                           <Space size={8} wrap>
                             <Link
@@ -149,13 +150,13 @@ export default function QuizesPage() {
                         </div>
                       </div>
                     </div>
-                  </Card>
+                  </QuizCard>
                 </Link>
               </Col>
             );
           })}
-        </Row>
-      </div>
-    </div>
+        </QuizCardsRow>
+      </QuizContainer>
+    </QuizPage>
   );
 }

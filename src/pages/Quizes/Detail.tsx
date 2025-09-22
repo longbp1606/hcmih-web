@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, useCallback } from "react";
-import { Button, Card, Col, Row, Typography, Space, Tag, Tooltip } from "antd";
+import { Button, Col, Row, Typography, Space, Tag, Tooltip } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
 import {
   useNavigate,
@@ -8,6 +8,22 @@ import {
   Location,
 } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks";
+import {
+  QuizDetailPageWrap,
+  QuizDetailContainer,
+  QuizDetailHeader,
+  QuizDetailTitleGradient,
+  QuizDetailProgressWrap,
+  QuizDetailProgressBar,
+  QuizDetailProgressInner,
+  QuizDetailProgressText,
+  QuizDetailShell,
+  QuestionCard,
+  AnswerBadge,
+  AnswerCard,
+  QuizDetailActions,
+  QuizDetailFeedback,
+} from "./Quizes.styled";
 
 const { Title, Text } = Typography;
 
@@ -165,13 +181,13 @@ export default function QuizDetailPage() {
   const progressPct = total ? Math.round((completed / total) * 100) : 0;
 
   const Badge = ({ label }: { label: string | number }) => (
-    <div className="quizdetail-answerBadge">{label}</div>
+    <AnswerBadge>{label}</AnswerBadge>
   );
 
   return (
-    <div className="quizdetail-page">
-      <div className="quizdetail-container">
-        <div className="quizdetail-header">
+    <QuizDetailPageWrap>
+      <QuizDetailContainer>
+        <QuizDetailHeader>
           <Button
             type="primary"
             ghost
@@ -180,11 +196,11 @@ export default function QuizDetailPage() {
           >
             Back
           </Button>
-        </div>
+        </QuizDetailHeader>
 
-        <Title level={1} className="quizdetail-title-gradient">
+        <QuizDetailTitleGradient level={1}>
           Quiz: {quizTitle}
-        </Title>
+        </QuizDetailTitleGradient>
         {isRandom10 && (
           <div style={{ marginBottom: 16 }}>
             <Space>
@@ -201,25 +217,22 @@ export default function QuizDetailPage() {
           </div>
         )}
 
-        <div className="quizdetail-progressWrap">
-          <div className="quizdetail-progressBar">
-            <div
-              className="quizdetail-progressInner"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
-          <div className="quizdetail-progressText">
+        <QuizDetailProgressWrap>
+          <QuizDetailProgressBar>
+            <QuizDetailProgressInner style={{ width: `${progressPct}%` }} />
+          </QuizDetailProgressBar>
+          <QuizDetailProgressText>
             {completed}/{total} hoàn thành
-          </div>
-        </div>
+          </QuizDetailProgressText>
+        </QuizDetailProgressWrap>
 
-        <div className="quizdetail-shell">
+        <QuizDetailShell>
           {loading && <div style={{ marginBottom: 12 }}>Đang tải quiz...</div>}
           {error && (
             <div style={{ color: "red", marginBottom: 12 }}>{error}</div>
           )}
           {finished ? (
-            <Card style={{ background: "#f7e9d6", border: "none" }}>
+            <QuestionCard style={{ background: "#f7e9d6", border: "none" }}>
               <Space direction="vertical" style={{ width: "100%" }} size={16}>
                 <Title
                   level={3}
@@ -251,24 +264,21 @@ export default function QuizDetailPage() {
                   </Button>
                 </Space>
               </Space>
-            </Card>
+            </QuestionCard>
           ) : !question ? (
-            <Card style={{ background: "#f7e9d6", border: "none" }}>
+            <QuestionCard style={{ background: "#f7e9d6", border: "none" }}>
               <Text>Không có câu hỏi.</Text>
-            </Card>
+            </QuestionCard>
           ) : (
             <>
-              <Card
-                styles={{ body: { padding: 16 } }}
-                className="quizdetail-questionCard"
-              >
+              <QuestionCard styles={{ body: { padding: 16 } }}>
                 <Title
                   level={4}
                   style={{ color: "white", margin: 0, textAlign: "center" }}
                 >
                   {question.text}
                 </Title>
-              </Card>
+              </QuestionCard>
 
               <Row gutter={[24, 24]}>
                 {shuffledAnswers.map((a, i) => {
@@ -276,31 +286,29 @@ export default function QuizDetailPage() {
                   const isCorrect = submitted && a.key === correctKey;
                   const isWrong =
                     submitted && a.key === selected && a.key !== correctKey;
-                  const classNames = ["quizdetail-answerCard"];
-                  if (isCorrect) classNames.push("quizdetail-correct");
-                  else if (isWrong) classNames.push("quizdetail-wrong");
-                  else if (!submitted && isActive)
-                    classNames.push("quizdetail-selected");
 
                   return (
                     <Col xs={24} md={12} key={a.key}>
-                      <Card
+                      <AnswerCard
                         hoverable
                         onClick={() => !submitted && setSelected(a.key)}
                         styles={{ body: { padding: 16 } }}
-                        className={classNames.join(" ")}
+                        $selected={!submitted && isActive}
+                        $correct={isCorrect}
+                        $wrong={isWrong}
                       >
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <Badge label={i + 1} />
                           <Text style={{ fontSize: 16 }}> {a.text} </Text>
                         </div>
-                      </Card>
+                      </AnswerCard>
                     </Col>
                   );
                 })}
               </Row>
 
-              <Space className="quizdetail-actions">
+              <QuizDetailActions>
+                <Space>
                 {!submitted ? (
                   <Button
                     type="primary"
@@ -311,19 +319,20 @@ export default function QuizDetailPage() {
                   </Button>
                 ) : (
                   <>
-                    <Text className="quizdetail-feedback">
+                    <QuizDetailFeedback>
                       {selected === correctKey ? "Chính xác! 🎉" : "Chưa đúng."}
-                    </Text>
+                    </QuizDetailFeedback>
                     <Button type="primary" onClick={onNext}>
                       {index + 1 >= total ? "Hoàn thành" : "Câu tiếp theo"}
                     </Button>
                   </>
                 )}
-              </Space>
+                </Space>
+              </QuizDetailActions>
             </>
           )}
-        </div>
-      </div>
-    </div>
+        </QuizDetailShell>
+      </QuizDetailContainer>
+    </QuizDetailPageWrap>
   );
 }
