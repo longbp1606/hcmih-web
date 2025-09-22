@@ -3,7 +3,6 @@ import { Card, Col, Row, Typography, theme, Space, Button } from "antd";
 import { Link } from "react-router-dom";
 import config from "@/config";
 import { useDocumentTitle } from "@/hooks";
-import styles from "./Quizes.module.css";
 
 type Quiz = {
   id: number;
@@ -40,17 +39,17 @@ export default function QuizesPage() {
   const current = useMemo(() => data.slice(0, 2), [data]);
 
   return (
-    <div className={styles.page}>
-      <div className={styles.container}>
-        <div className={styles.hero}>
+    <div className="quiz-page">
+      <div className="quiz-container">
+        <div className="quiz-hero">
           <Title
             level={1}
-            className={styles.title}
+            className="quiz-title-gradient"
             style={{ marginBottom: 8, fontSize: 48 }}
           >
             Danh sách Quiz
           </Title>
-          <Text className={styles.subtitle} style={{ fontSize: 16 }}>
+          <Text className="quiz-subtitle" style={{ fontSize: 16 }}>
             Chọn một bài kiểm tra ngắn để bắt đầu
           </Text>
         </div>
@@ -60,7 +59,7 @@ export default function QuizesPage() {
         )}
         {error && <div style={{ color: "red", marginBottom: 12 }}>{error}</div>}
 
-        <Row gutter={[28, 24]} className={styles.cardsRow}>
+        <Row gutter={[28, 24]} className="quiz-cardsRow">
           {current.map((item, idx) => {
             const questionsCount = item.questions?.length ?? 10;
             const estimatedMin = Math.max(3, Math.round(questionsCount * 0.6));
@@ -77,14 +76,14 @@ export default function QuizesPage() {
                 >
                   <Card
                     hoverable
-                    className={styles.card}
+                    className="quiz-card"
                     styles={{ body: { padding: 28 } }}
                     style={{ background: "#f5e6d3" }}
                   >
                     <div
                       style={{ display: "flex", alignItems: "center", gap: 20 }}
                     >
-                      <div className={styles.badge} aria-hidden>
+                      <div className="quiz-badge" aria-hidden>
                         {idx + 1}
                       </div>
                       <div style={{ flex: 1, minWidth: 0 }}>
@@ -115,9 +114,9 @@ export default function QuizesPage() {
                               • {questionsCount} câu hỏi • ~{estimatedMin} phút
                             </Text>
                           </div>
-                          <div className={styles.cta} aria-hidden>
+                          <div className="quiz-cta" aria-hidden>
                             Bắt đầu
-                            <span className={styles.arrow}>➔</span>
+                            <span className="quiz-arrow">➔</span>
                           </div>
                         </div>
                         <div style={{ marginTop: 8 }}>
@@ -125,9 +124,9 @@ export default function QuizesPage() {
                             {excerpt}
                           </Text>
                         </div>
-                        <div className={styles.chipRow}>
+                        <div className="quiz-chipRow">
                           {chips.map((c) => (
-                            <span className={styles.chip} key={c}>
+                            <span className="quiz-chip" key={c}>
                               {c}
                             </span>
                           ))}
