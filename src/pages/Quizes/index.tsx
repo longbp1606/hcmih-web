@@ -3,6 +3,7 @@ import { Col, Typography, theme, Space, Button } from "antd";
 import { Link } from "react-router-dom";
 import config from "@/config";
 import { useDocumentTitle } from "@/hooks";
+import { useTranslation } from "@/lang/LanguageProvider";
 import {
   QuizPage,
   QuizContainer,
@@ -27,7 +28,8 @@ type Quiz = {
 const { Text } = Typography;
 
 export default function QuizesPage() {
-  useDocumentTitle("Danh sách Quiz");
+  const { i18n } = useTranslation();
+  useDocumentTitle(i18n.t("quizzes.title"));
   theme.useToken();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -43,7 +45,7 @@ export default function QuizesPage() {
         setData(json.quizes as Quiz[]);
         setError(null);
       })
-      .catch((e) => setError(e?.message ?? "Failed to load quizes"))
+  .catch((e) => setError(e?.message ?? i18n.t("quizzes.loadError")))
       .finally(() => mounted && setLoading(false));
     return () => {
       mounted = false;
@@ -57,20 +59,20 @@ export default function QuizesPage() {
       <QuizContainer>
         <div style={{ marginBottom: 8 }}>
           <Link to={config.routes.public.learning + '#quiz'} style={{ fontSize: 13 }}>
-            ← Quay về Học & Tương tác
+            {i18n.t('common.backTo', { target: i18n.t('navigation.learning') })}
           </Link>
         </div>
         <QuizHero>
           <QuizTitleGradient level={1} style={{ marginBottom: 8, fontSize: 48 }}>
-            Danh sách Quiz
+            {i18n.t('quizzes.title')}
           </QuizTitleGradient>
           <QuizSubtitle style={{ fontSize: 16 }}>
-            Chọn một bài kiểm tra ngắn để bắt đầu
+            {i18n.t('quizzes.subtitle')}
           </QuizSubtitle>
         </QuizHero>
 
         {loading && (
-          <div style={{ marginBottom: 12 }}>Đang tải danh sách quiz...</div>
+          <div style={{ marginBottom: 12 }}>{i18n.t('quizzes.loading')}</div>
         )}
         {error && <div style={{ color: "red", marginBottom: 12 }}>{error}</div>}
 
@@ -78,10 +80,12 @@ export default function QuizesPage() {
           {current.map((item, idx) => {
             const questionsCount = item.questions?.length ?? 10;
             const estimatedMin = Math.max(3, Math.round(questionsCount * 0.6));
-            const excerpt = `Gồm khoảng ${questionsCount} câu hỏi trắc nghiệm về tư tưởng, lịch sử và kiến thức tổng quát. Thời gian dự kiến ${estimatedMin}-${
-              estimatedMin + 2
-            } phút.`;
-            const chips = ["Cơ bản", "Tư tưởng HCM", `${questionsCount} câu`];
+            const excerpt = i18n.t('quizzes.excerpt', { count: questionsCount, min: estimatedMin, max: estimatedMin + 2 });
+            const chips = [
+              i18n.t('quizzes.chips.basic'),
+              i18n.t('quizzes.chips.hcmThesis'),
+              i18n.t('quizzes.chips.questionsCount', { count: questionsCount })
+            ];
             return (
               <Col xs={24} key={item.id}>
                 <Link
@@ -119,11 +123,11 @@ export default function QuizesPage() {
                               {item.title}
                             </Text>
                             <Text type="secondary" style={{ fontSize: 14 }}>
-                              • {questionsCount} câu hỏi • ~{estimatedMin} phút
+                              {i18n.t('quizzes.meta', { count: questionsCount, minutes: estimatedMin })}
                             </Text>
                           </div>
                           <QuizCTA aria-hidden>
-                            Bắt đầu
+                            {i18n.t('quizzes.start')}
                             <QuizArrow>➔</QuizArrow>
                           </QuizCTA>
                         </div>
@@ -149,7 +153,7 @@ export default function QuizesPage() {
                               state={{ title: item.title }}
                               style={{ textDecoration: "none" }}
                             >
-                              <Button size="small">10 câu ngẫu nhiên</Button>
+                              <Button size="small">{i18n.t('quizzes.random10Button', { count: 10 })}</Button>
                             </Link>
                           </Space>
                         </div>

@@ -7,6 +7,10 @@
     "ideology": "Hệ thống tư tưởng",
     "learning": "Học & Tương tác"
   },
+  "common": {
+    "back": "Quay lại",
+    "backTo": "← Quay về %{target}"
+  },
   "timeline": {
     "title": "Lược sử",
     "periods": [
@@ -42,6 +46,43 @@
   },
   "footer": {
     "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
+  },
+  "quizzes": {
+    "title": "Danh sách Quiz",
+    "subtitle": "Chọn một bài kiểm tra ngắn để bắt đầu",
+    "loading": "Đang tải danh sách quiz...",
+    "loadError": "Không thể tải danh sách quiz",
+    "meta": "• %{count} câu hỏi • ~%{minutes} phút",
+    "start": "Bắt đầu",
+    "excerpt": "Gồm khoảng %{count} câu hỏi trắc nghiệm về tư tưởng, lịch sử và kiến thức tổng quát. Thời gian dự kiến %{min}-%{max} phút.",
+    "chips": {
+      "basic": "Cơ bản",
+      "hcmThesis": "Tư tưởng HCM",
+      "questionsCount": "%{count} câu"
+    },
+    "random10Button": "%{count} câu ngẫu nhiên"
+  },
+  "quizDetail": {
+    "loading": "Đang tải quiz...",
+    "notFound": "Quiz không tồn tại",
+    "loadError": "Không thể tải quiz",
+    "docTitle": "Quiz: %{title}",
+    "random10Tag": "Chế độ 10 câu ngẫu nhiên",
+    "regenerateTooltip": "Lấy lại 10 câu hỏi khác",
+    "regenerateBtn": "Đổi bộ câu hỏi",
+    "switchToFullMode": "Chuyển sang chế độ đầy đủ",
+    "progressText": "%{completed}/%{total} hoàn thành",
+    "completedTitle": "Hoàn thành bài Quiz!",
+    "score": "Điểm số: %{correct} / %{total} đúng (%{percent}%)",
+    "retry": "Làm lại",
+    "switchToRandom10": "Chuyển sang 10 câu ngẫu nhiên",
+    "backToList": "Quay lại danh sách",
+    "noQuestions": "Không có câu hỏi.",
+    "submit": "Nộp bài",
+    "correct": "Chính xác! 🎉",
+    "incorrect": "Chưa đúng.",
+    "finish": "Hoàn thành",
+    "nextQuestion": "Câu tiếp theo"
   },
   "home": {
     "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
@@ -94,19 +135,15 @@
     "japanese": "Tiếng Nhật",
     "switchTo": "Chuyển sang"
   },
-  "news": {
-    "title": "Tin tức",
-    "relatedNews": "Tin tức liên quan",
-    "readOriginal": "Xem bài viết gốc",
-    "content": "Nội dung chi tiết",
-    "date": "Ngày đăng",
-    "source": "Nguồn",
-    "backToNews": "Quay lại danh sách tin tức",
-    "noNewsFound": "Không tìm thấy tin tức!",
-    "pagination": {
-      "previous": "Trước",
-      "next": "Tiếp theo",
-      "page": "Trang"
+  "learning": {
+    "title": "Học & Tương tác",
+    "content": "Nội dung",
+    "news": "Tin tức",
+    "quiz": "Câu đố",
+    "alt": {
+      "content": "Nội dung",
+      "news": "Tin tức",
+      "quiz": "Câu đố"
     }
   }
 }
