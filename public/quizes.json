@@ -2,17 +2,29 @@
   "quizes": [
     {
       "id": 1,
-      "title": "Quiz 1",
+      "title": "Tư tưởng Hồ Chí Minh về độc lập dân tộc",
       "questions": [
         {
           "id": 101,
           "order": 1,
           "text": "Theo Hồ Chí Minh, độc lập và tự do là gì?",
           "answers": [
-            { "key": "A", "text": "Quyền lợi phụ thuộc vào lịch sử mỗi nước" },
-            { "key": "B", "text": "Quyền thiêng liêng, bất khả xâm phạm của mọi dân tộc" },
-            { "key": "C", "text": "Một mục tiêu có thể hoãn lại sau phát triển kinh tế" },
-            { "key": "D", "text": "Quyền chỉ của các nước văn minh" }
+            {
+              "key": "A",
+              "text": "Quyền lợi phụ thuộc vào lịch sử mỗi nước"
+            },
+            {
+              "key": "B",
+              "text": "Quyền thiêng liêng, bất khả xâm phạm của mọi dân tộc"
+            },
+            {
+              "key": "C",
+              "text": "Một mục tiêu có thể hoãn lại sau phát triển kinh tế"
+            },
+            {
+              "key": "D",
+              "text": "Quyền chỉ của các nước văn minh"
+            }
           ],
           "correct": "B"
         },
@@ -21,10 +33,22 @@
           "order": 2,
           "text": "Hồ Chí Minh đã gửi “Yêu sách của nhân dân An Nam” nhân dịp nào?",
           "answers": [
-            { "key": "A", "text": "Hội nghị Geneva 1954" },
-            { "key": "B", "text": "Hội nghị Vécxây (Versailles) 1919" },
-            { "key": "C", "text": "Hội nghị Paris 1973" },
-            { "key": "D", "text": "Hội nghị Potsdam 1945" }
+            {
+              "key": "A",
+              "text": "Hội nghị Geneva 1954"
+            },
+            {
+              "key": "B",
+              "text": "Hội nghị Vécxây (Versailles) 1919"
+            },
+            {
+              "key": "C",
+              "text": "Hội nghị Paris 1973"
+            },
+            {
+              "key": "D",
+              "text": "Hội nghị Potsdam 1945"
+            }
           ],
           "correct": "B"
         },
@@ -33,10 +57,22 @@
           "order": 3,
           "text": "Trong Chánh cương vắn tắt của Đảng (1930), một trong hai mục tiêu chính là gì?",
           "answers": [
-            { "key": "A", "text": "Xây dựng chủ nghĩa tư bản ở Việt Nam" },
-            { "key": "B", "text": "Làm cho nước Nam được hoàn toàn độc lập" },
-            { "key": "C", "text": "Liên minh với thực dân Pháp" },
-            { "key": "D", "text": "Bảo tồn chế độ phong kiến" }
+            {
+              "key": "A",
+              "text": "Xây dựng chủ nghĩa tư bản ở Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Làm cho nước Nam được hoàn toàn độc lập"
+            },
+            {
+              "key": "C",
+              "text": "Liên minh với thực dân Pháp"
+            },
+            {
+              "key": "D",
+              "text": "Bảo tồn chế độ phong kiến"
+            }
           ],
           "correct": "B"
         },
@@ -45,10 +81,22 @@
           "order": 4,
           "text": "Câu nói nổi tiếng của Hồ Chí Minh: “Không có gì quý hơn…” tiếp theo là gì?",
           "answers": [
-            { "key": "A", "text": "Tự do, hạnh phúc" },
-            { "key": "B", "text": "Độc lập, tự do" },
-            { "key": "C", "text": "Tình hữu nghị quốc tế" },
-            { "key": "D", "text": "Lao động và hòa bình" }
+            {
+              "key": "A",
+              "text": "Tự do, hạnh phúc"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập, tự do"
+            },
+            {
+              "key": "C",
+              "text": "Tình hữu nghị quốc tế"
+            },
+            {
+              "key": "D",
+              "text": "Lao động và hòa bình"
+            }
           ],
           "correct": "B"
         },
@@ -57,10 +105,22 @@
           "order": 5,
           "text": "Theo đoạn trích, độc lập phải gắn liền với yếu tố nào để có ý nghĩa thực sự?",
           "answers": [
-            { "key": "A", "text": "Tham gia liên minh quân sự mà không có quyền tự quyết" },
-            { "key": "B", "text": "Tự do và hạnh phúc của nhân dân (cơm no, áo ấm, học hành)" },
-            { "key": "C", "text": "Chỉ quyền độc lập về danh nghĩa" },
-            { "key": "D", "text": "Phát triển công nghiệp nặng trước hết" }
+            {
+              "key": "A",
+              "text": "Tham gia liên minh quân sự mà không có quyền tự quyết"
+            },
+            {
+              "key": "B",
+              "text": "Tự do và hạnh phúc của nhân dân (cơm no, áo ấm, học hành)"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ quyền độc lập về danh nghĩa"
+            },
+            {
+              "key": "D",
+              "text": "Phát triển công nghiệp nặng trước hết"
+            }
           ],
           "correct": "B"
         },
@@ -69,10 +129,22 @@
           "order": 6,
           "text": "Hồ Chí Minh dẫn chứng các văn kiện quốc tế nào để khẳng định quyền dân tộc?",
           "answers": [
-            { "key": "A", "text": "Tuyên ngôn Độc lập Mỹ 1776 và Tuyên ngôn Nhân quyền Pháp 1791" },
-            { "key": "B", "text": "Hiến pháp Nhật Bản 1947" },
-            { "key": "C", "text": "Hiến pháp Liên Xô 1936" },
-            { "key": "D", "text": "Hiệp ước Maastricht" }
+            {
+              "key": "A",
+              "text": "Tuyên ngôn Độc lập Mỹ 1776 và Tuyên ngôn Nhân quyền Pháp 1791"
+            },
+            {
+              "key": "B",
+              "text": "Hiến pháp Nhật Bản 1947"
+            },
+            {
+              "key": "C",
+              "text": "Hiến pháp Liên Xô 1936"
+            },
+            {
+              "key": "D",
+              "text": "Hiệp ước Maastricht"
+            }
           ],
           "correct": "A"
         },
@@ -81,10 +153,22 @@
           "order": 7,
           "text": "Khi nào Hồ Chí Minh thay mặt Chính phủ đọc Tuyên ngôn Độc lập?",
           "answers": [
-            { "key": "A", "text": "2/9/1945" },
-            { "key": "B", "text": "19/12/1946" },
-            { "key": "C", "text": "6/3/1946" },
-            { "key": "D", "text": "30/4/1975" }
+            {
+              "key": "A",
+              "text": "2/9/1945"
+            },
+            {
+              "key": "B",
+              "text": "19/12/1946"
+            },
+            {
+              "key": "C",
+              "text": "6/3/1946"
+            },
+            {
+              "key": "D",
+              "text": "30/4/1975"
+            }
           ],
           "correct": "A"
         },
@@ -93,10 +177,22 @@
           "order": 8,
           "text": "Trong quan niệm của Hồ Chí Minh, “độc lập thật sự” không bao gồm điều nào sau đây?",
           "answers": [
-            { "key": "A", "text": "Quyền tự quyết về ngoại giao" },
-            { "key": "B", "text": "Có quân đội riêng" },
-            { "key": "C", "text": "Không có nền tài chính riêng" },
-            { "key": "D", "text": "Chủ quyền toàn diện trên nhiều lĩnh vực" }
+            {
+              "key": "A",
+              "text": "Quyền tự quyết về ngoại giao"
+            },
+            {
+              "key": "B",
+              "text": "Có quân đội riêng"
+            },
+            {
+              "key": "C",
+              "text": "Không có nền tài chính riêng"
+            },
+            {
+              "key": "D",
+              "text": "Chủ quyền toàn diện trên nhiều lĩnh vực"
+            }
           ],
           "correct": "C"
         },
@@ -105,10 +201,22 @@
           "order": 9,
           "text": "Hiệp định Sơ bộ ký ngày 6-3-1946 có nội dung chính là gì (theo văn bản)?",
           "answers": [
-            { "key": "A", "text": "Pháp nhượng biển Đông cho Việt Nam" },
-            { "key": "B", "text": "Pháp công nhận Việt Nam Dân chủ Cộng hòa có chính phủ, nghị viện, quân đội, tài chính riêng" },
-            { "key": "C", "text": "Việt Nam trở thành thuộc địa của Liên Xô" },
-            { "key": "D", "text": "Việt Nam gia nhập Liên hiệp châu Âu" }
+            {
+              "key": "A",
+              "text": "Pháp nhượng biển Đông cho Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Pháp công nhận Việt Nam Dân chủ Cộng hòa có chính phủ, nghị viện, quân đội, tài chính riêng"
+            },
+            {
+              "key": "C",
+              "text": "Việt Nam trở thành thuộc địa của Liên Xô"
+            },
+            {
+              "key": "D",
+              "text": "Việt Nam gia nhập Liên hiệp châu Âu"
+            }
           ],
           "correct": "B"
         },
@@ -117,10 +225,22 @@
           "order": 10,
           "text": "Câu nói “Cái mà tôi cần nhất trên đời là đồng bào tôi được tự do, Tổ quốc tôi được độc lập” thể hiện điều gì trong tư tưởng Hồ Chí Minh?",
           "answers": [
-            { "key": "A", "text": "Ưu tiên phát triển kinh tế hơn độc lập" },
-            { "key": "B", "text": "Độc lập và tự do là mục tiêu hàng đầu, là tâm nguyện cá nhân của Người" },
-            { "key": "C", "text": "Người chỉ quan tâm đến chính trị quốc tế" },
-            { "key": "D", "text": "Người phản đối tự do cá nhân" }
+            {
+              "key": "A",
+              "text": "Ưu tiên phát triển kinh tế hơn độc lập"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập và tự do là mục tiêu hàng đầu, là tâm nguyện cá nhân của Người"
+            },
+            {
+              "key": "C",
+              "text": "Người chỉ quan tâm đến chính trị quốc tế"
+            },
+            {
+              "key": "D",
+              "text": "Người phản đối tự do cá nhân"
+            }
           ],
           "correct": "B"
         },
@@ -129,10 +249,22 @@
           "order": 11,
           "text": "Theo văn bản, Hiệp định Genève (1954) đã gây ra điều gì đối với Việt Nam?",
           "answers": [
-            { "key": "A", "text": "Chấm dứt hoàn toàn mọi xung đột ở Đông Nam Á" },
-            { "key": "B", "text": "Tạm thời chia đất nước làm hai miền" },
-            { "key": "C", "text": "Thiết lập nền độc lập vĩnh viễn cho Nam Bộ" },
-            { "key": "D", "text": "Ký năm 1946" }
+            {
+              "key": "A",
+              "text": "Chấm dứt hoàn toàn mọi xung đột ở Đông Nam Á"
+            },
+            {
+              "key": "B",
+              "text": "Tạm thời chia đất nước làm hai miền"
+            },
+            {
+              "key": "C",
+              "text": "Thiết lập nền độc lập vĩnh viễn cho Nam Bộ"
+            },
+            {
+              "key": "D",
+              "text": "Ký năm 1946"
+            }
           ],
           "correct": "B"
         },
@@ -141,10 +273,22 @@
           "order": 12,
           "text": "Hồ Chí Minh nhấn mạnh độc lập phải gắn liền với thống nhất và toàn vẹn lãnh thổ vì lý do nào?",
           "answers": [
-            { "key": "A", "text": "Để dễ dàng bị chia cắt bởi kẻ thù" },
-            { "key": "B", "text": "Vì lịch sử nước ta có nguy cơ bị chia cắt, cần bảo vệ toàn vẹn lãnh thổ" },
-            { "key": "C", "text": "Để từ bỏ quyền tự quyết" },
-            { "key": "D", "text": "Để nhượng đất cho các nước khác" }
+            {
+              "key": "A",
+              "text": "Để dễ dàng bị chia cắt bởi kẻ thù"
+            },
+            {
+              "key": "B",
+              "text": "Vì lịch sử nước ta có nguy cơ bị chia cắt, cần bảo vệ toàn vẹn lãnh thổ"
+            },
+            {
+              "key": "C",
+              "text": "Để từ bỏ quyền tự quyết"
+            },
+            {
+              "key": "D",
+              "text": "Để nhượng đất cho các nước khác"
+            }
           ],
           "correct": "B"
         },
@@ -153,10 +297,22 @@
           "order": 13,
           "text": "Trong bối cảnh sau Cách mạng Tháng Tám, Hồ Chí Minh đã kêu gọi nhân dân làm gì trước tiên?",
           "answers": [
-            { "key": "A", "text": "Chỉ lo ngoại giao quốc tế" },
-            { "key": "B", "text": "Làm cho dân có ăn, có mặc, có chỗ ở, có học hành" },
-            { "key": "C", "text": "Xây dựng lâu đài cho tầng lớp thượng lưu" },
-            { "key": "D", "text": "Từ bỏ mọi nỗ lực cải cách xã hội" }
+            {
+              "key": "A",
+              "text": "Chỉ lo ngoại giao quốc tế"
+            },
+            {
+              "key": "B",
+              "text": "Làm cho dân có ăn, có mặc, có chỗ ở, có học hành"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng lâu đài cho tầng lớp thượng lưu"
+            },
+            {
+              "key": "D",
+              "text": "Từ bỏ mọi nỗ lực cải cách xã hội"
+            }
           ],
           "correct": "B"
         },
@@ -165,10 +321,22 @@
           "order": 14,
           "text": "Hồ Chí Minh ca ngợi học thuyết “Tam dân” của ai?",
           "answers": [
-            { "key": "A", "text": "Mao Trạch Đông" },
-            { "key": "B", "text": "Tôn Trung Sơn (Sun Yat-sen)" },
-            { "key": "C", "text": "Lenin" },
-            { "key": "D", "text": "Franklin D. Roosevelt" }
+            {
+              "key": "A",
+              "text": "Mao Trạch Đông"
+            },
+            {
+              "key": "B",
+              "text": "Tôn Trung Sơn (Sun Yat-sen)"
+            },
+            {
+              "key": "C",
+              "text": "Lenin"
+            },
+            {
+              "key": "D",
+              "text": "Franklin D. Roosevelt"
+            }
           ],
           "correct": "B"
         },
@@ -177,10 +345,22 @@
           "order": 15,
           "text": "Lời kêu gọi toàn quốc kháng chiến (19-12-1946) thể hiện quyết tâm gì?",
           "answers": [
-            { "key": "A", "text": "Muốn cúi đầu đầu hàng thực dân" },
-            { "key": "B", "text": "Quyết bảo vệ bằng mọi giá nền độc lập đã giành được" },
-            { "key": "C", "text": "Kêu gọi người dân rời khỏi đất nước" },
-            { "key": "D", "text": "Ký ngay hiệp ước sáp nhập với Pháp" }
+            {
+              "key": "A",
+              "text": "Muốn cúi đầu đầu hàng thực dân"
+            },
+            {
+              "key": "B",
+              "text": "Quyết bảo vệ bằng mọi giá nền độc lập đã giành được"
+            },
+            {
+              "key": "C",
+              "text": "Kêu gọi người dân rời khỏi đất nước"
+            },
+            {
+              "key": "D",
+              "text": "Ký ngay hiệp ước sáp nhập với Pháp"
+            }
           ],
           "correct": "B"
         },
@@ -189,10 +369,22 @@
           "order": 16,
           "text": "Theo đoạn trích, việc thực dân lập chính quyền bù nhìn có mục đích gì?",
           "answers": [
-            { "key": "A", "text": "Trao tự do thật sự cho nhân dân thuộc địa" },
-            { "key": "B", "text": "Che giấu bản chất “ăn cướp” và kiểm soát nhân dân" },
-            { "key": "C", "text": "Tăng cường dân chủ thật sự" },
-            { "key": "D", "text": "Trao quyền tài chính cho thuộc địa" }
+            {
+              "key": "A",
+              "text": "Trao tự do thật sự cho nhân dân thuộc địa"
+            },
+            {
+              "key": "B",
+              "text": "Che giấu bản chất “ăn cướp” và kiểm soát nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Tăng cường dân chủ thật sự"
+            },
+            {
+              "key": "D",
+              "text": "Trao quyền tài chính cho thuộc địa"
+            }
           ],
           "correct": "B"
         },
@@ -201,10 +393,22 @@
           "order": 17,
           "text": "Cái gì được Hồ Chí Minh coi là “giá trị tinh thần thiêng liêng, bất hủ” của dân tộc?",
           "answers": [
-            { "key": "A", "text": "Chủ nghĩa tư bản" },
-            { "key": "B", "text": "Khát vọng độc lập và tự do của nhân dân" },
-            { "key": "C", "text": "Chế độ phong kiến" },
-            { "key": "D", "text": "Sự lệ thuộc vào thực dân" }
+            {
+              "key": "A",
+              "text": "Chủ nghĩa tư bản"
+            },
+            {
+              "key": "B",
+              "text": "Khát vọng độc lập và tự do của nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Chế độ phong kiến"
+            },
+            {
+              "key": "D",
+              "text": "Sự lệ thuộc vào thực dân"
+            }
           ],
           "correct": "B"
         },
@@ -213,10 +417,22 @@
           "order": 18,
           "text": "Câu nào dưới đây không phản ánh quan điểm Hồ Chí Minh về độc lập?",
           "answers": [
-            { "key": "A", "text": "Độc lập là mục tiêu hàng đầu của dân tộc" },
-            { "key": "B", "text": "Độc lập phải phục vụ hạnh phúc nhân dân" },
-            { "key": "C", "text": "Độc lập chỉ cần mang tính hình thức là đủ" },
-            { "key": "D", "text": "Độc lập phải kết hợp với thống nhất lãnh thổ" }
+            {
+              "key": "A",
+              "text": "Độc lập là mục tiêu hàng đầu của dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập phải phục vụ hạnh phúc nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Độc lập chỉ cần mang tính hình thức là đủ"
+            },
+            {
+              "key": "D",
+              "text": "Độc lập phải kết hợp với thống nhất lãnh thổ"
+            }
           ],
           "correct": "C"
         },
@@ -225,10 +441,22 @@
           "order": 19,
           "text": "Trong tư tưởng Hồ Chí Minh, độc lập gắn với yếu tố kinh tế nào sau đây?",
           "answers": [
-            { "key": "A", "text": "Không cần nền tài chính riêng" },
-            { "key": "B", "text": "Phải có nền tài chính riêng, tự chủ về kinh tế" },
-            { "key": "C", "text": "Phải bán tài nguyên cho ngoại bang để đổi lấy danh nghĩa độc lập" },
-            { "key": "D", "text": "Phải lệ thuộc hoàn toàn vào viện trợ nước ngoài" }
+            {
+              "key": "A",
+              "text": "Không cần nền tài chính riêng"
+            },
+            {
+              "key": "B",
+              "text": "Phải có nền tài chính riêng, tự chủ về kinh tế"
+            },
+            {
+              "key": "C",
+              "text": "Phải bán tài nguyên cho ngoại bang để đổi lấy danh nghĩa độc lập"
+            },
+            {
+              "key": "D",
+              "text": "Phải lệ thuộc hoàn toàn vào viện trợ nước ngoài"
+            }
           ],
           "correct": "B"
         },
@@ -237,10 +465,22 @@
           "order": 20,
           "text": "Hồ Chí Minh dùng dẫn chứng “Tuyên ngôn Độc lập (Mỹ) 1776” để nhấn mạnh điều gì?",
           "answers": [
-            { "key": "A", "text": "Quyền tự do, bình đẳng là những lẽ phải không thể chối cãi" },
-            { "key": "B", "text": "Nước Mỹ xâm lược Việt Nam" },
-            { "key": "C", "text": "Cần học theo phong kiến châu Âu" },
-            { "key": "D", "text": "Người không quan tâm đến các văn kiện quốc tế" }
+            {
+              "key": "A",
+              "text": "Quyền tự do, bình đẳng là những lẽ phải không thể chối cãi"
+            },
+            {
+              "key": "B",
+              "text": "Nước Mỹ xâm lược Việt Nam"
+            },
+            {
+              "key": "C",
+              "text": "Cần học theo phong kiến châu Âu"
+            },
+            {
+              "key": "D",
+              "text": "Người không quan tâm đến các văn kiện quốc tế"
+            }
           ],
           "correct": "A"
         },
@@ -249,10 +489,22 @@
           "order": 21,
           "text": "Việc nhân dân Việt Nam “quyết đem tất cả tinh thần và lực lượng… để giữ vững quyền tự do và độc lập” được công bố trong văn kiện nào?",
           "answers": [
-            { "key": "A", "text": "Hiệp định Paris 1973" },
-            { "key": "B", "text": "Tuyên ngôn Độc lập (1945)" },
-            { "key": "C", "text": "Hiệp định Sơ bộ 1946" },
-            { "key": "D", "text": "Hiệp định Geneva 1954" }
+            {
+              "key": "A",
+              "text": "Hiệp định Paris 1973"
+            },
+            {
+              "key": "B",
+              "text": "Tuyên ngôn Độc lập (1945)"
+            },
+            {
+              "key": "C",
+              "text": "Hiệp định Sơ bộ 1946"
+            },
+            {
+              "key": "D",
+              "text": "Hiệp định Geneva 1954"
+            }
           ],
           "correct": "B"
         },
@@ -261,10 +513,22 @@
           "order": 22,
           "text": "Theo đoạn trích, vì sao Hồ Chí Minh cho rằng độc lập phải là “triệt để”?",
           "answers": [
-            { "key": "A", "text": "Vì độc lập hình thức dễ bị lợi dụng, không đem lại quyền thật sự cho dân tộc" },
-            { "key": "B", "text": "Vì độc lập triệt để làm giảm dân chủ" },
-            { "key": "C", "text": "Vì độc lập triệt để chỉ cần trên giấy tờ" },
-            { "key": "D", "text": "Vì độc lập triệt để không cần quân đội" }
+            {
+              "key": "A",
+              "text": "Vì độc lập hình thức dễ bị lợi dụng, không đem lại quyền thật sự cho dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Vì độc lập triệt để làm giảm dân chủ"
+            },
+            {
+              "key": "C",
+              "text": "Vì độc lập triệt để chỉ cần trên giấy tờ"
+            },
+            {
+              "key": "D",
+              "text": "Vì độc lập triệt để không cần quân đội"
+            }
           ],
           "correct": "A"
         },
@@ -273,10 +537,22 @@
           "order": 23,
           "text": "Hồ Chí Minh khẳng định nhân dân ta đã buộc đế quốc Mỹ phải làm gì?",
           "answers": [
-            { "key": "A", "text": "Ký Hiệp định Paris và rút quân về nước" },
-            { "key": "B", "text": "Nhượng đất cho Pháp" },
-            { "key": "C", "text": "Đồng ý với việc thành lập chính phủ bù nhìn" },
-            { "key": "D", "text": "Giao quyền cho Liên Hợp Quốc quản lý Việt Nam" }
+            {
+              "key": "A",
+              "text": "Ký Hiệp định Paris và rút quân về nước"
+            },
+            {
+              "key": "B",
+              "text": "Nhượng đất cho Pháp"
+            },
+            {
+              "key": "C",
+              "text": "Đồng ý với việc thành lập chính phủ bù nhìn"
+            },
+            {
+              "key": "D",
+              "text": "Giao quyền cho Liên Hợp Quốc quản lý Việt Nam"
+            }
           ],
           "correct": "A"
         },
@@ -285,10 +561,22 @@
           "order": 24,
           "text": "Muốn độc lập “thật sự”, theo Hồ Chí Minh, quốc gia phải có:",
           "answers": [
-            { "key": "A", "text": "Chỉ có tên gọi độc lập, mọi thứ khác do ngoại bang điều khiển" },
-            { "key": "B", "text": "Quyền tự quyết về ngoại giao, quân đội và tài chính riêng" },
-            { "key": "C", "text": "Chỉ cần có quốc kỳ và quốc ca" },
-            { "key": "D", "text": "Phải từ bỏ chủ quyền biển đảo" }
+            {
+              "key": "A",
+              "text": "Chỉ có tên gọi độc lập, mọi thứ khác do ngoại bang điều khiển"
+            },
+            {
+              "key": "B",
+              "text": "Quyền tự quyết về ngoại giao, quân đội và tài chính riêng"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ cần có quốc kỳ và quốc ca"
+            },
+            {
+              "key": "D",
+              "text": "Phải từ bỏ chủ quyền biển đảo"
+            }
           ],
           "correct": "B"
         },
@@ -297,10 +585,22 @@
           "order": 25,
           "text": "Hồ Chí Minh viện dẫn khẩu hiệu “Không có gì quý hơn độc lập, tự do” chủ yếu nhằm mục đích gì?",
           "answers": [
-            { "key": "A", "text": "Khích lệ tinh thần đấu tranh của nhân dân" },
-            { "key": "B", "text": "Kêu gọi đầu hàng kẻ thù" },
-            { "key": "C", "text": "Khuyên người dân xuất khẩu lao động" },
-            { "key": "D", "text": "Dùng làm ca khúc quốc gia" }
+            {
+              "key": "A",
+              "text": "Khích lệ tinh thần đấu tranh của nhân dân"
+            },
+            {
+              "key": "B",
+              "text": "Kêu gọi đầu hàng kẻ thù"
+            },
+            {
+              "key": "C",
+              "text": "Khuyên người dân xuất khẩu lao động"
+            },
+            {
+              "key": "D",
+              "text": "Dùng làm ca khúc quốc gia"
+            }
           ],
           "correct": "A"
         },
@@ -309,10 +609,22 @@
           "order": 26,
           "text": "Trong bối cảnh lịch sử, “Nam Kỳ tự trị” là ví dụ cho mưu đồ gì?",
           "answers": [
-            { "key": "A", "text": "Mưu đồ chia cắt đất nước của thực dân" },
-            { "key": "B", "text": "Chính sách thống nhất đất nước của nhân dân" },
-            { "key": "C", "text": "Hiệp ước hòa bình vĩnh viễn" },
-            { "key": "D", "text": "Thỏa thuận phân chia tài nguyên hợp pháp" }
+            {
+              "key": "A",
+              "text": "Mưu đồ chia cắt đất nước của thực dân"
+            },
+            {
+              "key": "B",
+              "text": "Chính sách thống nhất đất nước của nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Hiệp ước hòa bình vĩnh viễn"
+            },
+            {
+              "key": "D",
+              "text": "Thỏa thuận phân chia tài nguyên hợp pháp"
+            }
           ],
           "correct": "A"
         },
@@ -321,10 +633,22 @@
           "order": 27,
           "text": "Đoạn trích cho thấy tư tưởng Hồ Chí Minh về độc lập là:",
           "answers": [
-            { "key": "A", "text": "Chỉ mang tính chính trị, không liên quan xã hội" },
-            { "key": "B", "text": "Toàn diện — chính trị, kinh tế, văn hóa, quân sự, lãnh thổ" },
-            { "key": "C", "text": "Chỉ quan tâm tới văn hóa truyền thống" },
-            { "key": "D", "text": "Chỉ là khẩu hiệu tuyên truyền" }
+            {
+              "key": "A",
+              "text": "Chỉ mang tính chính trị, không liên quan xã hội"
+            },
+            {
+              "key": "B",
+              "text": "Toàn diện — chính trị, kinh tế, văn hóa, quân sự, lãnh thổ"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ quan tâm tới văn hóa truyền thống"
+            },
+            {
+              "key": "D",
+              "text": "Chỉ là khẩu hiệu tuyên truyền"
+            }
           ],
           "correct": "B"
         },
@@ -333,10 +657,22 @@
           "order": 28,
           "text": "Hồ Chí Minh từng gửi “Yêu sách” đòi quyền gì cho nhân dân An Nam?",
           "answers": [
-            { "key": "A", "text": "Quyền bình đẳng pháp lý và các quyền tự do, dân chủ" },
-            { "key": "B", "text": "Quyền làm thuộc địa của Pháp" },
-            { "key": "C", "text": "Quyền lập ra chế độ quân chủ mới" },
-            { "key": "D", "text": "Quyền bán đất cho nước ngoài" }
+            {
+              "key": "A",
+              "text": "Quyền bình đẳng pháp lý và các quyền tự do, dân chủ"
+            },
+            {
+              "key": "B",
+              "text": "Quyền làm thuộc địa của Pháp"
+            },
+            {
+              "key": "C",
+              "text": "Quyền lập ra chế độ quân chủ mới"
+            },
+            {
+              "key": "D",
+              "text": "Quyền bán đất cho nước ngoài"
+            }
           ],
           "correct": "A"
         },
@@ -345,10 +681,22 @@
           "order": 29,
           "text": "Hồ Chí Minh cho rằng độc lập gắn với hạnh phúc nhân dân gồm những điều gì (theo đoạn trích)?",
           "answers": [
-            { "key": "A", "text": "Cơm no, áo mặc, chỗ ở, học hành" },
-            { "key": "B", "text": "Chỉ có quyền biểu tình" },
-            { "key": "C", "text": "Chỉ có quyền thành lập chính phủ bù nhìn" },
-            { "key": "D", "text": "Chỉ có phẩm giá hoàng gia" }
+            {
+              "key": "A",
+              "text": "Cơm no, áo mặc, chỗ ở, học hành"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ có quyền biểu tình"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ có quyền thành lập chính phủ bù nhìn"
+            },
+            {
+              "key": "D",
+              "text": "Chỉ có phẩm giá hoàng gia"
+            }
           ],
           "correct": "A"
         },
@@ -357,23 +705,46 @@
           "order": 30,
           "text": "Mục tiêu cuối cùng của tư tưởng Hồ Chí Minh về độc lập dân tộc là gì?",
           "answers": [
-            { "key": "A", "text": "Độc lập để phục vụ một thiểu số thống trị" },
-            { "key": "B", "text": "Độc lập để nhân dân được hưởng tự do, hạnh phúc và giữ vững toàn vẹn lãnh thổ" },
-            { "key": "C", "text": "Độc lập để phụ thuộc vào ngoại bang khác" },
-            { "key": "D", "text": "Độc lập chỉ để làm phong trào tạm thời" }
+            {
+              "key": "A",
+              "text": "Độc lập để phục vụ một thiểu số thống trị"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập để nhân dân được hưởng tự do, hạnh phúc và giữ vững toàn vẹn lãnh thổ"
+            },
+            {
+              "key": "C",
+              "text": "Độc lập để phụ thuộc vào ngoại bang khác"
+            },
+            {
+              "key": "D",
+              "text": "Độc lập chỉ để làm phong trào tạm thời"
+            }
           ],
           "correct": "B"
-        }
-        ,
+        },
         {
           "id": 131,
           "order": 31,
           "text": "Câu “Nước Việt Nam là một, dân tộc Việt Nam là một” được Hồ Chí Minh khẳng định năm nào?",
           "answers": [
-            { "key": "A", "text": "1919" },
-            { "key": "B", "text": "1930" },
-            { "key": "C", "text": "1958" },
-            { "key": "D", "text": "1975" }
+            {
+              "key": "A",
+              "text": "1919"
+            },
+            {
+              "key": "B",
+              "text": "1930"
+            },
+            {
+              "key": "C",
+              "text": "1958"
+            },
+            {
+              "key": "D",
+              "text": "1975"
+            }
           ],
           "correct": "C"
         },
@@ -382,10 +753,22 @@
           "order": 32,
           "text": "Văn kiện nào Hồ Chí Minh nhấn mạnh: “Nước độc lập mà dân không hưởng hạnh phúc tự do thì độc lập cũng chẳng có nghĩa lý gì”?",
           "answers": [
-            { "key": "A", "text": "Lời kêu gọi toàn quốc kháng chiến" },
-            { "key": "B", "text": "Chánh cương vắn tắt" },
-            { "key": "C", "text": "Bài nói chuyện sau Cách mạng Tháng Tám 1945" },
-            { "key": "D", "text": "Di chúc" }
+            {
+              "key": "A",
+              "text": "Lời kêu gọi toàn quốc kháng chiến"
+            },
+            {
+              "key": "B",
+              "text": "Chánh cương vắn tắt"
+            },
+            {
+              "key": "C",
+              "text": "Bài nói chuyện sau Cách mạng Tháng Tám 1945"
+            },
+            {
+              "key": "D",
+              "text": "Di chúc"
+            }
           ],
           "correct": "C"
         },
@@ -394,10 +777,22 @@
           "order": 33,
           "text": "“Đồng bào Nam Bộ là dân nước Việt Nam. Sông có thể cạn, núi có thể mòn…” được trích trong?",
           "answers": [
-            { "key": "A", "text": "Tuyên ngôn Độc lập" },
-            { "key": "B", "text": "Thư gửi đồng bào Nam Bộ (1946)" },
-            { "key": "C", "text": "Lời kêu gọi chống Mỹ cứu nước" },
-            { "key": "D", "text": "Yêu sách của nhân dân An Nam" }
+            {
+              "key": "A",
+              "text": "Tuyên ngôn Độc lập"
+            },
+            {
+              "key": "B",
+              "text": "Thư gửi đồng bào Nam Bộ (1946)"
+            },
+            {
+              "key": "C",
+              "text": "Lời kêu gọi chống Mỹ cứu nước"
+            },
+            {
+              "key": "D",
+              "text": "Yêu sách của nhân dân An Nam"
+            }
           ],
           "correct": "B"
         },
@@ -406,10 +801,22 @@
           "order": 34,
           "text": "Trong Di chúc, Hồ Chí Minh tin tưởng điều gì chắc chắn sẽ xảy ra?",
           "answers": [
-            { "key": "A", "text": "Đế quốc Mỹ nhất định phải cút khỏi nước ta, Tổ quốc ta nhất định sẽ thống nhất" },
-            { "key": "B", "text": "Việt Nam sẽ chia cắt vĩnh viễn" },
-            { "key": "C", "text": "Chỉ miền Bắc phát triển xã hội chủ nghĩa" },
-            { "key": "D", "text": "Độc lập chỉ còn trên giấy tờ" }
+            {
+              "key": "A",
+              "text": "Đế quốc Mỹ nhất định phải cút khỏi nước ta, Tổ quốc ta nhất định sẽ thống nhất"
+            },
+            {
+              "key": "B",
+              "text": "Việt Nam sẽ chia cắt vĩnh viễn"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ miền Bắc phát triển xã hội chủ nghĩa"
+            },
+            {
+              "key": "D",
+              "text": "Độc lập chỉ còn trên giấy tờ"
+            }
           ],
           "correct": "A"
         },
@@ -418,10 +825,22 @@
           "order": 35,
           "text": "Khẩu hiệu “Không có gì quý hơn độc lập, tự do” ra đời trong bối cảnh nào?",
           "answers": [
-            { "key": "A", "text": "Chiến tranh thế giới thứ nhất" },
-            { "key": "B", "text": "Kháng chiến chống Mỹ ác liệt, 1965" },
-            { "key": "C", "text": "Sau Hiệp định Genève" },
-            { "key": "D", "text": "Sau khi đất nước thống nhất" }
+            {
+              "key": "A",
+              "text": "Chiến tranh thế giới thứ nhất"
+            },
+            {
+              "key": "B",
+              "text": "Kháng chiến chống Mỹ ác liệt, 1965"
+            },
+            {
+              "key": "C",
+              "text": "Sau Hiệp định Genève"
+            },
+            {
+              "key": "D",
+              "text": "Sau khi đất nước thống nhất"
+            }
           ],
           "correct": "B"
         },
@@ -430,10 +849,22 @@
           "order": 36,
           "text": "Một trong những luận điểm xuyên suốt tư tưởng Hồ Chí Minh là:",
           "answers": [
-            { "key": "A", "text": "Độc lập dân tộc gắn liền với chủ nghĩa xã hội" },
-            { "key": "B", "text": "Độc lập dân tộc tách rời hoàn toàn chủ nghĩa xã hội" },
-            { "key": "C", "text": "Độc lập chỉ cần về mặt hình thức" },
-            { "key": "D", "text": "Độc lập phải nhường chỗ cho kinh tế thị trường" }
+            {
+              "key": "A",
+              "text": "Độc lập dân tộc gắn liền với chủ nghĩa xã hội"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập dân tộc tách rời hoàn toàn chủ nghĩa xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Độc lập chỉ cần về mặt hình thức"
+            },
+            {
+              "key": "D",
+              "text": "Độc lập phải nhường chỗ cho kinh tế thị trường"
+            }
           ],
           "correct": "A"
         },
@@ -442,10 +873,22 @@
           "order": 37,
           "text": "Việc Hồ Chí Minh viện dẫn Tuyên ngôn Mỹ 1776 và Pháp 1791 thể hiện phương pháp nào?",
           "answers": [
-            { "key": "A", "text": "Kế thừa giá trị nhân loại để đấu tranh cho quyền dân tộc" },
-            { "key": "B", "text": "Chỉ quan tâm đến phương Tây" },
-            { "key": "C", "text": "Sao chép nguyên bản không liên quan Việt Nam" },
-            { "key": "D", "text": "Bỏ qua truyền thống dân tộc" }
+            {
+              "key": "A",
+              "text": "Kế thừa giá trị nhân loại để đấu tranh cho quyền dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ quan tâm đến phương Tây"
+            },
+            {
+              "key": "C",
+              "text": "Sao chép nguyên bản không liên quan Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Bỏ qua truyền thống dân tộc"
+            }
           ],
           "correct": "A"
         },
@@ -454,10 +897,22 @@
           "order": 38,
           "text": "Yêu sách 1919 đòi hỏi chủ yếu điều gì?",
           "answers": [
-            { "key": "A", "text": "Quyền lập chính phủ độc lập ngay" },
-            { "key": "B", "text": "Quyền bình đẳng pháp lý và tự do, dân chủ cơ bản" },
-            { "key": "C", "text": "Chia đất nước làm 3 kỳ" },
-            { "key": "D", "text": "Quyền gia nhập Hội Quốc Liên" }
+            {
+              "key": "A",
+              "text": "Quyền lập chính phủ độc lập ngay"
+            },
+            {
+              "key": "B",
+              "text": "Quyền bình đẳng pháp lý và tự do, dân chủ cơ bản"
+            },
+            {
+              "key": "C",
+              "text": "Chia đất nước làm 3 kỳ"
+            },
+            {
+              "key": "D",
+              "text": "Quyền gia nhập Hội Quốc Liên"
+            }
           ],
           "correct": "B"
         },
@@ -466,10 +921,22 @@
           "order": 39,
           "text": "“Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước” nằm trong văn kiện nào?",
           "answers": [
-            { "key": "A", "text": "Di chúc" },
-            { "key": "B", "text": "Lời kêu gọi toàn quốc kháng chiến (19-12-1946)" },
-            { "key": "C", "text": "Hiệp định Sơ bộ" },
-            { "key": "D", "text": "Thư gửi đồng bào Nam Bộ" }
+            {
+              "key": "A",
+              "text": "Di chúc"
+            },
+            {
+              "key": "B",
+              "text": "Lời kêu gọi toàn quốc kháng chiến (19-12-1946)"
+            },
+            {
+              "key": "C",
+              "text": "Hiệp định Sơ bộ"
+            },
+            {
+              "key": "D",
+              "text": "Thư gửi đồng bào Nam Bộ"
+            }
           ],
           "correct": "B"
         },
@@ -478,23 +945,46 @@
           "order": 40,
           "text": "Theo Hồ Chí Minh, độc lập chỉ có ý nghĩa khi đi liền với:",
           "answers": [
-            { "key": "A", "text": "Sự công nhận của thực dân" },
-            { "key": "B", "text": "Tự do, hạnh phúc nhân dân" },
-            { "key": "C", "text": "Viện trợ kinh tế nước ngoài" },
-            { "key": "D", "text": "Chế độ phong kiến vững mạnh" }
+            {
+              "key": "A",
+              "text": "Sự công nhận của thực dân"
+            },
+            {
+              "key": "B",
+              "text": "Tự do, hạnh phúc nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Viện trợ kinh tế nước ngoài"
+            },
+            {
+              "key": "D",
+              "text": "Chế độ phong kiến vững mạnh"
+            }
           ],
           "correct": "B"
-        }
-        ,
+        },
         {
           "id": 141,
           "order": 41,
           "text": "Hồ Chí Minh yêu cầu thực hiện “Làm cho dân có ăn, có mặc, có chỗ ở, có học hành” trong hoàn cảnh nào?",
           "answers": [
-            { "key": "A", "text": "Ngay sau Cách mạng Tháng Tám 1945" },
-            { "key": "B", "text": "Sau Hiệp định Genève" },
-            { "key": "C", "text": "Khi đọc Tuyên ngôn Độc lập" },
-            { "key": "D", "text": "Khi gửi Yêu sách 1919" }
+            {
+              "key": "A",
+              "text": "Ngay sau Cách mạng Tháng Tám 1945"
+            },
+            {
+              "key": "B",
+              "text": "Sau Hiệp định Genève"
+            },
+            {
+              "key": "C",
+              "text": "Khi đọc Tuyên ngôn Độc lập"
+            },
+            {
+              "key": "D",
+              "text": "Khi gửi Yêu sách 1919"
+            }
           ],
           "correct": "A"
         },
@@ -503,10 +993,22 @@
           "order": 42,
           "text": "Một biểu hiện của “độc lập giả hiệu” mà Hồ Chí Minh phê phán là gì?",
           "answers": [
-            { "key": "A", "text": "Có cờ và quốc ca nhưng không có quân đội, ngoại giao, tài chính riêng" },
-            { "key": "B", "text": "Có tự quyết toàn diện" },
-            { "key": "C", "text": "Có hiến pháp độc lập" },
-            { "key": "D", "text": "Có thống nhất lãnh thổ" }
+            {
+              "key": "A",
+              "text": "Có cờ và quốc ca nhưng không có quân đội, ngoại giao, tài chính riêng"
+            },
+            {
+              "key": "B",
+              "text": "Có tự quyết toàn diện"
+            },
+            {
+              "key": "C",
+              "text": "Có hiến pháp độc lập"
+            },
+            {
+              "key": "D",
+              "text": "Có thống nhất lãnh thổ"
+            }
           ],
           "correct": "A"
         },
@@ -515,10 +1017,22 @@
           "order": 43,
           "text": "Hồ Chí Minh nhấn mạnh thống nhất Tổ quốc trong Di chúc với cụm từ nào?",
           "answers": [
-            { "key": "A", "text": "“Nước Nam ta có bao giờ được thế này chăng?”" },
-            { "key": "B", "text": "“Đồng bào Nam Bắc nhất định sẽ sum họp một nhà”" },
-            { "key": "C", "text": "“Chúng ta thà hy sinh tất cả”" },
-            { "key": "D", "text": "“Không có gì quý hơn độc lập, tự do”" }
+            {
+              "key": "A",
+              "text": "“Nước Nam ta có bao giờ được thế này chăng?”"
+            },
+            {
+              "key": "B",
+              "text": "“Đồng bào Nam Bắc nhất định sẽ sum họp một nhà”"
+            },
+            {
+              "key": "C",
+              "text": "“Chúng ta thà hy sinh tất cả”"
+            },
+            {
+              "key": "D",
+              "text": "“Không có gì quý hơn độc lập, tự do”"
+            }
           ],
           "correct": "B"
         },
@@ -527,10 +1041,22 @@
           "order": 44,
           "text": "Tại sao Hồ Chí Minh coi việc chống chia cắt đất nước là nhiệm vụ sống còn?",
           "answers": [
-            { "key": "A", "text": "Vì chia cắt sẽ làm mất giá trị độc lập, đe dọa sự tồn vong dân tộc" },
-            { "key": "B", "text": "Vì chia cắt dễ phát triển kinh tế vùng miền" },
-            { "key": "C", "text": "Vì chia cắt tạo điều kiện liên minh với ngoại bang" },
-            { "key": "D", "text": "Vì chia cắt làm tăng dân chủ" }
+            {
+              "key": "A",
+              "text": "Vì chia cắt sẽ làm mất giá trị độc lập, đe dọa sự tồn vong dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Vì chia cắt dễ phát triển kinh tế vùng miền"
+            },
+            {
+              "key": "C",
+              "text": "Vì chia cắt tạo điều kiện liên minh với ngoại bang"
+            },
+            {
+              "key": "D",
+              "text": "Vì chia cắt làm tăng dân chủ"
+            }
           ],
           "correct": "A"
         },
@@ -539,10 +1065,22 @@
           "order": 45,
           "text": "Khi nào Hồ Chí Minh viết “Thư gửi Liên Hợp Quốc” khẳng định nhân dân Việt Nam kiên quyết bảo vệ độc lập?",
           "answers": [
-            { "key": "A", "text": "1945" },
-            { "key": "B", "text": "1946" },
-            { "key": "C", "text": "1954" },
-            { "key": "D", "text": "1965" }
+            {
+              "key": "A",
+              "text": "1945"
+            },
+            {
+              "key": "B",
+              "text": "1946"
+            },
+            {
+              "key": "C",
+              "text": "1954"
+            },
+            {
+              "key": "D",
+              "text": "1965"
+            }
           ],
           "correct": "B"
         },
@@ -551,10 +1089,22 @@
           "order": 46,
           "text": "Theo Hồ Chí Minh, độc lập dân tộc có mối quan hệ thế nào với hòa bình?",
           "answers": [
-            { "key": "A", "text": "Độc lập đi liền với khát vọng hòa bình, nhưng sẵn sàng chiến đấu nếu bị xâm phạm" },
-            { "key": "B", "text": "Độc lập và hòa bình là hai khái niệm tách rời" },
-            { "key": "C", "text": "Muốn hòa bình phải từ bỏ độc lập" },
-            { "key": "D", "text": "Độc lập đồng nghĩa chiến tranh vĩnh viễn" }
+            {
+              "key": "A",
+              "text": "Độc lập đi liền với khát vọng hòa bình, nhưng sẵn sàng chiến đấu nếu bị xâm phạm"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập và hòa bình là hai khái niệm tách rời"
+            },
+            {
+              "key": "C",
+              "text": "Muốn hòa bình phải từ bỏ độc lập"
+            },
+            {
+              "key": "D",
+              "text": "Độc lập đồng nghĩa chiến tranh vĩnh viễn"
+            }
           ],
           "correct": "A"
         },
@@ -563,10 +1113,22 @@
           "order": 47,
           "text": "Hồ Chí Minh đã nhiều lần khẳng định mục tiêu “toàn vẹn lãnh thổ cho Tổ quốc” trong bối cảnh nào?",
           "answers": [
-            { "key": "A", "text": "Khi gửi thư cho Liên Hợp Quốc 1946" },
-            { "key": "B", "text": "Khi viết Di chúc" },
-            { "key": "C", "text": "Khi đọc Tuyên ngôn Độc lập" },
-            { "key": "D", "text": "Khi ký Hiệp định Paris" }
+            {
+              "key": "A",
+              "text": "Khi gửi thư cho Liên Hợp Quốc 1946"
+            },
+            {
+              "key": "B",
+              "text": "Khi viết Di chúc"
+            },
+            {
+              "key": "C",
+              "text": "Khi đọc Tuyên ngôn Độc lập"
+            },
+            {
+              "key": "D",
+              "text": "Khi ký Hiệp định Paris"
+            }
           ],
           "correct": "A"
         },
@@ -575,10 +1137,22 @@
           "order": 48,
           "text": "Quan niệm “độc lập cho dân tộc, tự do cho nhân dân” phản ánh tư tưởng gì?",
           "answers": [
-            { "key": "A", "text": "Độc lập gắn với dân chủ và quyền con người" },
-            { "key": "B", "text": "Độc lập chỉ cho tầng lớp lãnh đạo" },
-            { "key": "C", "text": "Độc lập tách rời nhân dân" },
-            { "key": "D", "text": "Độc lập chỉ chú trọng quân sự" }
+            {
+              "key": "A",
+              "text": "Độc lập gắn với dân chủ và quyền con người"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập chỉ cho tầng lớp lãnh đạo"
+            },
+            {
+              "key": "C",
+              "text": "Độc lập tách rời nhân dân"
+            },
+            {
+              "key": "D",
+              "text": "Độc lập chỉ chú trọng quân sự"
+            }
           ],
           "correct": "A"
         },
@@ -587,10 +1161,22 @@
           "order": 49,
           "text": "Khẩu hiệu nào dưới đây không phải của Hồ Chí Minh?",
           "answers": [
-            { "key": "A", "text": "“Không có gì quý hơn độc lập, tự do”" },
-            { "key": "B", "text": "“Dù khó khăn gian khổ đến mấy, nhân dân ta nhất định sẽ hoàn toàn thắng lợi”" },
-            { "key": "C", "text": "“Đồng bào Nam Bắc nhất định sẽ sum họp một nhà”" },
-            { "key": "D", "text": "“Độc lập trước hết để giàu sang phú quý cho giai cấp thống trị”" }
+            {
+              "key": "A",
+              "text": "“Không có gì quý hơn độc lập, tự do”"
+            },
+            {
+              "key": "B",
+              "text": "“Dù khó khăn gian khổ đến mấy, nhân dân ta nhất định sẽ hoàn toàn thắng lợi”"
+            },
+            {
+              "key": "C",
+              "text": "“Đồng bào Nam Bắc nhất định sẽ sum họp một nhà”"
+            },
+            {
+              "key": "D",
+              "text": "“Độc lập trước hết để giàu sang phú quý cho giai cấp thống trị”"
+            }
           ],
           "correct": "D"
         },
@@ -599,10 +1185,22 @@
           "order": 50,
           "text": "Ý nghĩa cốt lõi của tư tưởng Hồ Chí Minh về độc lập dân tộc là gì?",
           "answers": [
-            { "key": "A", "text": "Độc lập chỉ là phương tiện chính trị tạm thời" },
-            { "key": "B", "text": "Độc lập gắn liền với quyền sống, hạnh phúc, tự do, thống nhất toàn vẹn lãnh thổ" },
-            { "key": "C", "text": "Độc lập là ưu tiên của một nhóm nhỏ" },
-            { "key": "D", "text": "Độc lập không cần cho các dân tộc nhỏ bé" }
+            {
+              "key": "A",
+              "text": "Độc lập chỉ là phương tiện chính trị tạm thời"
+            },
+            {
+              "key": "B",
+              "text": "Độc lập gắn liền với quyền sống, hạnh phúc, tự do, thống nhất toàn vẹn lãnh thổ"
+            },
+            {
+              "key": "C",
+              "text": "Độc lập là ưu tiên của một nhóm nhỏ"
+            },
+            {
+              "key": "D",
+              "text": "Độc lập không cần cho các dân tộc nhỏ bé"
+            }
           ],
           "correct": "B"
         }
@@ -610,17 +1208,29 @@
     },
     {
       "id": 2,
-      "title": "Quiz 2",
+      "title": "Tư tưởng Hồ Chí Minh về Cách mạng giải phóng dân tộc",
       "questions": [
         {
           "id": 202,
           "order": 2,
           "text": "Sau khi chứng kiến sự thất bại của các phong trào yêu nước cuối thế kỷ XIX – đầu XX, Hồ Chí Minh nhận thấy nguyên nhân chính là gì?",
           "answers": [
-            { "key": "A", "text": "Thiếu sự ủng hộ của nhân dân" },
-            { "key": "B", "text": "Chưa có sự giúp đỡ quốc tế" },
-            { "key": "C", "text": "Khủng hoảng về giai cấp lãnh đạo và đường lối cách mạng" },
-            { "key": "D", "text": "Do thực dân Pháp quá mạnh" }
+            {
+              "key": "A",
+              "text": "Thiếu sự ủng hộ của nhân dân"
+            },
+            {
+              "key": "B",
+              "text": "Chưa có sự giúp đỡ quốc tế"
+            },
+            {
+              "key": "C",
+              "text": "Khủng hoảng về giai cấp lãnh đạo và đường lối cách mạng"
+            },
+            {
+              "key": "D",
+              "text": "Do thực dân Pháp quá mạnh"
+            }
           ],
           "correct": "C"
         },
@@ -629,10 +1239,22 @@
           "order": 3,
           "text": "Hồ Chí Minh không chọn con đường cách mạng tư sản vì:",
           "answers": [
-            { "key": "A", "text": "Cách mạng tư sản chỉ giải phóng giai cấp tư sản, không triệt để" },
-            { "key": "B", "text": "Tư sản là giai cấp phản động" },
-            { "key": "C", "text": "Tư sản không quan tâm đến thuộc địa" },
-            { "key": "D", "text": "Tư sản chỉ quan tâm đến quyền lợi của địa chủ" }
+            {
+              "key": "A",
+              "text": "Cách mạng tư sản chỉ giải phóng giai cấp tư sản, không triệt để"
+            },
+            {
+              "key": "B",
+              "text": "Tư sản là giai cấp phản động"
+            },
+            {
+              "key": "C",
+              "text": "Tư sản không quan tâm đến thuộc địa"
+            },
+            {
+              "key": "D",
+              "text": "Tư sản chỉ quan tâm đến quyền lợi của địa chủ"
+            }
           ],
           "correct": "A"
         },
@@ -641,10 +1263,22 @@
           "order": 4,
           "text": "Cách mạng Tháng Mười Nga thắng lợi năm 1917 đã giúp Hồ Chí Minh thấy:",
           "answers": [
-            { "key": "A", "text": "Sức mạnh của phong trào công nhân châu Âu" },
-            { "key": "B", "text": "Con đường cách mạng vô sản là con đường đúng đắn" },
-            { "key": "C", "text": "Chủ nghĩa dân tộc là giải pháp tối ưu" },
-            { "key": "D", "text": "Vai trò của tầng lớp tư sản dân tộc" }
+            {
+              "key": "A",
+              "text": "Sức mạnh của phong trào công nhân châu Âu"
+            },
+            {
+              "key": "B",
+              "text": "Con đường cách mạng vô sản là con đường đúng đắn"
+            },
+            {
+              "key": "C",
+              "text": "Chủ nghĩa dân tộc là giải pháp tối ưu"
+            },
+            {
+              "key": "D",
+              "text": "Vai trò của tầng lớp tư sản dân tộc"
+            }
           ],
           "correct": "B"
         },
@@ -653,10 +1287,22 @@
           "order": 5,
           "text": "Năm 1920, Hồ Chí Minh đọc “Sơ thảo lần thứ nhất Luận cương về vấn đề dân tộc và thuộc địa” của Lênin và khẳng định:",
           "answers": [
-            { "key": "A", "text": "Con đường cứu nước là cách mạng tư sản" },
-            { "key": "B", "text": "Chỉ có con đường cách mạng vô sản mới cứu được nước ta" },
-            { "key": "C", "text": "Phải dựa vào nông dân để giành thắng lợi" },
-            { "key": "D", "text": "Cần kết hợp với cách mạng tư sản ở phương Tây" }
+            {
+              "key": "A",
+              "text": "Con đường cứu nước là cách mạng tư sản"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ có con đường cách mạng vô sản mới cứu được nước ta"
+            },
+            {
+              "key": "C",
+              "text": "Phải dựa vào nông dân để giành thắng lợi"
+            },
+            {
+              "key": "D",
+              "text": "Cần kết hợp với cách mạng tư sản ở phương Tây"
+            }
           ],
           "correct": "B"
         },
@@ -665,10 +1311,22 @@
           "order": 6,
           "text": "Theo Hồ Chí Minh, trình tự giải phóng ở Việt Nam khác với Mác – Ăngghen ở châu Âu, vì:",
           "answers": [
-            { "key": "A", "text": "Việt Nam là nước thuộc địa nửa phong kiến" },
-            { "key": "B", "text": "Việt Nam có truyền thống văn hóa khác" },
-            { "key": "C", "text": "Nông dân chiếm đa số dân cư" },
-            { "key": "D", "text": "Tư sản dân tộc yếu" }
+            {
+              "key": "A",
+              "text": "Việt Nam là nước thuộc địa nửa phong kiến"
+            },
+            {
+              "key": "B",
+              "text": "Việt Nam có truyền thống văn hóa khác"
+            },
+            {
+              "key": "C",
+              "text": "Nông dân chiếm đa số dân cư"
+            },
+            {
+              "key": "D",
+              "text": "Tư sản dân tộc yếu"
+            }
           ],
           "correct": "A"
         },
@@ -677,10 +1335,22 @@
           "order": 7,
           "text": "Trong tác phẩm “Đường cách mệnh” (1927), Hồ Chí Minh khẳng định muốn làm cách mạng trước hết phải có:",
           "answers": [
-            { "key": "A", "text": "Lực lượng vũ trang" },
-            { "key": "B", "text": "Liên minh công – nông" },
-            { "key": "C", "text": "Sự giúp đỡ quốc tế" },
-            { "key": "D", "text": "Đảng cách mệnh" }
+            {
+              "key": "A",
+              "text": "Lực lượng vũ trang"
+            },
+            {
+              "key": "B",
+              "text": "Liên minh công – nông"
+            },
+            {
+              "key": "C",
+              "text": "Sự giúp đỡ quốc tế"
+            },
+            {
+              "key": "D",
+              "text": "Đảng cách mệnh"
+            }
           ],
           "correct": "D"
         },
@@ -689,10 +1359,22 @@
           "order": 8,
           "text": "Đảng Cộng sản Việt Nam được Hồ Chí Minh coi là:",
           "answers": [
-            { "key": "A", "text": "Đảng của giai cấp công nhân" },
-            { "key": "B", "text": "Đảng của giai cấp công nhân và nhân dân lao động" },
-            { "key": "C", "text": "Đảng của toàn dân tộc Việt Nam" },
-            { "key": "D", "text": "Cả B và C đúng" }
+            {
+              "key": "A",
+              "text": "Đảng của giai cấp công nhân"
+            },
+            {
+              "key": "B",
+              "text": "Đảng của giai cấp công nhân và nhân dân lao động"
+            },
+            {
+              "key": "C",
+              "text": "Đảng của toàn dân tộc Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Cả B và C đúng"
+            }
           ],
           "correct": "D"
         },
@@ -701,10 +1383,22 @@
           "order": 9,
           "text": "Đảng Cộng sản có vai trò quan trọng vì:",
           "answers": [
-            { "key": "A", "text": "Là người tổ chức, lãnh đạo và đưa cách mạng đến thắng lợi" },
-            { "key": "B", "text": "Đại diện lợi ích của tư sản dân tộc" },
-            { "key": "C", "text": "Tập hợp lực lượng nông dân" },
-            { "key": "D", "text": "Kêu gọi quốc tế giúp đỡ" }
+            {
+              "key": "A",
+              "text": "Là người tổ chức, lãnh đạo và đưa cách mạng đến thắng lợi"
+            },
+            {
+              "key": "B",
+              "text": "Đại diện lợi ích của tư sản dân tộc"
+            },
+            {
+              "key": "C",
+              "text": "Tập hợp lực lượng nông dân"
+            },
+            {
+              "key": "D",
+              "text": "Kêu gọi quốc tế giúp đỡ"
+            }
           ],
           "correct": "A"
         },
@@ -713,10 +1407,22 @@
           "order": 10,
           "text": "Theo Hồ Chí Minh: “cách mệnh là việc chung của dân chúng chứ không phải…”",
           "answers": [
-            { "key": "A", "text": "Của công nhân" },
-            { "key": "B", "text": "Của nông dân" },
-            { "key": "C", "text": "Của một hai người" },
-            { "key": "D", "text": "Của trí thức" }
+            {
+              "key": "A",
+              "text": "Của công nhân"
+            },
+            {
+              "key": "B",
+              "text": "Của nông dân"
+            },
+            {
+              "key": "C",
+              "text": "Của một hai người"
+            },
+            {
+              "key": "D",
+              "text": "Của trí thức"
+            }
           ],
           "correct": "C"
         },
@@ -725,10 +1431,22 @@
           "order": 11,
           "text": "Trong “Sách lược vắn tắt” (1930), lực lượng cách mạng được xác định là:",
           "answers": [
-            { "key": "A", "text": "Công nhân và nông dân" },
-            { "key": "B", "text": "Toàn dân tộc" },
-            { "key": "C", "text": "Công – nông – trí thức" },
-            { "key": "D", "text": "Nông dân là chủ yếu" }
+            {
+              "key": "A",
+              "text": "Công nhân và nông dân"
+            },
+            {
+              "key": "B",
+              "text": "Toàn dân tộc"
+            },
+            {
+              "key": "C",
+              "text": "Công – nông – trí thức"
+            },
+            {
+              "key": "D",
+              "text": "Nông dân là chủ yếu"
+            }
           ],
           "correct": "B"
         },
@@ -737,10 +1455,22 @@
           "order": 12,
           "text": "Hồ Chí Minh nhấn mạnh lực lượng cách mạng là toàn dân, nhưng không quên:",
           "answers": [
-            { "key": "A", "text": "Giai cấp tư sản dân tộc" },
-            { "key": "B", "text": "Công nông là gốc cách mệnh" },
-            { "key": "C", "text": "Trí thức là lãnh đạo" },
-            { "key": "D", "text": "Địa chủ tiến bộ là đồng minh" }
+            {
+              "key": "A",
+              "text": "Giai cấp tư sản dân tộc"
+            },
+            {
+              "key": "B",
+              "text": "Công nông là gốc cách mệnh"
+            },
+            {
+              "key": "C",
+              "text": "Trí thức là lãnh đạo"
+            },
+            {
+              "key": "D",
+              "text": "Địa chủ tiến bộ là đồng minh"
+            }
           ],
           "correct": "B"
         },
@@ -749,10 +1479,22 @@
           "order": 13,
           "text": "Trong “Lời kêu gọi toàn quốc kháng chiến” (1946), Hồ Chí Minh kêu gọi:",
           "answers": [
-            { "key": "A", "text": "Chỉ công – nông đứng lên" },
-            { "key": "B", "text": "Công nhân và trí thức tham gia" },
-            { "key": "C", "text": "Toàn thể người Việt Nam, không phân biệt giai cấp, tôn giáo, đảng phái" },
-            { "key": "D", "text": "Bộ đội chủ lực chiến đấu" }
+            {
+              "key": "A",
+              "text": "Chỉ công – nông đứng lên"
+            },
+            {
+              "key": "B",
+              "text": "Công nhân và trí thức tham gia"
+            },
+            {
+              "key": "C",
+              "text": "Toàn thể người Việt Nam, không phân biệt giai cấp, tôn giáo, đảng phái"
+            },
+            {
+              "key": "D",
+              "text": "Bộ đội chủ lực chiến đấu"
+            }
           ],
           "correct": "C"
         },
@@ -761,10 +1503,22 @@
           "order": 14,
           "text": "Quốc tế Cộng sản từng cho rằng cách mạng thuộc địa chỉ thắng lợi khi:",
           "answers": [
-            { "key": "A", "text": "Có sự giúp đỡ của Liên Xô" },
-            { "key": "B", "text": "Cách mạng vô sản ở chính quốc thắng lợi" },
-            { "key": "C", "text": "Nông dân nổi dậy mạnh mẽ" },
-            { "key": "D", "text": "Tư sản dân tộc lãnh đạo" }
+            {
+              "key": "A",
+              "text": "Có sự giúp đỡ của Liên Xô"
+            },
+            {
+              "key": "B",
+              "text": "Cách mạng vô sản ở chính quốc thắng lợi"
+            },
+            {
+              "key": "C",
+              "text": "Nông dân nổi dậy mạnh mẽ"
+            },
+            {
+              "key": "D",
+              "text": "Tư sản dân tộc lãnh đạo"
+            }
           ],
           "correct": "B"
         },
@@ -773,10 +1527,22 @@
           "order": 15,
           "text": "Hồ Chí Minh ví chủ nghĩa tư bản như một con đỉa với:",
           "answers": [
-            { "key": "A", "text": "Một vòi hút máu thuộc địa" },
-            { "key": "B", "text": "Một vòi hút máu công nhân chính quốc" },
-            { "key": "C", "text": "Hai vòi: một ở chính quốc, một ở thuộc địa" },
-            { "key": "D", "text": "Ba vòi: chính quốc, thuộc địa và nông dân" }
+            {
+              "key": "A",
+              "text": "Một vòi hút máu thuộc địa"
+            },
+            {
+              "key": "B",
+              "text": "Một vòi hút máu công nhân chính quốc"
+            },
+            {
+              "key": "C",
+              "text": "Hai vòi: một ở chính quốc, một ở thuộc địa"
+            },
+            {
+              "key": "D",
+              "text": "Ba vòi: chính quốc, thuộc địa và nông dân"
+            }
           ],
           "correct": "C"
         },
@@ -785,10 +1551,22 @@
           "order": 16,
           "text": "Hồ Chí Minh cho rằng cách mạng thuộc địa:",
           "answers": [
-            { "key": "A", "text": "Phải phụ thuộc cách mạng chính quốc" },
-            { "key": "B", "text": "Có thể thắng lợi trước cách mạng vô sản ở chính quốc" },
-            { "key": "C", "text": "Chỉ thắng lợi sau cách mạng chính quốc" },
-            { "key": "D", "text": "Không có khả năng thắng lợi" }
+            {
+              "key": "A",
+              "text": "Phải phụ thuộc cách mạng chính quốc"
+            },
+            {
+              "key": "B",
+              "text": "Có thể thắng lợi trước cách mạng vô sản ở chính quốc"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ thắng lợi sau cách mạng chính quốc"
+            },
+            {
+              "key": "D",
+              "text": "Không có khả năng thắng lợi"
+            }
           ],
           "correct": "B"
         },
@@ -797,10 +1575,22 @@
           "order": 17,
           "text": "Cơ sở để Hồ Chí Minh khẳng định thuộc địa có thể thắng lợi trước là:",
           "answers": [
-            { "key": "A", "text": "Thuộc địa là nơi yếu nhất của chủ nghĩa đế quốc" },
-            { "key": "B", "text": "Nông dân đông đảo" },
-            { "key": "C", "text": "Công nhân giác ngộ sớm" },
-            { "key": "D", "text": "Được Liên Xô viện trợ" }
+            {
+              "key": "A",
+              "text": "Thuộc địa là nơi yếu nhất của chủ nghĩa đế quốc"
+            },
+            {
+              "key": "B",
+              "text": "Nông dân đông đảo"
+            },
+            {
+              "key": "C",
+              "text": "Công nhân giác ngộ sớm"
+            },
+            {
+              "key": "D",
+              "text": "Được Liên Xô viện trợ"
+            }
           ],
           "correct": "A"
         },
@@ -809,10 +1599,22 @@
           "order": 18,
           "text": "Ai là người nói “Bạo lực là bà đỡ của một xã hội cũ đang thai nghén xã hội mới”?",
           "answers": [
-            { "key": "A", "text": "C.Mác" },
-            { "key": "B", "text": "Ph.Ăngghen" },
-            { "key": "C", "text": "V.I.Lênin" },
-            { "key": "D", "text": "Hồ Chí Minh" }
+            {
+              "key": "A",
+              "text": "C.Mác"
+            },
+            {
+              "key": "B",
+              "text": "Ph.Ăngghen"
+            },
+            {
+              "key": "C",
+              "text": "V.I.Lênin"
+            },
+            {
+              "key": "D",
+              "text": "Hồ Chí Minh"
+            }
           ],
           "correct": "A"
         },
@@ -821,10 +1623,22 @@
           "order": 19,
           "text": "Hồ Chí Minh khẳng định muốn giành chính quyền và bảo vệ chính quyền phải dùng:",
           "answers": [
-            { "key": "A", "text": "Con đường hòa bình" },
-            { "key": "B", "text": "Bạo lực cách mạng chống bạo lực phản cách mạng" },
-            { "key": "C", "text": "Thương thuyết ngoại giao" },
-            { "key": "D", "text": "Liên minh với tư sản dân tộc" }
+            {
+              "key": "A",
+              "text": "Con đường hòa bình"
+            },
+            {
+              "key": "B",
+              "text": "Bạo lực cách mạng chống bạo lực phản cách mạng"
+            },
+            {
+              "key": "C",
+              "text": "Thương thuyết ngoại giao"
+            },
+            {
+              "key": "D",
+              "text": "Liên minh với tư sản dân tộc"
+            }
           ],
           "correct": "B"
         },
@@ -833,10 +1647,22 @@
           "order": 20,
           "text": "Theo Hồ Chí Minh, bạo lực cách mạng bao gồm:",
           "answers": [
-            { "key": "A", "text": "Chỉ có đấu tranh vũ trang" },
-            { "key": "B", "text": "Đấu tranh chính trị và đấu tranh vũ trang" },
-            { "key": "C", "text": "Chỉ có đấu tranh chính trị" },
-            { "key": "D", "text": "Bạo động tự phát" }
+            {
+              "key": "A",
+              "text": "Chỉ có đấu tranh vũ trang"
+            },
+            {
+              "key": "B",
+              "text": "Đấu tranh chính trị và đấu tranh vũ trang"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ có đấu tranh chính trị"
+            },
+            {
+              "key": "D",
+              "text": "Bạo động tự phát"
+            }
           ],
           "correct": "B"
         },
@@ -845,10 +1671,22 @@
           "order": 21,
           "text": "Trong Cách mạng Tháng Tám 1945, yếu tố quyết định thắng lợi là:",
           "answers": [
-            { "key": "A", "text": "Lực lượng vũ trang chủ lực" },
-            { "key": "B", "text": "Sự giúp đỡ quốc tế" },
-            { "key": "C", "text": "Tổng khởi nghĩa toàn dân, kết hợp đấu tranh chính trị và vũ trang" },
-            { "key": "D", "text": "Chỉ dựa vào công nhân" }
+            {
+              "key": "A",
+              "text": "Lực lượng vũ trang chủ lực"
+            },
+            {
+              "key": "B",
+              "text": "Sự giúp đỡ quốc tế"
+            },
+            {
+              "key": "C",
+              "text": "Tổng khởi nghĩa toàn dân, kết hợp đấu tranh chính trị và vũ trang"
+            },
+            {
+              "key": "D",
+              "text": "Chỉ dựa vào công nhân"
+            }
           ],
           "correct": "C"
         },
@@ -857,10 +1695,22 @@
           "order": 22,
           "text": "Theo Hồ Chí Minh, “Độc lập dân tộc gắn liền với…”",
           "answers": [
-            { "key": "A", "text": "Chủ nghĩa tư bản" },
-            { "key": "B", "text": "Chủ nghĩa xã hội" },
-            { "key": "C", "text": "Chủ nghĩa dân tộc" },
-            { "key": "D", "text": "Nông dân" }
+            {
+              "key": "A",
+              "text": "Chủ nghĩa tư bản"
+            },
+            {
+              "key": "B",
+              "text": "Chủ nghĩa xã hội"
+            },
+            {
+              "key": "C",
+              "text": "Chủ nghĩa dân tộc"
+            },
+            {
+              "key": "D",
+              "text": "Nông dân"
+            }
           ],
           "correct": "B"
         },
@@ -869,10 +1719,22 @@
           "order": 23,
           "text": "Trong Chánh cương vắn tắt (1930), nhiệm vụ hàng đầu của cách mạng Việt Nam là:",
           "answers": [
-            { "key": "A", "text": "Giành ruộng đất cho nông dân" },
-            { "key": "B", "text": "Đánh đổ đế quốc và phong kiến, làm nước Nam độc lập" },
-            { "key": "C", "text": "Xây dựng xã hội cộng sản ngay" },
-            { "key": "D", "text": "Đoàn kết với phong trào công nhân quốc tế" }
+            {
+              "key": "A",
+              "text": "Giành ruộng đất cho nông dân"
+            },
+            {
+              "key": "B",
+              "text": "Đánh đổ đế quốc và phong kiến, làm nước Nam độc lập"
+            },
+            {
+              "key": "C",
+              "text": "Xây dựng xã hội cộng sản ngay"
+            },
+            {
+              "key": "D",
+              "text": "Đoàn kết với phong trào công nhân quốc tế"
+            }
           ],
           "correct": "B"
         },
@@ -881,10 +1743,22 @@
           "order": 24,
           "text": "Trong Chánh cương vắn tắt (1930), Hồ Chí Minh chỉ nêu:",
           "answers": [
-            { "key": "A", "text": "Người cày có ruộng" },
-            { "key": "B", "text": "Chia ruộng đất đế quốc cho dân cày nghèo" },
-            { "key": "C", "text": "Quốc hữu hóa toàn bộ ruộng đất" },
-            { "key": "D", "text": "Chia ruộng đất cho cả phú nông" }
+            {
+              "key": "A",
+              "text": "Người cày có ruộng"
+            },
+            {
+              "key": "B",
+              "text": "Chia ruộng đất đế quốc cho dân cày nghèo"
+            },
+            {
+              "key": "C",
+              "text": "Quốc hữu hóa toàn bộ ruộng đất"
+            },
+            {
+              "key": "D",
+              "text": "Chia ruộng đất cho cả phú nông"
+            }
           ],
           "correct": "B"
         },
@@ -893,10 +1767,22 @@
           "order": 25,
           "text": "Trong Báo cáo chính trị Đại hội II (1951), Hồ Chí Minh khẳng định Đảng Lao động Việt Nam là:",
           "answers": [
-            { "key": "A", "text": "Đảng của giai cấp công nhân" },
-            { "key": "B", "text": "Đảng của nông dân" },
-            { "key": "C", "text": "Đảng của giai cấp công nhân và dân tộc Việt Nam" },
-            { "key": "D", "text": "Đảng của trí thức" }
+            {
+              "key": "A",
+              "text": "Đảng của giai cấp công nhân"
+            },
+            {
+              "key": "B",
+              "text": "Đảng của nông dân"
+            },
+            {
+              "key": "C",
+              "text": "Đảng của giai cấp công nhân và dân tộc Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Đảng của trí thức"
+            }
           ],
           "correct": "C"
         },
@@ -905,10 +1791,22 @@
           "order": 26,
           "text": "Theo Hồ Chí Minh, sức mạnh cách mạng đến từ:",
           "answers": [
-            { "key": "A", "text": "Lực lượng công nhân quốc tế" },
-            { "key": "B", "text": "Sự giúp đỡ của Liên Xô và Trung Quốc" },
-            { "key": "C", "text": "Sự đoàn kết toàn dân, lấy công – nông làm gốc" },
-            { "key": "D", "text": "Tư sản dân tộc tiến bộ" }
+            {
+              "key": "A",
+              "text": "Lực lượng công nhân quốc tế"
+            },
+            {
+              "key": "B",
+              "text": "Sự giúp đỡ của Liên Xô và Trung Quốc"
+            },
+            {
+              "key": "C",
+              "text": "Sự đoàn kết toàn dân, lấy công – nông làm gốc"
+            },
+            {
+              "key": "D",
+              "text": "Tư sản dân tộc tiến bộ"
+            }
           ],
           "correct": "C"
         },
@@ -917,10 +1815,22 @@
           "order": 27,
           "text": "Khi nói “Nếu thua thì chỉ mất kiếp khổ, nếu được thì được cả thế giới”, Hồ Chí Minh muốn chỉ:",
           "answers": [
-            { "key": "A", "text": "Trí thức" },
-            { "key": "B", "text": "Công – nông" },
-            { "key": "C", "text": "Tư sản" },
-            { "key": "D", "text": "Địa chủ tiến bộ" }
+            {
+              "key": "A",
+              "text": "Trí thức"
+            },
+            {
+              "key": "B",
+              "text": "Công – nông"
+            },
+            {
+              "key": "C",
+              "text": "Tư sản"
+            },
+            {
+              "key": "D",
+              "text": "Địa chủ tiến bộ"
+            }
           ],
           "correct": "B"
         },
@@ -929,10 +1839,22 @@
           "order": 28,
           "text": "Khi thực dân Pháp xâm lược lần thứ hai, Hồ Chí Minh ra lời kêu gọi:",
           "answers": [
-            { "key": "A", "text": "Toàn quốc kháng chiến (1946)" },
-            { "key": "B", "text": "Kháng chiến chống Mỹ cứu nước" },
-            { "key": "C", "text": "Thành lập Việt Minh" },
-            { "key": "D", "text": "Cải cách ruộng đất" }
+            {
+              "key": "A",
+              "text": "Toàn quốc kháng chiến (1946)"
+            },
+            {
+              "key": "B",
+              "text": "Kháng chiến chống Mỹ cứu nước"
+            },
+            {
+              "key": "C",
+              "text": "Thành lập Việt Minh"
+            },
+            {
+              "key": "D",
+              "text": "Cải cách ruộng đất"
+            }
           ],
           "correct": "A"
         },
@@ -941,10 +1863,22 @@
           "order": 29,
           "text": "Theo Hồ Chí Minh, “nọc độc và sức sống của con rắn độc tư bản chủ nghĩa” tập trung ở:",
           "answers": [
-            { "key": "A", "text": "Chính quốc" },
-            { "key": "B", "text": "Các thuộc địa" },
-            { "key": "C", "text": "Trung tâm công nghiệp" },
-            { "key": "D", "text": "Tầng lớp tư sản" }
+            {
+              "key": "A",
+              "text": "Chính quốc"
+            },
+            {
+              "key": "B",
+              "text": "Các thuộc địa"
+            },
+            {
+              "key": "C",
+              "text": "Trung tâm công nghiệp"
+            },
+            {
+              "key": "D",
+              "text": "Tầng lớp tư sản"
+            }
           ],
           "correct": "B"
         },
@@ -953,10 +1887,22 @@
           "order": 30,
           "text": "Thắng lợi Cách mạng Tháng Tám 1945 chứng minh luận điểm nào của Hồ Chí Minh?",
           "answers": [
-            { "key": "A", "text": "Cách mạng thuộc địa có thể thắng lợi trước chính quốc" },
-            { "key": "B", "text": "Tư sản dân tộc có thể lãnh đạo cách mạng" },
-            { "key": "C", "text": "Chỉ có bạo lực vũ trang mới giành được độc lập" },
-            { "key": "D", "text": "Quốc tế Cộng sản luôn đúng" }
+            {
+              "key": "A",
+              "text": "Cách mạng thuộc địa có thể thắng lợi trước chính quốc"
+            },
+            {
+              "key": "B",
+              "text": "Tư sản dân tộc có thể lãnh đạo cách mạng"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ có bạo lực vũ trang mới giành được độc lập"
+            },
+            {
+              "key": "D",
+              "text": "Quốc tế Cộng sản luôn đúng"
+            }
           ],
           "correct": "A"
         },
@@ -965,10 +1911,22 @@
           "order": 31,
           "text": "Theo Hồ Chí Minh, yếu tố quyết định thắng lợi của cách mạng Việt Nam là:",
           "answers": [
-            { "key": "A", "text": "Sự lãnh đạo của Đảng Cộng sản" },
-            { "key": "B", "text": "Lực lượng vũ trang hùng mạnh" },
-            { "key": "C", "text": "Giúp đỡ từ Liên Xô, Trung Quốc" },
-            { "key": "D", "text": "Vai trò của tư sản dân tộc" }
+            {
+              "key": "A",
+              "text": "Sự lãnh đạo của Đảng Cộng sản"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng vũ trang hùng mạnh"
+            },
+            {
+              "key": "C",
+              "text": "Giúp đỡ từ Liên Xô, Trung Quốc"
+            },
+            {
+              "key": "D",
+              "text": "Vai trò của tư sản dân tộc"
+            }
           ],
           "correct": "A"
         },
@@ -977,10 +1935,22 @@
           "order": 32,
           "text": "Hồ Chí Minh đã từng nói: “Muốn cứu nước và giải phóng dân tộc không có con đường nào khác…”",
           "answers": [
-            { "key": "A", "text": "Con đường dân tộc chủ nghĩa" },
-            { "key": "B", "text": "Con đường cách mạng vô sản" },
-            { "key": "C", "text": "Con đường cách mạng tư sản" },
-            { "key": "D", "text": "Con đường cải lương" }
+            {
+              "key": "A",
+              "text": "Con đường dân tộc chủ nghĩa"
+            },
+            {
+              "key": "B",
+              "text": "Con đường cách mạng vô sản"
+            },
+            {
+              "key": "C",
+              "text": "Con đường cách mạng tư sản"
+            },
+            {
+              "key": "D",
+              "text": "Con đường cải lương"
+            }
           ],
           "correct": "B"
         },
@@ -989,10 +1959,22 @@
           "order": 33,
           "text": "Trong “Con đường dẫn tôi đến chủ nghĩa Lênin”, Hồ Chí Minh kể lại khi đọc Luận cương của Lênin, Người đã:",
           "answers": [
-            { "key": "A", "text": "Buồn bã vì chưa tìm thấy con đường cứu nước" },
-            { "key": "B", "text": "Vui mừng đến phát khóc" },
-            { "key": "C", "text": "Quyết định trở về ngay nước nhà" },
-            { "key": "D", "text": "Gia nhập Quốc tế II" }
+            {
+              "key": "A",
+              "text": "Buồn bã vì chưa tìm thấy con đường cứu nước"
+            },
+            {
+              "key": "B",
+              "text": "Vui mừng đến phát khóc"
+            },
+            {
+              "key": "C",
+              "text": "Quyết định trở về ngay nước nhà"
+            },
+            {
+              "key": "D",
+              "text": "Gia nhập Quốc tế II"
+            }
           ],
           "correct": "B"
         },
@@ -1001,10 +1983,22 @@
           "order": 34,
           "text": "Hồ Chí Minh nhận xét về cách mạng Pháp và Mỹ:",
           "answers": [
-            { "key": "A", "text": "Là cách mạng triệt để nhất" },
-            { "key": "B", "text": "Đem lại độc lập và tự do thật sự" },
-            { "key": "C", "text": "Chỉ là cách mạng tư sản, không đến nơi" },
-            { "key": "D", "text": "Có thể làm mẫu cho Việt Nam" }
+            {
+              "key": "A",
+              "text": "Là cách mạng triệt để nhất"
+            },
+            {
+              "key": "B",
+              "text": "Đem lại độc lập và tự do thật sự"
+            },
+            {
+              "key": "C",
+              "text": "Chỉ là cách mạng tư sản, không đến nơi"
+            },
+            {
+              "key": "D",
+              "text": "Có thể làm mẫu cho Việt Nam"
+            }
           ],
           "correct": "C"
         },
@@ -1013,10 +2007,22 @@
           "order": 35,
           "text": "Theo Hồ Chí Minh, giải phóng dân tộc ở Việt Nam phải đặt ở vị trí:",
           "answers": [
-            { "key": "A", "text": "Sau giải phóng giai cấp" },
-            { "key": "B", "text": "Trước hết, trên hết" },
-            { "key": "C", "text": "Đồng thời với giải phóng giai cấp" },
-            { "key": "D", "text": "Không quan trọng" }
+            {
+              "key": "A",
+              "text": "Sau giải phóng giai cấp"
+            },
+            {
+              "key": "B",
+              "text": "Trước hết, trên hết"
+            },
+            {
+              "key": "C",
+              "text": "Đồng thời với giải phóng giai cấp"
+            },
+            {
+              "key": "D",
+              "text": "Không quan trọng"
+            }
           ],
           "correct": "B"
         },
@@ -1025,10 +2031,22 @@
           "order": 36,
           "text": "Hồ Chí Minh tiếp thu quan điểm Mác – Lênin và khẳng định: Đảng Cộng sản là nhân tố…",
           "answers": [
-            { "key": "A", "text": "Quyết định sự thắng lợi của cách mạng" },
-            { "key": "B", "text": "Tập hợp tư sản dân tộc" },
-            { "key": "C", "text": "Lãnh đạo phong trào nông dân" },
-            { "key": "D", "text": "Hỗ trợ phong trào quốc tế" }
+            {
+              "key": "A",
+              "text": "Quyết định sự thắng lợi của cách mạng"
+            },
+            {
+              "key": "B",
+              "text": "Tập hợp tư sản dân tộc"
+            },
+            {
+              "key": "C",
+              "text": "Lãnh đạo phong trào nông dân"
+            },
+            {
+              "key": "D",
+              "text": "Hỗ trợ phong trào quốc tế"
+            }
           ],
           "correct": "A"
         },
@@ -1037,10 +2055,22 @@
           "order": 37,
           "text": "Hồ Chí Minh coi Đảng Cộng sản Việt Nam là:",
           "answers": [
-            { "key": "A", "text": "Đảng chỉ của công nhân" },
-            { "key": "B", "text": "Đảng chỉ của nông dân" },
-            { "key": "C", "text": "Đảng của giai cấp công nhân, nhân dân lao động và dân tộc Việt Nam" },
-            { "key": "D", "text": "Đảng của trí thức" }
+            {
+              "key": "A",
+              "text": "Đảng chỉ của công nhân"
+            },
+            {
+              "key": "B",
+              "text": "Đảng chỉ của nông dân"
+            },
+            {
+              "key": "C",
+              "text": "Đảng của giai cấp công nhân, nhân dân lao động và dân tộc Việt Nam"
+            },
+            {
+              "key": "D",
+              "text": "Đảng của trí thức"
+            }
           ],
           "correct": "C"
         },
@@ -1049,10 +2079,22 @@
           "order": 38,
           "text": "Trong tác phẩm nào Hồ Chí Minh lần đầu nhấn mạnh phải có đảng cách mệnh?",
           "answers": [
-            { "key": "A", "text": "Bản án chế độ thực dân Pháp" },
-            { "key": "B", "text": "Đường cách mệnh" },
-            { "key": "C", "text": "Sơ thảo chính cương vắn tắt" },
-            { "key": "D", "text": "Lời kêu gọi toàn quốc kháng chiến" }
+            {
+              "key": "A",
+              "text": "Bản án chế độ thực dân Pháp"
+            },
+            {
+              "key": "B",
+              "text": "Đường cách mệnh"
+            },
+            {
+              "key": "C",
+              "text": "Sơ thảo chính cương vắn tắt"
+            },
+            {
+              "key": "D",
+              "text": "Lời kêu gọi toàn quốc kháng chiến"
+            }
           ],
           "correct": "B"
         },
@@ -1061,10 +2103,22 @@
           "order": 39,
           "text": "Câu nói: “Đảng có vững cách mệnh mới thành công…” là của Hồ Chí Minh trong:",
           "answers": [
-            { "key": "A", "text": "Chánh cương vắn tắt" },
-            { "key": "B", "text": "Đường cách mệnh" },
-            { "key": "C", "text": "Bản án chế độ thực dân Pháp" },
-            { "key": "D", "text": "Sách lược vắn tắt" }
+            {
+              "key": "A",
+              "text": "Chánh cương vắn tắt"
+            },
+            {
+              "key": "B",
+              "text": "Đường cách mệnh"
+            },
+            {
+              "key": "C",
+              "text": "Bản án chế độ thực dân Pháp"
+            },
+            {
+              "key": "D",
+              "text": "Sách lược vắn tắt"
+            }
           ],
           "correct": "B"
         },
@@ -1073,10 +2127,22 @@
           "order": 40,
           "text": "Hồ Chí Minh khẳng định “Có dân là có tất cả, mất dân là mất tất cả”. Quan điểm này nhấn mạnh:",
           "answers": [
-            { "key": "A", "text": "Sức mạnh của liên minh công nông" },
-            { "key": "B", "text": "Vai trò quyết định của nhân dân" },
-            { "key": "C", "text": "Sự lãnh đạo của Đảng" },
-            { "key": "D", "text": "Sự giúp đỡ quốc tế" }
+            {
+              "key": "A",
+              "text": "Sức mạnh của liên minh công nông"
+            },
+            {
+              "key": "B",
+              "text": "Vai trò quyết định của nhân dân"
+            },
+            {
+              "key": "C",
+              "text": "Sự lãnh đạo của Đảng"
+            },
+            {
+              "key": "D",
+              "text": "Sự giúp đỡ quốc tế"
+            }
           ],
           "correct": "B"
         },
@@ -1085,23 +2151,46 @@
           "order": 41,
           "text": "Trong thời kỳ kháng chiến chống Pháp, Hồ Chí Minh chủ trương đoàn kết:",
           "answers": [
-            { "key": "A", "text": "Chỉ công nhân và nông dân" },
-            { "key": "B", "text": "Chỉ trí thức và công nhân" },
-            { "key": "C", "text": "Toàn dân tộc, không phân biệt giai cấp, tôn giáo, đảng phái" },
-            { "key": "D", "text": "Công – nông – trí thức" }
+            {
+              "key": "A",
+              "text": "Chỉ công nhân và nông dân"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ trí thức và công nhân"
+            },
+            {
+              "key": "C",
+              "text": "Toàn dân tộc, không phân biệt giai cấp, tôn giáo, đảng phái"
+            },
+            {
+              "key": "D",
+              "text": "Công – nông – trí thức"
+            }
           ],
           "correct": "C"
-        }
-        ,
+        },
         {
           "id": 242,
           "order": 42,
           "text": "Trong Sách lược vắn tắt (1930), Hồ Chí Minh cho rằng đối với phú nông, trung tiểu địa chủ và tư bản Việt Nam:",
           "answers": [
-            { "key": "A", "text": "Đều phải tiêu diệt" },
-            { "key": "B", "text": "Cần tranh thủ hoặc làm cho họ trung lập" },
-            { "key": "C", "text": "Tuyệt đối không liên minh" },
-            { "key": "D", "text": "Phải giao ruộng đất ngay cho nông dân" }
+            {
+              "key": "A",
+              "text": "Đều phải tiêu diệt"
+            },
+            {
+              "key": "B",
+              "text": "Cần tranh thủ hoặc làm cho họ trung lập"
+            },
+            {
+              "key": "C",
+              "text": "Tuyệt đối không liên minh"
+            },
+            {
+              "key": "D",
+              "text": "Phải giao ruộng đất ngay cho nông dân"
+            }
           ],
           "correct": "B"
         },
@@ -1110,10 +2199,22 @@
           "order": 43,
           "text": "Lực lượng nào được Hồ Chí Minh coi là “gốc cách mệnh”?",
           "answers": [
-            { "key": "A", "text": "Công nhân" },
-            { "key": "B", "text": "Nông dân" },
-            { "key": "C", "text": "Công – nông" },
-            { "key": "D", "text": "Trí thức" }
+            {
+              "key": "A",
+              "text": "Công nhân"
+            },
+            {
+              "key": "B",
+              "text": "Nông dân"
+            },
+            {
+              "key": "C",
+              "text": "Công – nông"
+            },
+            {
+              "key": "D",
+              "text": "Trí thức"
+            }
           ],
           "correct": "C"
         },
@@ -1122,10 +2223,22 @@
           "order": 44,
           "text": "Trong Bản án chế độ thực dân Pháp (1925), Hồ Chí Minh viết: Chủ nghĩa tư bản như một con đỉa có…",
           "answers": [
-            { "key": "A", "text": "Một vòi" },
-            { "key": "B", "text": "Hai vòi" },
-            { "key": "C", "text": "Ba vòi" },
-            { "key": "D", "text": "Nhiều vòi" }
+            {
+              "key": "A",
+              "text": "Một vòi"
+            },
+            {
+              "key": "B",
+              "text": "Hai vòi"
+            },
+            {
+              "key": "C",
+              "text": "Ba vòi"
+            },
+            {
+              "key": "D",
+              "text": "Nhiều vòi"
+            }
           ],
           "correct": "B"
         },
@@ -1134,10 +2247,22 @@
           "order": 45,
           "text": "Hồ Chí Minh cho rằng, cách mạng thuộc địa có vai trò:",
           "answers": [
-            { "key": "A", "text": "Bổ sung cho cách mạng chính quốc" },
-            { "key": "B", "text": "Phụ thuộc hoàn toàn vào chính quốc" },
-            { "key": "C", "text": "Có thể đi trước và hỗ trợ cách mạng chính quốc" },
-            { "key": "D", "text": "Không quan trọng bằng chính quốc" }
+            {
+              "key": "A",
+              "text": "Bổ sung cho cách mạng chính quốc"
+            },
+            {
+              "key": "B",
+              "text": "Phụ thuộc hoàn toàn vào chính quốc"
+            },
+            {
+              "key": "C",
+              "text": "Có thể đi trước và hỗ trợ cách mạng chính quốc"
+            },
+            {
+              "key": "D",
+              "text": "Không quan trọng bằng chính quốc"
+            }
           ],
           "correct": "C"
         },
@@ -1146,10 +2271,22 @@
           "order": 46,
           "text": "Câu nói: “Nọc độc và sức sống của con rắn độc tư bản chủ nghĩa đang tập trung ở các thuộc địa” là của:",
           "answers": [
-            { "key": "A", "text": "V.I.Lênin" },
-            { "key": "B", "text": "Hồ Chí Minh" },
-            { "key": "C", "text": "C.Mác" },
-            { "key": "D", "text": "Ph.Ăngghen" }
+            {
+              "key": "A",
+              "text": "V.I.Lênin"
+            },
+            {
+              "key": "B",
+              "text": "Hồ Chí Minh"
+            },
+            {
+              "key": "C",
+              "text": "C.Mác"
+            },
+            {
+              "key": "D",
+              "text": "Ph.Ăngghen"
+            }
           ],
           "correct": "B"
         },
@@ -1158,10 +2295,22 @@
           "order": 47,
           "text": "Thực tiễn chứng minh luận điểm “cách mạng thuộc địa có thể thắng lợi trước chính quốc” của Hồ Chí Minh là:",
           "answers": [
-            { "key": "A", "text": "Thắng lợi Cách mạng Tháng Tám 1945 ở Việt Nam" },
-            { "key": "B", "text": "Thắng lợi Cách mạng Tháng Mười Nga 1917" },
-            { "key": "C", "text": "Khởi nghĩa Xô viết Nghệ Tĩnh 1930-31" },
-            { "key": "D", "text": "Phong trào Dân chủ 1936-39" }
+            {
+              "key": "A",
+              "text": "Thắng lợi Cách mạng Tháng Tám 1945 ở Việt Nam"
+            },
+            {
+              "key": "B",
+              "text": "Thắng lợi Cách mạng Tháng Mười Nga 1917"
+            },
+            {
+              "key": "C",
+              "text": "Khởi nghĩa Xô viết Nghệ Tĩnh 1930-31"
+            },
+            {
+              "key": "D",
+              "text": "Phong trào Dân chủ 1936-39"
+            }
           ],
           "correct": "A"
         },
@@ -1170,10 +2319,22 @@
           "order": 48,
           "text": "Ai khẳng định: “Bạo lực còn là bà đỡ cho mọi xã hội cũ đang thai nghén xã hội mới”?",
           "answers": [
-            { "key": "A", "text": "Hồ Chí Minh" },
-            { "key": "B", "text": "C.Mác" },
-            { "key": "C", "text": "Ph.Ăngghen" },
-            { "key": "D", "text": "V.I.Lênin" }
+            {
+              "key": "A",
+              "text": "Hồ Chí Minh"
+            },
+            {
+              "key": "B",
+              "text": "C.Mác"
+            },
+            {
+              "key": "C",
+              "text": "Ph.Ăngghen"
+            },
+            {
+              "key": "D",
+              "text": "V.I.Lênin"
+            }
           ],
           "correct": "C"
         },
@@ -1182,10 +2343,22 @@
           "order": 49,
           "text": "Hồ Chí Minh cho rằng, bản chất của chế độ thực dân là:",
           "answers": [
-            { "key": "A", "text": "Một hành động khai hóa văn minh" },
-            { "key": "B", "text": "Một hành động hợp tác bình đẳng" },
-            { "key": "C", "text": "Một hành động bạo lực của kẻ mạnh với kẻ yếu" },
-            { "key": "D", "text": "Một sự giúp đỡ quốc tế" }
+            {
+              "key": "A",
+              "text": "Một hành động khai hóa văn minh"
+            },
+            {
+              "key": "B",
+              "text": "Một hành động hợp tác bình đẳng"
+            },
+            {
+              "key": "C",
+              "text": "Một hành động bạo lực của kẻ mạnh với kẻ yếu"
+            },
+            {
+              "key": "D",
+              "text": "Một sự giúp đỡ quốc tế"
+            }
           ],
           "correct": "C"
         },
@@ -1194,10 +2367,22 @@
           "order": 50,
           "text": "Hình thức đấu tranh cách mạng theo Hồ Chí Minh phải là:",
           "answers": [
-            { "key": "A", "text": "Chỉ vũ trang" },
-            { "key": "B", "text": "Chỉ chính trị" },
-            { "key": "C", "text": "Kết hợp chính trị và vũ trang" },
-            { "key": "D", "text": "Hòa bình, thỏa hiệp" }
+            {
+              "key": "A",
+              "text": "Chỉ vũ trang"
+            },
+            {
+              "key": "B",
+              "text": "Chỉ chính trị"
+            },
+            {
+              "key": "C",
+              "text": "Kết hợp chính trị và vũ trang"
+            },
+            {
+              "key": "D",
+              "text": "Hòa bình, thỏa hiệp"
+            }
           ],
           "correct": "C"
         },
@@ -1206,10 +2391,22 @@
           "order": 51,
           "text": "Trong Cách mạng Tháng Tám, lực lượng chủ yếu quyết định thắng lợi là:",
           "answers": [
-            { "key": "A", "text": "Lực lượng chính trị của quần chúng" },
-            { "key": "B", "text": "Lực lượng vũ trang chủ lực" },
-            { "key": "C", "text": "Trí thức yêu nước" },
-            { "key": "D", "text": "Tư sản dân tộc" }
+            {
+              "key": "A",
+              "text": "Lực lượng chính trị của quần chúng"
+            },
+            {
+              "key": "B",
+              "text": "Lực lượng vũ trang chủ lực"
+            },
+            {
+              "key": "C",
+              "text": "Trí thức yêu nước"
+            },
+            {
+              "key": "D",
+              "text": "Tư sản dân tộc"
+            }
           ],
           "correct": "A"
         }
