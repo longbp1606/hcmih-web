@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "../../lang/LanguageProvider";
-import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
 import { getLocalizedNews, getLocalizedNewsById } from "../../data/news/newsUtils";
 
 export default function NewsDetail() {
@@ -23,17 +22,7 @@ export default function NewsDetail() {
         padding: "20px",
       }}
     >
-      {/* Language Switcher */}
-      <div
-        style={{
-          position: "fixed",
-          top: 20,
-          right: 20,
-          zIndex: 1000,
-        }}
-      >
-        <LanguageSwitcher />
-      </div>
+
       <div
         style={{
           maxWidth: 1200,

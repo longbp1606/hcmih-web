@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "../../lang/LanguageProvider";
-import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
 import { getLocalizedNews } from "../../data/news/newsUtils";
 
 export default function NewsPage() {
   const { i18n, locale } = useTranslation();
   const [page, setPage] = useState(1); // Trang 1 như hình
-  const pageSize = 10; // Cố định 10 tin tức mỗi trang
+  const pageSize = 6; // Cố định 6 tin tức mỗi trang
 
   // Lấy dữ liệu theo ngôn ngữ hiện tại
   const newsData = getLocalizedNews(locale);
@@ -39,17 +38,7 @@ export default function NewsPage() {
         padding: "32px 0",
       }}
     >
-      {/* Language Switcher */}
-      <div
-        style={{
-          position: "fixed",
-          top: 20,
-          right: 20,
-          zIndex: 1000,
-        }}
-      >
-        <LanguageSwitcher />
-      </div>
+
 
       <h1
         style={{
