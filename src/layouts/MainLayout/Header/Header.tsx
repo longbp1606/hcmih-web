@@ -13,6 +13,7 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation } from '../../../lang/LanguageProvider';
 import LanguageSwitcher from '../../../components/LanguageSwitcher';
 import logo from '../../../assets/logo.png';
+import config from '@/config';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,13 +25,18 @@ const Header = () => {
         label: string;
         href: string;
         matchers?: string[]; // additional path prefixes that should activate this item
+        onClick?: () => void; // custom behavior
     }> = [
-        { label: i18n.t('navigation.home'), href: '/', matchers: ['/'] },
+        { label: i18n.t('navigation.home'), href: config.routes.public.home, matchers: ['/'] },
         { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
         { label: i18n.t('navigation.search'), href: '/tra-cuu' },
         { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
-        // Consider both /quizes and a possible redirected alias /hoc-tuong-tac as active
-        { label: i18n.t('navigation.learning'), href: '/quizes', matchers: ['/quizes', '/hoc-tuong-tac'] }
+        // Learning: go to the dedicated page; quizzes live in its #quiz section
+        { 
+          label: i18n.t('navigation.learning'), 
+          href: config.routes.public.learning, 
+          matchers: ['/hoc-tuong-tac', '/quizes'],
+        }
     ];
 
     // Active logic that supports redirects/aliases and nested routes
@@ -63,6 +69,13 @@ const Header = () => {
                     <NavItem
                         key={index}
                         href={item.href}
+                        onClick={(e: React.MouseEvent) => {
+                          // default navigation via anchor; if we ever need custom behavior, use navigate
+                          if (item.onClick) {
+                            e.preventDefault();
+                            item.onClick();
+                          }
+                        }}
                         $isActive={isActivePath(pathname, item.href, item.matchers)}
                     >
                         {item.label}
@@ -83,7 +96,13 @@ const Header = () => {
                         key={index}
                         href={item.href}
                         $isActive={isActivePath(pathname, item.href, item.matchers)}
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={(e: React.MouseEvent) => {
+                          setIsMobileMenuOpen(false);
+                          if (item.onClick) {
+                            e.preventDefault();
+                            item.onClick();
+                          }
+                        }}
                     >
                         {item.label}
                     </NavItem>

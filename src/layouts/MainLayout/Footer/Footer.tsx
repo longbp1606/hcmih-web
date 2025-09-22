@@ -11,6 +11,7 @@ import {
 } from './Footer.styled';
 import logoImage from '../../../assets/logo.png';
 import { useTranslation } from '../../../lang/LanguageProvider';
+import config from '@/config';
 
 const Footer = () => {
   const { i18n } = useTranslation();
@@ -20,7 +21,7 @@ const Footer = () => {
     { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
     { label: i18n.t('navigation.search'), href: '/tra-cuu' },
     { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
-    { label: i18n.t('navigation.learning'), href: '/hoc-tuong-tac' }
+    { label: i18n.t('navigation.learning'), href: config.routes.public.learning }
   ];
 
   return (

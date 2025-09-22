@@ -55,6 +55,11 @@ export default function QuizesPage() {
   return (
     <QuizPage>
       <QuizContainer>
+        <div style={{ marginBottom: 8 }}>
+          <Link to={config.routes.public.learning + '#quiz'} style={{ fontSize: 13 }}>
+            ← Quay về Học & Tương tác
+          </Link>
+        </div>
         <QuizHero>
           <QuizTitleGradient level={1} style={{ marginBottom: 8, fontSize: 48 }}>
             Danh sách Quiz
