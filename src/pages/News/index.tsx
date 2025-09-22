@@ -1,19 +1,16 @@
 import { useState } from "react";
-import { mockNews as baseNews } from "../../data/news/mockNews";
-
-// Sử dụng trực tiếp dữ liệu từ mockNews
-const newsData = baseNews.map(news => ({
-  id: news.id,
-  title: news.title,
-  desc: news.desc,
-  img: news.img,
-}));
-
-const TOTAL_ITEMS = newsData.length;
+import { useTranslation } from "../../lang/LanguageProvider";
+import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
+import { getLocalizedNews } from "../../data/news/newsUtils";
 
 export default function NewsPage() {
+  const { i18n, locale } = useTranslation();
   const [page, setPage] = useState(1); // Trang 1 như hình
-  const pageSize = 9; // Cố định 9 tin tức mỗi trang
+  const pageSize = 10; // Cố định 10 tin tức mỗi trang
+
+  // Lấy dữ liệu theo ngôn ngữ hiện tại
+  const newsData = getLocalizedNews(locale);
+  const TOTAL_ITEMS = newsData.length;
 
   // Tính toán số trang dựa trên pageSize
   const totalPages = Math.ceil(TOTAL_ITEMS / pageSize);
@@ -42,6 +39,18 @@ export default function NewsPage() {
         padding: "32px 0",
       }}
     >
+      {/* Language Switcher */}
+      <div
+        style={{
+          position: "fixed",
+          top: 20,
+          right: 20,
+          zIndex: 1000,
+        }}
+      >
+        <LanguageSwitcher />
+      </div>
+
       <h1
         style={{
           textAlign: "center",
@@ -52,7 +61,7 @@ export default function NewsPage() {
           textShadow: "2px 2px 0 #fff",
         }}
       >
-        Tin tức
+        {i18n.t("news.title")}
       </h1>
       <div
         style={{
@@ -98,8 +107,8 @@ export default function NewsPage() {
                 src={news.img}
                 alt={news.title}
                 style={{
-                  width: "160px",
-                  height: "120px",
+                  width: "100%",
+                  height: "180px",
                   objectFit: "cover",
                   display: "block",
                   borderRadius: "8px",
@@ -110,10 +119,16 @@ export default function NewsPage() {
               <h2
                 style={{
                   fontWeight: "bold",
-                  fontSize: "2rem",
+                  fontSize: "1.4rem",
                   color: "#b8860b",
                   margin: "24px 0 8px 0",
                   textAlign: "left",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  lineHeight: "1.3",
                 }}
               >
                 {news.title}
@@ -121,10 +136,16 @@ export default function NewsPage() {
               <p
                 style={{
                   color: "#a97c2f",
-                  fontWeight: 600,
-                  fontSize: "1.15rem",
+                  fontWeight: 500,
+                  fontSize: "0.95rem",
                   margin: 0,
                   textAlign: "left",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 3,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  lineHeight: "1.4",
                 }}
               >
                 {news.desc}
@@ -162,14 +183,15 @@ export default function NewsPage() {
               border: "none",
               color: page === 1 ? "#b8860b55" : "#b8860b",
               fontWeight: "bold",
-              fontSize: "1.2rem",
+              fontSize: "1rem",
               cursor: page === 1 ? "not-allowed" : "pointer",
-              padding: "0 6px",
+              padding: "0 8px",
             }}
             onClick={() => handlePageChange(page - 1)}
             disabled={page === 1}
+            title={i18n.t("news.pagination.previous")}
           >
-            &#60;
+            &#60; {i18n.t("news.pagination.previous")}
           </button>
           {/* Pagination numbers with ... */}
           <span style={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -287,14 +309,15 @@ export default function NewsPage() {
               border: "none",
               color: page === totalPages ? "#b8860b55" : "#b8860b",
               fontWeight: "bold",
-              fontSize: "1.2rem",
+              fontSize: "1rem",
               cursor: page === totalPages ? "not-allowed" : "pointer",
-              padding: "0 6px",
+              padding: "0 8px",
             }}
             onClick={() => handlePageChange(page + 1)}
             disabled={page === totalPages}
+            title={i18n.t("news.pagination.next")}
           >
-            &#62;
+            {i18n.t("news.pagination.next")} &#62;
           </button>
         </div>
       </div>

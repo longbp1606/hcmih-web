@@ -1,12 +1,19 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { mockNews } from "../../data/news/mockNews";
+import { useTranslation } from "../../lang/LanguageProvider";
+import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
+import { getLocalizedNews, getLocalizedNewsById } from "../../data/news/newsUtils";
 
 export default function NewsDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const news = mockNews.find((n) => n.id === Number(id));
+  const { i18n, locale } = useTranslation();
+  const news = getLocalizedNewsById(Number(id), locale);
 
-  if (!news) return <div style={{ padding: 32 }}>Không tìm thấy tin tức!</div>;
+  if (!news) return <div style={{ padding: 32 }}>{i18n.t("news.noNewsFound")}</div>;
+
+  // Lấy tin tức liên quan (loại trừ tin hiện tại)
+  const allNews = getLocalizedNews(locale);
+  const relatedNews = allNews.filter(n => n.id !== news.id).slice(0, 3);
 
   return (
     <div
@@ -16,6 +23,17 @@ export default function NewsDetail() {
         padding: "20px",
       }}
     >
+      {/* Language Switcher */}
+      <div
+        style={{
+          position: "fixed",
+          top: 20,
+          right: 20,
+          zIndex: 1000,
+        }}
+      >
+        <LanguageSwitcher />
+      </div>
       <div
         style={{
           maxWidth: 1200,
@@ -63,27 +81,62 @@ export default function NewsDetail() {
               e.currentTarget.style.background = "rgba(255, 228, 196, 0.3)";
               e.currentTarget.style.transform = "scale(1)";
             }}
-            aria-label="Quay lại"
+            aria-label={i18n.t("news.backToNews")}
+            title={i18n.t("news.backToNews")}
           >
             &#8592;
           </button>
 
           {/* Nguồn */}
-          <div
-            style={{
-              position: "absolute",
-              right: 30,
-              top: 30,
-              background: "rgba(255, 228, 196, 0.3)",
-              padding: "8px 16px",
-              borderRadius: 20,
-              color: "#8b4513",
-              fontSize: "0.9rem",
-              fontWeight: 500,
-            }}
-          >
-            {news.source}
-          </div>
+          {news.url ? (
+            <a
+              href={news.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                position: "absolute",
+                right: 30,
+                top: 30,
+                background: "rgba(255, 228, 196, 0.3)",
+                padding: "8px 16px",
+                borderRadius: 20,
+                color: "#8b4513",
+                fontSize: "0.9rem",
+                fontWeight: 500,
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.background = "rgba(255, 228, 196, 0.6)";
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.background = "rgba(255, 228, 196, 0.3)";
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+            >
+              📖 {news.source}
+            </a>
+          ) : (
+            <div
+              style={{
+                position: "absolute",
+                right: 30,
+                top: 30,
+                background: "rgba(255, 228, 196, 0.3)",
+                padding: "8px 16px",
+                borderRadius: 20,
+                color: "#8b4513",
+                fontSize: "0.9rem",
+                fontWeight: 500,
+              }}
+            >
+              {news.source}
+            </div>
+          )}
 
           {/* Tiêu đề */}
           <h1
@@ -149,14 +202,15 @@ export default function NewsDetail() {
                 padding: 20,
                 boxShadow: "0 15px 35px rgba(184, 134, 11, 0.2)",
                 border: "2px solid #daa520",
+                maxWidth: "100%",
               }}
             >
               <img
                 src={news.img}
                 alt={news.title}
                 style={{
-                  width: 450,
-                  height: 300,
+                  width: "100%",
+                  height: "400px",
                   objectFit: "cover",
                   display: "block",
                   borderRadius: 10,
@@ -186,7 +240,7 @@ export default function NewsDetail() {
                   paddingBottom: 10,
                 }}
               >
-                Nội dung chi tiết
+                {i18n.t("news.content")}
               </h3>
               <div
                 style={{
@@ -202,42 +256,95 @@ export default function NewsDetail() {
           )}
 
           {/* Link nguồn */}
-          {news.url && (
-            <div
+
+
+          {/* Tin tức liên quan */}
+          <div style={{ marginTop: 20, borderTop: "2px solid #daa520", paddingTop: 32 }}>
+            <h3
               style={{
+                color: "#8b4513",
+                fontSize: "1.4rem",
+                fontWeight: "600",
+                marginBottom: 24,
                 textAlign: "center",
-                marginTop: 40,
               }}
             >
-              <a
-                href={news.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-block",
-                  background: "linear-gradient(135deg, #daa520 0%, #b8860b 100%)",
-                  color: "#ffffff",
-                  padding: "15px 30px",
-                  borderRadius: 25,
-                  textDecoration: "none",
-                  fontSize: "1rem",
-                  fontWeight: 600,
-                  boxShadow: "0 10px 25px rgba(218, 165, 32, 0.4)",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "translateY(-3px)";
-                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(218, 165, 32, 0.6)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(218, 165, 32, 0.4)";
-                }}
-              >
-                📖 Xem bài viết gốc
-              </a>
+              {i18n.t("news.relatedNews")}
+            </h3>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: 20,
+              }}
+            >
+              {relatedNews.map((relatedItem) => (
+                <div
+                  key={relatedItem.id}
+                  onClick={() => (window.location.href = `/news/${relatedItem.id}`)}
+                  style={{
+                    border: "2px solid #daa520",
+                    borderRadius: 15,
+                    overflow: "hidden",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                    background: "#fff8dc",
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.boxShadow = "0 15px 35px rgba(184, 134, 11, 0.3)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.boxShadow = "none";
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                >
+                  <img
+                    src={relatedItem.img}
+                    alt={relatedItem.title}
+                    style={{
+                      width: "100%",
+                      height: 160,
+                      objectFit: "cover",
+                    }}
+                  />
+                  <div style={{ padding: 16 }}>
+                    <h4
+                      style={{
+                        margin: "0 0 8px 0",
+                        fontSize: "1rem",
+                        fontWeight: 600,
+                        color: "#8b4513",
+                        lineHeight: 1.3,
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {relatedItem.title}
+                    </h4>
+                    <p
+                      style={{
+                        margin: 0,
+                        fontSize: "0.85rem",
+                        color: "#a97c2f",
+                        lineHeight: 1.4,
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {relatedItem.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
