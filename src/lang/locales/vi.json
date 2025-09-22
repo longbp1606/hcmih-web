@@ -1,135 +1,164 @@
 {
-    "appName": "HCMIH",
-    "navigation": {
-        "home": "Trang chủ",
-        "about": "Giới thiệu",
-        "search": "Tra cứu",
-        "ideology": "Hệ thống tư tưởng",
-        "learning": "Học & Tương tác"
-    },
-    "common": {
-        "back": "Quay lại",
-        "backTo": "← Quay về %{target}"
-    },
-    "timeline": {
-        "title": "Lược sử",
-        "periods": [
-            { "range": "Từ 1890–1911", "desc": "Thời kỳ hình thành tư tưởng yêu nước và chí hướng cách mạng." },
-            { "range": "Từ 1911–1920", "desc": "Thời kỳ tìm tòi con đường cứu nước giải phóng dân tộc." },
-            { "range": "Từ 1921–1930", "desc": "Thời kỳ hình thành cơ bản tư tưởng Hồ Chí Minh" },
-            { "range": "Từ 1930–1945", "desc": "Thời kỳ thử thách, kiên trì giữ vững quan điểm" },
-            { "range": "Từ 1945–1969", "desc": "Thời kỳ phát triển mới về tư tưởng kháng chiến và kiến quốc." }
-        ]
-    ,
-        "explore": {
-            "title": "Bắt đầu khám phá",
-            "items": {
-                "content": "Nội dung",
-                "news": "Tin tức",
-                "quiz": "Câu đố"
-            }
-        }
-    },
-    "footer": {
-        "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
-    },
-    "quizzes": {
-        "title": "Danh sách Quiz",
-        "subtitle": "Chọn một bài kiểm tra ngắn để bắt đầu",
-        "loading": "Đang tải danh sách quiz...",
-        "loadError": "Không thể tải danh sách quiz",
-        "meta": "• %{count} câu hỏi • ~%{minutes} phút",
-        "start": "Bắt đầu",
-        "excerpt": "Gồm khoảng %{count} câu hỏi trắc nghiệm về tư tưởng, lịch sử và kiến thức tổng quát. Thời gian dự kiến %{min}-%{max} phút.",
-        "chips": {
-            "basic": "Cơ bản",
-            "hcmThesis": "Tư tưởng HCM",
-            "questionsCount": "%{count} câu"
-        },
-        "random10Button": "%{count} câu ngẫu nhiên"
-    },
-    "quizDetail": {
-        "loading": "Đang tải quiz...",
-        "notFound": "Quiz không tồn tại",
-        "loadError": "Không thể tải quiz",
-        "docTitle": "Quiz: %{title}",
-        "random10Tag": "Chế độ 10 câu ngẫu nhiên",
-        "regenerateTooltip": "Lấy lại 10 câu hỏi khác",
-        "regenerateBtn": "Đổi bộ câu hỏi",
-        "switchToFullMode": "Chuyển sang chế độ đầy đủ",
-        "progressText": "%{completed}/%{total} hoàn thành",
-        "completedTitle": "Hoàn thành bài Quiz!",
-        "score": "Điểm số: %{correct} / %{total} đúng (%{percent}%)",
-        "retry": "Làm lại",
-        "switchToRandom10": "Chuyển sang 10 câu ngẫu nhiên",
-        "backToList": "Quay lại danh sách",
-        "noQuestions": "Không có câu hỏi.",
-        "submit": "Nộp bài",
-        "correct": "Chính xác! 🎉",
-        "incorrect": "Chưa đúng.",
-        "finish": "Hoàn thành",
-        "nextQuestion": "Câu tiếp theo"
-    },
-    "home": {
-        "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
-        "featuredTitle": "Các chủ đề nổi bật",
-        "topics": {
-            "history": {
-                "title": "Cuộc đời & sự nghiệp",
-                "desc": "Khám phá cuộc đời, gia đình và con đường cách mạng của Chủ tịch Hồ Chí Minh."
-            },
-            "ideology": {
-                "title": "Hệ thống tư tưởng",
-                "desc": "Các luận điểm cốt lõi, giá trị và sự vận dụng trong thời đại mới."
-            },
-            "quotes": {
-                "title": "Danh ngôn & trích dẫn",
-                "desc": "Tập hợp những câu nói, bài viết tiêu biểu, dễ tìm và trích dẫn."
-            },
-            "timeline": {
-                "title": "Dòng thời gian",
-                "desc": "Các mốc sự kiện quan trọng, gắn với bối cảnh lịch sử Việt Nam và thế giới."
-            },
-            "works": {
-                "title": "Tác phẩm tiêu biểu",
-                "desc": "Giới thiệu các tác phẩm, thư từ và văn kiện quan trọng."
-            },
-            "learning": {
-                "title": "Học & tương tác",
-                "desc": "Bài học tương tác, trắc nghiệm, sơ đồ tư duy và hoạt động trải nghiệm."
-            }
-        }
-    },
-    "research": {
-        "title": "Tra cứu nhanh",
-        "searchPlaceholder": "Nhập từ khóa (ví dụ: tư tưởng, độc lập, dân chủ…)",
-        "searchButton": "Tìm kiếm",
-        "tags": [
-            "Tư tưởng",
-            "Độc lập",
-            "Dân chủ",
-            "Đạo đức",
-            "Văn hóa",
-            "Thanh niên",
-            "Cách mạng",
-            "Nhân dân"
-        ]
-    },
-    "language": {
-        "vietnamese": "Tiếng Việt",
-        "english": "Tiếng Anh",
-        "japanese": "Tiếng Nhật",
-        "switchTo": "Chuyển sang"
-    },
-    "learning": {
-        "title": "Học & Tương tác",
+  "appName": "HCMIH",
+  "navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "search": "Tra cứu",
+    "ideology": "Hệ thống tư tưởng",
+    "learning": "Học & Tương tác"
+  },
+  "common": {
+    "back": "Quay lại",
+    "backTo": "← Quay về %{target}"
+  },
+  "timeline": {
+    "title": "Lược sử",
+    "periods": [
+      {
+        "range": "Từ 1890–1911",
+        "desc": "Thời kỳ hình thành tư tưởng yêu nước và chí hướng cách mạng."
+      },
+      {
+        "range": "Từ 1911–1920",
+        "desc": "Thời kỳ tìm tòi con đường cứu nước giải phóng dân tộc."
+      },
+      {
+        "range": "Từ 1921–1930",
+        "desc": "Thời kỳ hình thành cơ bản tư tưởng Hồ Chí Minh"
+      },
+      {
+        "range": "Từ 1930–1945",
+        "desc": "Thời kỳ thử thách, kiên trì giữ vững quan điểm"
+      },
+      {
+        "range": "Từ 1945–1969",
+        "desc": "Thời kỳ phát triển mới về tư tưởng kháng chiến và kiến quốc."
+      }
+    ],
+    "explore": {
+      "title": "Bắt đầu khám phá",
+      "items": {
         "content": "Nội dung",
         "news": "Tin tức",
-        "quiz": "Câu đố",
-        "alt": {
-            "content": "Nội dung",
-            "news": "Tin tức",
-            "quiz": "Câu đố"
-        }
+        "quiz": "Câu đố"
+      }
     }
+  },
+  "footer": {
+    "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
+  },
+  "quizzes": {
+    "title": "Danh sách Quiz",
+    "subtitle": "Chọn một bài kiểm tra ngắn để bắt đầu",
+    "loading": "Đang tải danh sách quiz...",
+    "loadError": "Không thể tải danh sách quiz",
+    "meta": "• %{count} câu hỏi • ~%{minutes} phút",
+    "start": "Bắt đầu",
+    "excerpt": "Gồm khoảng %{count} câu hỏi trắc nghiệm về tư tưởng, lịch sử và kiến thức tổng quát. Thời gian dự kiến %{min}-%{max} phút.",
+    "chips": {
+      "basic": "Cơ bản",
+      "hcmThesis": "Tư tưởng HCM",
+      "questionsCount": "%{count} câu"
+    },
+    "random10Button": "%{count} câu ngẫu nhiên"
+  },
+  "quizDetail": {
+    "loading": "Đang tải quiz...",
+    "notFound": "Quiz không tồn tại",
+    "loadError": "Không thể tải quiz",
+    "docTitle": "Quiz: %{title}",
+    "random10Tag": "Chế độ 10 câu ngẫu nhiên",
+    "regenerateTooltip": "Lấy lại 10 câu hỏi khác",
+    "regenerateBtn": "Đổi bộ câu hỏi",
+    "switchToFullMode": "Chuyển sang chế độ đầy đủ",
+    "progressText": "%{completed}/%{total} hoàn thành",
+    "completedTitle": "Hoàn thành bài Quiz!",
+    "score": "Điểm số: %{correct} / %{total} đúng (%{percent}%)",
+    "retry": "Làm lại",
+    "switchToRandom10": "Chuyển sang 10 câu ngẫu nhiên",
+    "backToList": "Quay lại danh sách",
+    "noQuestions": "Không có câu hỏi.",
+    "submit": "Nộp bài",
+    "correct": "Chính xác! 🎉",
+    "incorrect": "Chưa đúng.",
+    "finish": "Hoàn thành",
+    "nextQuestion": "Câu tiếp theo"
+  },
+  "home": {
+    "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
+    "featuredTitle": "Các chủ đề nổi bật",
+    "topics": {
+      "history": {
+        "title": "Cuộc đời & sự nghiệp",
+        "desc": "Khám phá cuộc đời, gia đình và con đường cách mạng của Chủ tịch Hồ Chí Minh."
+      },
+      "ideology": {
+        "title": "Hệ thống tư tưởng",
+        "desc": "Các luận điểm cốt lõi, giá trị và sự vận dụng trong thời đại mới."
+      },
+      "quotes": {
+        "title": "Danh ngôn & trích dẫn",
+        "desc": "Tập hợp những câu nói, bài viết tiêu biểu, dễ tìm và trích dẫn."
+      },
+      "timeline": {
+        "title": "Dòng thời gian",
+        "desc": "Các mốc sự kiện quan trọng, gắn với bối cảnh lịch sử Việt Nam và thế giới."
+      },
+      "works": {
+        "title": "Tác phẩm tiêu biểu",
+        "desc": "Giới thiệu các tác phẩm, thư từ và văn kiện quan trọng."
+      },
+      "learning": {
+        "title": "Học & tương tác",
+        "desc": "Bài học tương tác, trắc nghiệm, sơ đồ tư duy và hoạt động trải nghiệm."
+      }
+    }
+  },
+  "research": {
+    "title": "Tra cứu nhanh",
+    "searchPlaceholder": "Nhập từ khóa (ví dụ: tư tưởng, độc lập, dân chủ…)",
+    "searchButton": "Tìm kiếm",
+    "tags": [
+      "Tư tưởng",
+      "Độc lập",
+      "Dân chủ",
+      "Đạo đức",
+      "Văn hóa",
+      "Thanh niên",
+      "Cách mạng",
+      "Nhân dân"
+    ]
+  },
+  "language": {
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh",
+    "japanese": "Tiếng Nhật",
+    "switchTo": "Chuyển sang"
+  },
+  "learning": {
+    "title": "Học & Tương tác",
+    "content": "Nội dung",
+    "news": "Tin tức",
+    "quiz": "Câu đố",
+    "alt": {
+      "content": "Nội dung",
+      "news": "Tin tức",
+      "quiz": "Câu đố"
+    }
+  },
+  "news": {
+    "title": "Tin tức",
+    "relatedNews": "Tin tức liên quan",
+    "readOriginal": "Xem bài viết gốc",
+    "content": "Nội dung chi tiết",
+    "date": "Ngày đăng",
+    "source": "Nguồn",
+    "backToNews": "Quay lại danh sách tin tức",
+    "noNewsFound": "Không tìm thấy tin tức!",
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp theo",
+      "page": "Trang"
+    }
+  }
 }

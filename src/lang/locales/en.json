@@ -1,135 +1,164 @@
 {
-    "appName": "HCMIH",
-    "navigation": {
-        "home": "Home",
-        "about": "About",
-        "search": "Search",
-        "ideology": "Ideology System",
-        "learning": "Learning & Interaction"
-    },
-    "common": {
-        "back": "Back",
-        "backTo": "← Back to %{target}"
-    },
-    "timeline": {
-        "title": "Timeline",
-        "periods": [
-            { "range": "1890–1911", "desc": "Formation of patriotism and revolutionary aspiration." },
-            { "range": "1911–1920", "desc": "Searching for the path to national liberation." },
-            { "range": "1921–1930", "desc": "Fundamental formation of Ho Chi Minh's thought on Vietnam's revolution: both scientific and practical." },
-            { "range": "1930–1945", "desc": "A period of trials, steadfast in viewpoint; upholding the ideas of independence, freedom, and fundamental national rights." },
-            { "range": "1945–1969", "desc": "New development in the thought of resistance and nation-building." }
-        ]
-        ,
-        "explore": {
-            "title": "Start Exploring",
-            "items": {
-                "content": "Content",
-                "news": "News",
-                "quiz": "Quiz"
-            }
-        }
-    },
-    "footer": {
-        "copyright": "Copyright © 2025 HCMIH. All rights reserved."
-    },
-    "quizzes": {
-        "title": "Quizzes",
-        "subtitle": "Pick a short test to begin",
-        "loading": "Loading quizzes...",
-        "loadError": "Failed to load quizzes",
-        "meta": "• %{count} questions • ~%{minutes} mins",
-        "start": "Start",
-        "excerpt": "About %{count} multiple-choice questions on ideology, history and general knowledge. Estimated time %{min}-%{max} mins.",
-        "chips": {
-            "basic": "Basic",
-            "hcmThesis": "HCM Thought",
-            "questionsCount": "%{count} questions"
-        },
-        "random10Button": "%{count} random"
-    },
-    "quizDetail": {
-        "loading": "Loading quiz...",
-        "notFound": "Quiz not found",
-        "loadError": "Unable to load quiz",
-        "docTitle": "Quiz: %{title}",
-        "random10Tag": "Random 10 mode",
-        "regenerateTooltip": "Get another set of 10 questions",
-        "regenerateBtn": "Regenerate",
-        "switchToFullMode": "Switch to full mode",
-        "progressText": "%{completed}/%{total} completed",
-        "completedTitle": "Quiz completed!",
-        "score": "Score: %{correct} / %{total} correct (%{percent}%)",
-        "retry": "Retry",
-        "switchToRandom10": "Switch to Random 10",
-        "backToList": "Back to list",
-        "noQuestions": "No questions.",
-        "submit": "Submit",
-        "correct": "Correct! 🎉",
-        "incorrect": "Not quite.",
-        "finish": "Finish",
-        "nextQuestion": "Next question"
-    },
-    "home": {
-        "heroTitle": "Approach Ho Chi Minh's thought in a modern, visual, and easy-to-understand way.",
-        "featuredTitle": "Featured Topics",
-        "topics": {
-            "history": {
-                "title": "Life & Career",
-                "desc": "Explore the life, family, and revolutionary journey of President Ho Chi Minh."
-            },
-            "ideology": {
-                "title": "Ideological System",
-                "desc": "Core theses, values, and modern applications."
-            },
-            "quotes": {
-                "title": "Quotes & Sayings",
-                "desc": "A curated set of notable quotes and writings, ready to reference."
-            },
-            "timeline": {
-                "title": "Timeline",
-                "desc": "Key milestones aligned with Vietnam and world history."
-            },
-            "works": {
-                "title": "Notable Works",
-                "desc": "Highlighted works, letters, and important documents."
-            },
-            "learning": {
-                "title": "Learning & Interaction",
-                "desc": "Interactive lessons, quizzes, mind maps, and experiential activities."
-            }
-        }
-    },
-    "research": {
-        "title": "Quick Research",
-        "searchPlaceholder": "Type keywords (e.g., ideology, independence, democracy…)",
-        "searchButton": "Search",
-        "tags": [
-            "Ideology",
-            "Independence",
-            "Democracy",
-            "Ethics",
-            "Culture",
-            "Youth",
-            "Revolution",
-            "People"
-        ]
-    },
-    "language": {
-        "vietnamese": "Vietnamese",
-        "english": "English",
-        "japanese": "Japanese",
-        "switchTo": "Switch to"
-    },
-    "learning": {
-        "title": "Learning & Interaction",
+  "appName": "HCMIH",
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "search": "Search",
+    "ideology": "Ideology System",
+    "learning": "Learning & Interaction"
+  },
+  "common": {
+    "back": "Back",
+    "backTo": "← Back to %{target}"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "periods": [
+      {
+        "range": "1890–1911",
+        "desc": "Formation of patriotism and revolutionary aspiration."
+      },
+      {
+        "range": "1911–1920",
+        "desc": "Searching for the path to national liberation."
+      },
+      {
+        "range": "1921–1930",
+        "desc": "Fundamental formation of Ho Chi Minh's thought on Vietnam's revolution: both scientific and practical."
+      },
+      {
+        "range": "1930–1945",
+        "desc": "A period of trials, steadfast in viewpoint; upholding the ideas of independence, freedom, and fundamental national rights."
+      },
+      {
+        "range": "1945–1969",
+        "desc": "New development in the thought of resistance and nation-building."
+      }
+    ],
+    "explore": {
+      "title": "Start Exploring",
+      "items": {
         "content": "Content",
         "news": "News",
-        "quiz": "Quiz",
-        "alt": {
-            "content": "Content",
-            "news": "News",
-            "quiz": "Quiz"
-        }
+        "quiz": "Quiz"
+      }
     }
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 HCMIH. All rights reserved."
+  },
+  "quizzes": {
+    "title": "Quizzes",
+    "subtitle": "Pick a short test to begin",
+    "loading": "Loading quizzes...",
+    "loadError": "Failed to load quizzes",
+    "meta": "• %{count} questions • ~%{minutes} mins",
+    "start": "Start",
+    "excerpt": "About %{count} multiple-choice questions on ideology, history and general knowledge. Estimated time %{min}-%{max} mins.",
+    "chips": {
+      "basic": "Basic",
+      "hcmThesis": "HCM Thought",
+      "questionsCount": "%{count} questions"
+    },
+    "random10Button": "%{count} random"
+  },
+  "quizDetail": {
+    "loading": "Loading quiz...",
+    "notFound": "Quiz not found",
+    "loadError": "Unable to load quiz",
+    "docTitle": "Quiz: %{title}",
+    "random10Tag": "Random 10 mode",
+    "regenerateTooltip": "Get another set of 10 questions",
+    "regenerateBtn": "Regenerate",
+    "switchToFullMode": "Switch to full mode",
+    "progressText": "%{completed}/%{total} completed",
+    "completedTitle": "Quiz completed!",
+    "score": "Score: %{correct} / %{total} correct (%{percent}%)",
+    "retry": "Retry",
+    "switchToRandom10": "Switch to Random 10",
+    "backToList": "Back to list",
+    "noQuestions": "No questions.",
+    "submit": "Submit",
+    "correct": "Correct! 🎉",
+    "incorrect": "Not quite.",
+    "finish": "Finish",
+    "nextQuestion": "Next question"
+  },
+  "home": {
+    "heroTitle": "Approach Ho Chi Minh's thought in a modern, visual, and easy-to-understand way.",
+    "featuredTitle": "Featured Topics",
+    "topics": {
+      "history": {
+        "title": "Life & Career",
+        "desc": "Explore the life, family, and revolutionary journey of President Ho Chi Minh."
+      },
+      "ideology": {
+        "title": "Ideological System",
+        "desc": "Core theses, values, and modern applications."
+      },
+      "quotes": {
+        "title": "Quotes & Sayings",
+        "desc": "A curated set of notable quotes and writings, ready to reference."
+      },
+      "timeline": {
+        "title": "Timeline",
+        "desc": "Key milestones aligned with Vietnam and world history."
+      },
+      "works": {
+        "title": "Notable Works",
+        "desc": "Highlighted works, letters, and important documents."
+      },
+      "learning": {
+        "title": "Learning & Interaction",
+        "desc": "Interactive lessons, quizzes, mind maps, and experiential activities."
+      }
+    }
+  },
+  "research": {
+    "title": "Quick Research",
+    "searchPlaceholder": "Type keywords (e.g., ideology, independence, democracy…)",
+    "searchButton": "Search",
+    "tags": [
+      "Ideology",
+      "Independence",
+      "Democracy",
+      "Ethics",
+      "Culture",
+      "Youth",
+      "Revolution",
+      "People"
+    ]
+  },
+  "language": {
+    "vietnamese": "Vietnamese",
+    "english": "English",
+    "japanese": "Japanese",
+    "switchTo": "Switch to"
+  },
+  "learning": {
+    "title": "Learning & Interaction",
+    "content": "Content",
+    "news": "News",
+    "quiz": "Quiz",
+    "alt": {
+      "content": "Content",
+      "news": "News",
+      "quiz": "Quiz"
+    }
+  },
+  "news": {
+    "title": "News",
+    "relatedNews": "Related News",
+    "readOriginal": "Read Original Article",
+    "content": "Detailed Content",
+    "date": "Published Date",
+    "source": "Source",
+    "backToNews": "Back to News List",
+    "noNewsFound": "News not found!",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
+    }
+  }
 }

@@ -4,6 +4,8 @@ const routes = {
     learning: "/hoc-tuong-tac",
     quizes: "/quizes",
     quizDetail: "/quizes/:id",
+    news: "/news",
+    newsDetail: "/news/:id",
   },
   api: {
     loginGoogle: "/auth/signin",
