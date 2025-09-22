@@ -12,7 +12,7 @@ const LearningPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useDocumentTitle(i18n.t('navigation.learning', { defaultValue: 'Học & Tương tác' }));
+  useDocumentTitle(i18n.t('learning.title'));
 
   useEffect(() => {
     if (location.hash) {
@@ -79,7 +79,7 @@ const LearningPage: React.FC = () => {
     <div style={pageStyle}>
       <div style={containerStyle}>
         <Typography.Title level={1} style={titleStyle}>
-          {i18n.t('navigation.learning', { defaultValue: 'Học & Tương tác' })}
+          {i18n.t('learning.title')}
         </Typography.Title>
 
         <Row gutter={[24, 24]}>
@@ -90,13 +90,13 @@ const LearningPage: React.FC = () => {
               bodyStyle={{ padding: 16 }}
               cover={
                 <div style={coverWrap}>
-                  <img src={contentImg} alt="Nội dung" style={imgStyle} />
+                  <img src={contentImg} alt={i18n.t('learning.alt.content')} style={imgStyle} />
                 </div>
               }
               onClick={() => navigate('/noi-dung')}
             >
               <Typography.Text strong style={labelStyle}>
-                {i18n.t('learning.content', { defaultValue: 'Nội dung' })}
+                {i18n.t('learning.content')}
               </Typography.Text>
             </Card>
           </Col>
@@ -108,13 +108,13 @@ const LearningPage: React.FC = () => {
               bodyStyle={{ padding: 16 }}
               cover={
                 <div style={coverWrap}>
-                  <img src={newsImg} alt="Tin tức" style={imgStyle} />
+                  <img src={newsImg} alt={i18n.t('learning.alt.news')} style={imgStyle} />
                 </div>
               }
               onClick={() => navigate('/news')}
             >
               <Typography.Text strong style={labelStyle}>
-                {i18n.t('learning.news', { defaultValue: 'Tin tức' })}
+                {i18n.t('learning.news')}
               </Typography.Text>
             </Card>
           </Col>
@@ -126,13 +126,13 @@ const LearningPage: React.FC = () => {
               bodyStyle={{ padding: 16 }}
               cover={
                 <div style={coverWrap}>
-                  <img src={quizImg} alt="Câu đố" style={imgStyle} />
+                  <img src={quizImg} alt={i18n.t('learning.alt.quiz')} style={imgStyle} />
                 </div>
               }
               onClick={() => navigate('/quizes')}
             >
               <Typography.Text strong style={labelStyle}>
-                {i18n.t('learning.quiz', { defaultValue: 'Câu đố' })}
+                {i18n.t('learning.quiz')}
               </Typography.Text>
             </Card>
           </Col>

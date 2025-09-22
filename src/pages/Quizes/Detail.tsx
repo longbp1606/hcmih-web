@@ -8,6 +8,7 @@ import {
   Location,
 } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks";
+import { useTranslation } from "@/lang/LanguageProvider";
 import {
   QuizDetailPageWrap,
   QuizDetailContainer,
@@ -48,6 +49,7 @@ export default function QuizDetailPage() {
   const navigate = useNavigate();
   const { id } = useParams();
   const location = useLocation() as Location & { state?: { title?: string } };
+  const { i18n } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [quiz, setQuiz] = useState<Quiz | null>(null);
@@ -59,7 +61,7 @@ export default function QuizDetailPage() {
   const isRandom10 = mode === "random10";
 
   const quizTitle = quiz?.title ?? location.state?.title ?? "Quiz";
-  useDocumentTitle(`Quiz: ${quizTitle}`);
+  useDocumentTitle(i18n.t('quizDetail.docTitle', { title: quizTitle }));
 
   const [selected, setSelected] = useState<Answer["key"] | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -78,13 +80,13 @@ export default function QuizDetailPage() {
           (q) => String(q.id) === String(id)
         );
         if (!found) {
-          setError("Quiz không tồn tại");
+          setError(i18n.t('quizDetail.notFound'));
         } else {
           setQuiz(found);
           setError(null);
         }
       })
-      .catch((e) => setError(e?.message ?? "Không thể tải quiz"))
+      .catch((e) => setError(e?.message ?? i18n.t('quizDetail.loadError')))
       .finally(() => mounted && setLoading(false));
     return () => {
       mounted = false;
@@ -194,24 +196,24 @@ export default function QuizDetailPage() {
             icon={<LeftOutlined />}
             onClick={() => navigate(-1)}
           >
-            Back
+            {i18n.t('common.back')}
           </Button>
         </QuizDetailHeader>
 
         <QuizDetailTitleGradient level={1}>
-          Quiz: {quizTitle}
+          {i18n.t('quizDetail.docTitle', { title: quizTitle })}
         </QuizDetailTitleGradient>
         {isRandom10 && (
           <div style={{ marginBottom: 16 }}>
             <Space>
-              <Tag color="blue">Chế độ 10 câu ngẫu nhiên</Tag>
-              <Tooltip title="Lấy lại 10 câu hỏi khác">
+              <Tag color="blue">{i18n.t('quizDetail.random10Tag')}</Tag>
+              <Tooltip title={i18n.t('quizDetail.regenerateTooltip')}>
                 <Button size="small" onClick={buildSubset}>
-                  Đổi bộ câu hỏi
+                  {i18n.t('quizDetail.regenerateBtn')}
                 </Button>
               </Tooltip>
               <Button size="small" onClick={() => navigate(location.pathname)}>
-                Chuyển sang chế độ đầy đủ
+                {i18n.t('quizDetail.switchToFullMode')}
               </Button>
             </Space>
           </div>
@@ -222,12 +224,12 @@ export default function QuizDetailPage() {
             <QuizDetailProgressInner style={{ width: `${progressPct}%` }} />
           </QuizDetailProgressBar>
           <QuizDetailProgressText>
-            {completed}/{total} hoàn thành
+            {i18n.t('quizDetail.progressText', { completed, total })}
           </QuizDetailProgressText>
         </QuizDetailProgressWrap>
 
         <QuizDetailShell>
-          {loading && <div style={{ marginBottom: 12 }}>Đang tải quiz...</div>}
+          {loading && <div style={{ marginBottom: 12 }}>{i18n.t('quizDetail.loading')}</div>}
           {error && (
             <div style={{ color: "red", marginBottom: 12 }}>{error}</div>
           )}
@@ -238,36 +240,35 @@ export default function QuizDetailPage() {
                   level={3}
                   style={{ margin: 0, textAlign: "center", color: "#5a3b2e" }}
                 >
-                  Hoàn thành bài Quiz!
+                  {i18n.t('quizDetail.completedTitle')}
                 </Title>
                 <Text style={{ fontSize: 16 }}>
-                  Điểm số: <strong>{correctCount}</strong> / {total} đúng (
-                  {total ? Math.round((correctCount / total) * 100) : 0}%)
+                  {i18n.t('quizDetail.score', { correct: correctCount, total, percent: total ? Math.round((correctCount / total) * 100) : 0 })}
                 </Text>
                 <Space wrap>
                   <Button type="primary" onClick={buildSubset}>
-                    Làm lại
+                    {i18n.t('quizDetail.retry')}
                   </Button>
                   {isRandom10 ? (
-                    <Button onClick={buildSubset}>Lấy bộ câu hỏi khác</Button>
+                    <Button onClick={buildSubset}>{i18n.t('quizDetail.regenerateBtn')}</Button>
                   ) : (
                     <Button
                       onClick={() =>
                         navigate(location.pathname + "?mode=random10")
                       }
                     >
-                      Chuyển sang 10 câu ngẫu nhiên
+                      {i18n.t('quizDetail.switchToRandom10')}
                     </Button>
                   )}
                   <Button onClick={() => navigate(-1)}>
-                    Quay lại danh sách
+                    {i18n.t('quizDetail.backToList')}
                   </Button>
                 </Space>
               </Space>
             </QuestionCard>
           ) : !question ? (
             <QuestionCard style={{ background: "#f7e9d6", border: "none" }}>
-              <Text>Không có câu hỏi.</Text>
+              <Text>{i18n.t('quizDetail.noQuestions')}</Text>
             </QuestionCard>
           ) : (
             <>
@@ -315,15 +316,15 @@ export default function QuizDetailPage() {
                     disabled={!selected}
                     onClick={onSubmit}
                   >
-                    Nộp bài
+                    {i18n.t('quizDetail.submit')}
                   </Button>
                 ) : (
                   <>
                     <QuizDetailFeedback>
-                      {selected === correctKey ? "Chính xác! 🎉" : "Chưa đúng."}
+                      {selected === correctKey ? i18n.t('quizDetail.correct') : i18n.t('quizDetail.incorrect')}
                     </QuizDetailFeedback>
                     <Button type="primary" onClick={onNext}>
-                      {index + 1 >= total ? "Hoàn thành" : "Câu tiếp theo"}
+                      {index + 1 >= total ? i18n.t('quizDetail.finish') : i18n.t('quizDetail.nextQuestion')}
                     </Button>
                   </>
                 )}

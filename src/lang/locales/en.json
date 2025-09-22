@@ -7,6 +7,10 @@
         "ideology": "Ideology System",
         "learning": "Learning & Interaction"
     },
+    "common": {
+        "back": "Back",
+        "backTo": "← Back to %{target}"
+    },
     "timeline": {
         "title": "Timeline",
         "periods": [
@@ -28,6 +32,43 @@
     },
     "footer": {
         "copyright": "Copyright © 2025 HCMIH. All rights reserved."
+    },
+    "quizzes": {
+        "title": "Quizzes",
+        "subtitle": "Pick a short test to begin",
+        "loading": "Loading quizzes...",
+        "loadError": "Failed to load quizzes",
+        "meta": "• %{count} questions • ~%{minutes} mins",
+        "start": "Start",
+        "excerpt": "About %{count} multiple-choice questions on ideology, history and general knowledge. Estimated time %{min}-%{max} mins.",
+        "chips": {
+            "basic": "Basic",
+            "hcmThesis": "HCM Thought",
+            "questionsCount": "%{count} questions"
+        },
+        "random10Button": "%{count} random"
+    },
+    "quizDetail": {
+        "loading": "Loading quiz...",
+        "notFound": "Quiz not found",
+        "loadError": "Unable to load quiz",
+        "docTitle": "Quiz: %{title}",
+        "random10Tag": "Random 10 mode",
+        "regenerateTooltip": "Get another set of 10 questions",
+        "regenerateBtn": "Regenerate",
+        "switchToFullMode": "Switch to full mode",
+        "progressText": "%{completed}/%{total} completed",
+        "completedTitle": "Quiz completed!",
+        "score": "Score: %{correct} / %{total} correct (%{percent}%)",
+        "retry": "Retry",
+        "switchToRandom10": "Switch to Random 10",
+        "backToList": "Back to list",
+        "noQuestions": "No questions.",
+        "submit": "Submit",
+        "correct": "Correct! 🎉",
+        "incorrect": "Not quite.",
+        "finish": "Finish",
+        "nextQuestion": "Next question"
     },
     "home": {
         "heroTitle": "Approach Ho Chi Minh's thought in a modern, visual, and easy-to-understand way.",
@@ -79,5 +120,16 @@
         "english": "English",
         "japanese": "Japanese",
         "switchTo": "Switch to"
+    },
+    "learning": {
+        "title": "Learning & Interaction",
+        "content": "Content",
+        "news": "News",
+        "quiz": "Quiz",
+        "alt": {
+            "content": "Content",
+            "news": "News",
+            "quiz": "Quiz"
+        }
     }
 }
