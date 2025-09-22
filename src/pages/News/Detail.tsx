@@ -270,7 +270,7 @@ export default function NewsDetail() {
               {relatedNews.map((relatedItem) => (
                 <div
                   key={relatedItem.id}
-                  onClick={() => (window.location.href = `/news/${relatedItem.id}`)}
+                  onClick={() => navigate(`/news/${relatedItem.id}`)}
                   style={{
                     border: "2px solid #daa520",
                     borderRadius: 15,
