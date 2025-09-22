@@ -145,5 +145,20 @@
       "news": "Tin tức",
       "quiz": "Câu đố"
     }
+  },
+  "news": {
+    "title": "Tin tức",
+    "relatedNews": "Tin tức liên quan",
+    "readOriginal": "Xem bài viết gốc",
+    "content": "Nội dung chi tiết",
+    "date": "Ngày đăng",
+    "source": "Nguồn",
+    "backToNews": "Quay lại danh sách tin tức",
+    "noNewsFound": "Không tìm thấy tin tức!",
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp theo",
+      "page": "Trang"
+    }
   }
 }
