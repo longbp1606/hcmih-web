@@ -17,6 +17,8 @@ const GlobalStyles = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
     }
 
+        
+
     a {
         font-weight: 500;
         color: #646cff;

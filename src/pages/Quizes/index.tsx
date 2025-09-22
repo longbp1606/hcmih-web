@@ -1,118 +1,167 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Card, Col, Pagination, Row, Typography, theme } from 'antd';
-import { Link } from 'react-router-dom';
-import config from '@/config';
-import { useDocumentTitle } from '@/hooks';
+import { useEffect, useMemo, useState } from "react";
+import { Col, Typography, theme, Space, Button } from "antd";
+import { Link } from "react-router-dom";
+import config from "@/config";
+import { useDocumentTitle } from "@/hooks";
+import {
+  QuizPage,
+  QuizContainer,
+  QuizHero,
+  QuizTitleGradient,
+  QuizSubtitle,
+  QuizCardsRow,
+  QuizCard,
+  QuizBadge,
+  QuizCTA,
+  QuizArrow,
+  QuizChipRow,
+  QuizChip,
+} from "./Quizes.styled";
 
 type Quiz = {
-    id: number;
-    title: string;
+  id: number;
+  title: string;
+  questions?: Array<{ id: number }>;
 };
 
-const { Title, Text } = Typography;
-
-const PAGE_SIZE_OPTIONS = [8, 10, 12] as const;
+const { Text } = Typography;
 
 export default function QuizesPage() {
-    useDocumentTitle('Danh sách Quiz');
-    theme.useToken();
-    const [page, setPage] = useState(1);
-    const [pageSize, setPageSize] = useState<number>(PAGE_SIZE_OPTIONS[0]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-    const [data, setData] = useState<Quiz[]>([]);
+  useDocumentTitle("Danh sách Quiz");
+  theme.useToken();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [data, setData] = useState<Quiz[]>([]);
 
-    useEffect(() => {
-        let mounted = true;
-        setLoading(true);
-        fetch('/quizes.json')
-            .then((r) => r.json())
-            .then((json) => {
-                if (!mounted) return;
-                setData(json.quizes as Quiz[]);
-                setError(null);
-            })
-            .catch((e) => setError(e?.message ?? 'Failed to load quizes'))
-            .finally(() => mounted && setLoading(false));
-        return () => {
-            mounted = false;
-        };
-    }, []);
+  useEffect(() => {
+    let mounted = true;
+    setLoading(true);
+    fetch("/quizes.json")
+      .then((r) => r.json())
+      .then((json) => {
+        if (!mounted) return;
+        setData(json.quizes as Quiz[]);
+        setError(null);
+      })
+      .catch((e) => setError(e?.message ?? "Failed to load quizes"))
+      .finally(() => mounted && setLoading(false));
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
-    const filtered = useMemo(() => data, [data]);
+  const current = useMemo(() => data.slice(0, 2), [data]);
 
-    const start = (page - 1) * pageSize;
-    const current = filtered.slice(start, start + pageSize);
-
-    return (
-        <div style={{ padding: '32px 24px', background: '#f7f2e7' }}>
-            <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                <Title level={1} style={{ textAlign: 'center', marginBottom: 24, color: '#7b2e20' }}>
-                    Danh sách Quiz
-                </Title>
-
-                {/* level filter removed */}
-
-                {loading && (
-                    <div style={{ marginBottom: 12 }}>Đang tải danh sách quiz...</div>
-                )}
-                {error && (
-                    <div style={{ color: 'red', marginBottom: 12 }}>{error}</div>
-                )}
-
-                <Row gutter={[24, 24]}>
-                    {current.map((item) => (
-                                    <Col xs={24} sm={12} md={12} lg={8} xl={6} key={item.id}>
-                                        <Card
-                                hoverable
-                                styles={{ body: { padding: 16 } }}
-                                style={{
-                                    background: '#f5e6d3',
-                                    borderRadius: 14,
-                                    border: 'none',
-                                    boxShadow: '0 2px 0 rgba(0,0,0,0.02)',
-                                }}
-                            >
-                                            <Link
-                                                to={config.routes.public.quizes + '/' + item.id}
-                                                state={{ title: item.title }}
-                                                style={{ textDecoration: 'none', color: 'inherit' }}
-                                            >
-                                            <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                                                <div>
-                                                    <Text strong style={{ fontSize: 16 }}>
-                                                        {item.title}
-                                                    </Text>
-                                                </div>
-                                            </div>
-                                            </Link>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-
-                <div
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        marginTop: 24,
-                    }}
-                >
-                    <Text type="secondary">Total {filtered.length} items</Text>
-                    <Pagination
-                        current={page}
-                        total={filtered.length}
-                        pageSize={pageSize}
-                        showSizeChanger
-                        pageSizeOptions={PAGE_SIZE_OPTIONS.map(String)}
-                        onChange={(p, ps) => {
-                            setPage(p);
-                            setPageSize(ps);
-                        }}
-                    />
-                </div>
-            </div>
+  return (
+    <QuizPage>
+      <QuizContainer>
+        <div style={{ marginBottom: 8 }}>
+          <Link to={config.routes.public.learning + '#quiz'} style={{ fontSize: 13 }}>
+            ← Quay về Học & Tương tác
+          </Link>
         </div>
-    );
+        <QuizHero>
+          <QuizTitleGradient level={1} style={{ marginBottom: 8, fontSize: 48 }}>
+            Danh sách Quiz
+          </QuizTitleGradient>
+          <QuizSubtitle style={{ fontSize: 16 }}>
+            Chọn một bài kiểm tra ngắn để bắt đầu
+          </QuizSubtitle>
+        </QuizHero>
+
+        {loading && (
+          <div style={{ marginBottom: 12 }}>Đang tải danh sách quiz...</div>
+        )}
+        {error && <div style={{ color: "red", marginBottom: 12 }}>{error}</div>}
+
+        <QuizCardsRow gutter={[28, 24]}>
+          {current.map((item, idx) => {
+            const questionsCount = item.questions?.length ?? 10;
+            const estimatedMin = Math.max(3, Math.round(questionsCount * 0.6));
+            const excerpt = `Gồm khoảng ${questionsCount} câu hỏi trắc nghiệm về tư tưởng, lịch sử và kiến thức tổng quát. Thời gian dự kiến ${estimatedMin}-${
+              estimatedMin + 2
+            } phút.`;
+            const chips = ["Cơ bản", "Tư tưởng HCM", `${questionsCount} câu`];
+            return (
+              <Col xs={24} key={item.id}>
+                <Link
+                  to={config.routes.public.quizes + "/" + item.id}
+                  state={{ title: item.title }}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <QuizCard hoverable styles={{ body: { padding: 28 } }} style={{ background: "#f5e6d3" }}>
+                    <div
+                      style={{ display: "flex", alignItems: "center", gap: 20 }}
+                    >
+                      <QuizBadge aria-hidden>{idx + 1}</QuizBadge>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: 12,
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "baseline",
+                              gap: 12,
+                              flexWrap: "wrap",
+                            }}
+                          >
+                            <Text
+                              strong
+                              style={{ fontSize: 22, color: "#5a3b2e" }}
+                            >
+                              {item.title}
+                            </Text>
+                            <Text type="secondary" style={{ fontSize: 14 }}>
+                              • {questionsCount} câu hỏi • ~{estimatedMin} phút
+                            </Text>
+                          </div>
+                          <QuizCTA aria-hidden>
+                            Bắt đầu
+                            <QuizArrow>➔</QuizArrow>
+                          </QuizCTA>
+                        </div>
+                        <div style={{ marginTop: 8 }}>
+                          <Text type="secondary" style={{ fontSize: 15 }}>
+                            {excerpt}
+                          </Text>
+                        </div>
+                        <QuizChipRow>
+                          {chips.map((c) => (
+                            <QuizChip key={c}>{c}</QuizChip>
+                          ))}
+                        </QuizChipRow>
+                        <div style={{ marginTop: 16 }}>
+                          <Space size={8} wrap>
+                            <Link
+                              to={
+                                config.routes.public.quizes +
+                                "/" +
+                                item.id +
+                                "?mode=random10"
+                              }
+                              state={{ title: item.title }}
+                              style={{ textDecoration: "none" }}
+                            >
+                              <Button size="small">10 câu ngẫu nhiên</Button>
+                            </Link>
+                          </Space>
+                        </div>
+                      </div>
+                    </div>
+                  </QuizCard>
+                </Link>
+              </Col>
+            );
+          })}
+        </QuizCardsRow>
+      </QuizContainer>
+    </QuizPage>
+  );
 }

@@ -1,0 +1,145 @@
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { Card, Col, Row, Typography } from 'antd';
+import { useDocumentTitle } from '@/hooks';
+import { useTranslation } from '@/lang/LanguageProvider';
+import contentImg from '@/assets/noidung.png';
+import newsImg from '@/assets/tintuc.png';
+import quizImg from '@/assets/caudo.png';
+
+const LearningPage: React.FC = () => {
+  const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useDocumentTitle(i18n.t('navigation.learning', { defaultValue: 'Học & Tương tác' }));
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [location.hash]);
+
+  // page background gradient + soft vignette
+  const pageStyle: React.CSSProperties = {
+    minHeight: '100vh',
+    padding: '48px 24px',
+    background: [
+      'radial-gradient(1200px 400px at 50% -200px, rgba(0,0,0,0.08), rgba(0,0,0,0) 70%)', // top vignette
+      'radial-gradient(1200px 400px at 50% 110%, rgba(0,0,0,0.10), rgba(0,0,0,0) 70%)', // bottom vignette
+      'linear-gradient(180deg, #E8D5B5 0%, #D6BE98 100%)',
+    ].join(', '),
+  };
+
+  const containerStyle: React.CSSProperties = {
+    maxWidth: 1200, margin: '0 auto',
+  };
+
+  const titleStyle: React.CSSProperties = {
+    textAlign: 'center',
+    marginBottom: 24,
+    color: '#7b1e1e',
+    textShadow: '0 2px 0 rgba(0,0,0,0.1)',
+    letterSpacing: 0.5,
+  } as React.CSSProperties;
+
+  const cardStyle: React.CSSProperties = {
+    border: 'none',
+    borderRadius: 16,
+    background: 'rgba(207, 178, 145, 0.65)', // warm beige panel
+    boxShadow: '0 8px 18px rgba(0,0,0,0.15)',
+  };
+
+  const coverWrap: React.CSSProperties = {
+    padding: 16,
+    borderRadius: 12,
+  };
+
+  const imgStyle: React.CSSProperties = {
+    width: '100%',
+    height: 220,
+    objectFit: 'cover',
+    borderRadius: 12,
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+  };
+
+  const labelStyle: React.CSSProperties = {
+    display: 'block',
+    textAlign: 'center',
+    marginTop: 8,
+    fontSize: 18,
+    color: '#7b1e1e',
+  };
+
+  return (
+    <div style={pageStyle}>
+      <div style={containerStyle}>
+        <Typography.Title level={1} style={titleStyle}>
+          {i18n.t('navigation.learning', { defaultValue: 'Học & Tương tác' })}
+        </Typography.Title>
+
+        <Row gutter={[24, 24]}>
+          <Col xs={24} md={8}>
+            <Card
+              hoverable
+              style={cardStyle}
+              bodyStyle={{ padding: 16 }}
+              cover={
+                <div style={coverWrap}>
+                  <img src={contentImg} alt="Nội dung" style={imgStyle} />
+                </div>
+              }
+              onClick={() => navigate('/noi-dung')}
+            >
+              <Typography.Text strong style={labelStyle}>
+                {i18n.t('learning.content', { defaultValue: 'Nội dung' })}
+              </Typography.Text>
+            </Card>
+          </Col>
+
+          <Col xs={24} md={8}>
+            <Card
+              hoverable
+              style={cardStyle}
+              bodyStyle={{ padding: 16 }}
+              cover={
+                <div style={coverWrap}>
+                  <img src={newsImg} alt="Tin tức" style={imgStyle} />
+                </div>
+              }
+              onClick={() => navigate('/news')}
+            >
+              <Typography.Text strong style={labelStyle}>
+                {i18n.t('learning.news', { defaultValue: 'Tin tức' })}
+              </Typography.Text>
+            </Card>
+          </Col>
+
+          <Col xs={24} md={8}>
+            <Card
+              hoverable
+              style={cardStyle}
+              bodyStyle={{ padding: 16 }}
+              cover={
+                <div style={coverWrap}>
+                  <img src={quizImg} alt="Câu đố" style={imgStyle} />
+                </div>
+              }
+              onClick={() => navigate('/quizes')}
+            >
+              <Typography.Text strong style={labelStyle}>
+                {i18n.t('learning.quiz', { defaultValue: 'Câu đố' })}
+              </Typography.Text>
+            </Card>
+          </Col>
+        </Row>
+      </div>
+    </div>
+  );
+};
+
+export default LearningPage;

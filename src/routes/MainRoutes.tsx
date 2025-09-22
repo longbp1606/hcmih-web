@@ -1,5 +1,6 @@
 import config from "@/config";
 import MainLayout from "@/layouts/MainLayout";
+import LearningPage from '@/pages/Learning';
 import QuizesPage from "@/pages/Quizes";
 import QuizDetailPage from "@/pages/Quizes/Detail";
 import NewsPage from "@/pages/News";
@@ -11,13 +12,12 @@ const MainRouter = () => {
 };
 
 const publicRoutes = {
-  children: [
-    { path: config.routes.public.home, element: <Home /> },
-    { path: config.routes.public.quizes, element: <QuizesPage /> },
-    { path: config.routes.public.quizDetail, element: <QuizDetailPage /> },
-    { path: config.routes.public.news, element: <NewsPage /> },
-    { path: config.routes.public.newsDetail, element: <NewsDetailPage /> },
-  ],
+    children: [
+        { path: config.routes.public.home, element: <Home />},
+        { path: config.routes.public.learning, element: <LearningPage />},
+        { path: config.routes.public.quizes, element: <QuizesPage />},
+        { path: config.routes.public.quizDetail, element: <QuizDetailPage />},
+    ]
 };
 
 const MainRoutes = {

@@ -62,7 +62,7 @@ export const AntdThemeConfig = {
         colorPrimary: PRIMARY_COLOR,
         colorSecondary: SECONDARY_COLOR,
         colorLink: PRIMARY_COLOR,
-        fontFamily: 'Inter',
+        fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
         colorLinkHover: PRIMARY_COLOR,
     },
 };
