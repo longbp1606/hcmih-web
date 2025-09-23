@@ -6,9 +6,11 @@ import NewsPage from '@/pages/News';
 import NewsDetailPage from '@/pages/News/Detail';
 import QuizesPage from '@/pages/Quizes';
 import QuizDetailPage from '@/pages/Quizes/Detail';
+import SearchPage from '@/pages/Search/Search';
+
 
 const MainRouter = () => {
-    return <MainLayout />;
+  return <MainLayout />;
 };
 
 const publicRoutes = {
@@ -19,13 +21,15 @@ const publicRoutes = {
         { path: config.routes.public.quizDetail, element: <QuizDetailPage />},
         { path: config.routes.public.news, element: <NewsPage /> },
         { path: config.routes.public.newsDetail, element: <NewsDetailPage /> },
+        { path: config.routes.public.search, element: <SearchPage />},
+        
     ]
 };
 
 const MainRoutes = {
-    path: '/',
-    element: <MainRouter />,
-    children: [publicRoutes],
+  path: "/",
+  element: <MainRouter />,
+  children: [publicRoutes],
 };
 
 export default MainRoutes;

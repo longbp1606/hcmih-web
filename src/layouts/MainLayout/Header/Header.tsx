@@ -29,7 +29,7 @@ const Header = () => {
     }> = [
         { label: i18n.t('navigation.home'), href: config.routes.public.home, matchers: ['/'] },
         { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
-        { label: i18n.t('navigation.search'), href: '/tra-cuu' },
+        { label: i18n.t('navigation.search'), href: '/search', matchers: ['/search', '/tra-cuu'] },
         { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
         // Learning: go to the dedicated page; quizzes live in its #quiz section
         { 

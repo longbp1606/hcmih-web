@@ -161,4 +161,9 @@
       "page": "Page"
     }
   }
+  ,
+  "search": {
+    "title": "Search",
+    "placeholder": "Enter search keywords..."
+  }
 }

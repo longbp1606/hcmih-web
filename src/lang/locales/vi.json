@@ -160,5 +160,9 @@
       "next": "Tiếp theo",
       "page": "Trang"
     }
+  },
+  "search": {
+    "title": "Tra cứu",
+    "placeholder": "Nhập từ khóa tìm kiếm..."
   }
 }
