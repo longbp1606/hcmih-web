@@ -93,7 +93,7 @@
     "home": {
         "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
         "heroQuote": "Không gì quý giá hơn độc lập, tự do",
-        "heroSubtitle": "Hồ Chí Minh • 17/07/1966",
+        "heroSubtitle": "Chủ tịch Hồ Chí Minh • 17/07/1966",
         "featuredTitle": "Các chủ đề nổi bật",
         "topics": {
             "history": {
@@ -177,6 +177,9 @@
     },
     "content": {
         "relatedTitle": "Nội dung liên quan"
+    },
+    "audio": {
+        "declarationTitle": "Tuyên ngôn độc lập của nước Việt Nam Dân chủ Cộng hòa"
     },
     "ideology": {
         "title": "Nội dung Tư tưởng Hồ Chí Minh về độc lập dân tộc",

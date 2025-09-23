@@ -92,8 +92,8 @@
   },
   "home": {
     "heroTitle": "Approach Ho Chi Minh's thought in a modern, visual, and easy-to-understand way.",
-    "heroQuote": "Nothing is more precious than independence and freedom",
-    "heroSubtitle": "Ho Chi Minh • 17/07/1966",
+  "heroQuote": "Nothing is more precious than independence and freedom",
+  "heroSubtitle": "President Ho Chi Minh • July 17, 1966",
     "featuredTitle": "Featured Topics",
     "topics": {
       "history": {
@@ -263,5 +263,9 @@
   },
   "content": {
     "relatedTitle": "Related Content"
+  }
+  ,
+  "audio": {
+    "declarationTitle": "Declaration of Independence of the Democratic Republic of Vietnam"
   }
 }
