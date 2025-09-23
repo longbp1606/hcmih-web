@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 import { Card, Row, Typography } from 'antd';
+import background from '@/assets/background.png';
+
+export const PageBg = styled.div`
+	background: url(${background}) no-repeat center/cover;
+	position: fixed;
+  top: 0;
+  left: 0;
+	inset: 0;
+	z-index: 0;
+`;
 
 // Page wrappers
 export const QuizPage = styled.div`
@@ -39,6 +49,8 @@ export const QuizTitleGradient = styled(Typography.Title)`
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent !important;
+  position: relative;
+  z-index: 1;
 `;
 
 export const QuizDetailTitleGradient = styled(Typography.Title)`

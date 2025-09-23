@@ -7,6 +7,7 @@ import contentImg from '@/assets/noidung.png';
 import newsImg from '@/assets/tintuc.png';
 import quizImg from '@/assets/caudo.png';
 import { PageBg } from './Learning.styled';
+import config from '@/config';
 
 const LearningPage: React.FC = () => {
   const { i18n } = useTranslation();
@@ -41,6 +42,9 @@ const LearningPage: React.FC = () => {
     color: '#7b1e1e',
     textShadow: '0 2px 0 rgba(0,0,0,0.1)',
     letterSpacing: 0.5,
+    position: 'relative',
+    zIndex: 2,
+    fontWeight: 900,
   } as React.CSSProperties;
 
   const cardStyle: React.CSSProperties = {
@@ -66,8 +70,7 @@ const LearningPage: React.FC = () => {
   const labelStyle: React.CSSProperties = {
     display: 'block',
     textAlign: 'center',
-    marginTop: 8,
-    fontSize: 18,
+    fontSize: 24,
     color: '#7b1e1e',
   };
 
@@ -91,7 +94,7 @@ const LearningPage: React.FC = () => {
                     <img src={contentImg} alt={i18n.t('learning.alt.content')} style={imgStyle} />
                   </div>
                 }
-                onClick={() => navigate('/noi-dung')}
+                onClick={() => navigate(config.routes.public.ideology)}
               >
                 <Typography.Text strong style={labelStyle}>
                   {i18n.t('learning.content')}
@@ -109,7 +112,7 @@ const LearningPage: React.FC = () => {
                     <img src={newsImg} alt={i18n.t('learning.alt.news')} style={imgStyle} />
                   </div>
                 }
-                onClick={() => navigate('/news')}
+                onClick={() => navigate(config.routes.public.news)}
               >
                 <Typography.Text strong style={labelStyle}>
                   {i18n.t('learning.news')}
@@ -127,7 +130,7 @@ const LearningPage: React.FC = () => {
                     <img src={quizImg} alt={i18n.t('learning.alt.quiz')} style={imgStyle} />
                   </div>
                 }
-                onClick={() => navigate('/quizes')}
+                onClick={() => navigate(config.routes.public.quizes)}
               >
                 <Typography.Text strong style={labelStyle}>
                   {i18n.t('learning.quiz')}

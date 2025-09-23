@@ -4,6 +4,8 @@ import background from '@/assets/background.png';
 export const PageBg = styled.div`
 	background: url(${background}) no-repeat center/cover;
 	position: fixed;
+  top: 0;
+  left: 0;
 	inset: 0;
 	z-index: 0;
 `;

@@ -24,6 +24,7 @@ import {
   AnswerCard,
   QuizDetailActions,
   QuizDetailFeedback,
+  PageBg,
 } from "./Quizes.styled";
 
 const { Title, Text } = Typography;
@@ -161,8 +162,8 @@ export default function QuizDetailPage() {
     const length = subset
       ? subset.length
       : shuffledAll
-      ? shuffledAll.length
-      : quiz.questions.length;
+        ? shuffledAll.length
+        : quiz.questions.length;
     const next = index + 1;
     if (next < length) {
       setIndex(next);
@@ -177,8 +178,8 @@ export default function QuizDetailPage() {
   const total = subset
     ? subset.length
     : shuffledAll
-    ? shuffledAll.length
-    : quiz?.questions.length ?? 0;
+      ? shuffledAll.length
+      : quiz?.questions.length ?? 0;
   const completed = Math.min(index + (submitted ? 1 : 0), total);
   const progressPct = total ? Math.round((completed / total) * 100) : 0;
 
@@ -187,153 +188,156 @@ export default function QuizDetailPage() {
   );
 
   return (
-    <QuizDetailPageWrap>
-      <QuizDetailContainer>
-        <QuizDetailHeader>
-          <Button
-            type="primary"
-            ghost
-            icon={<LeftOutlined />}
-            onClick={() => navigate(-1)}
-          >
-            {i18n.t('common.back')}
-          </Button>
-        </QuizDetailHeader>
+    <>
+    <PageBg />
+      <QuizDetailPageWrap>
+        <QuizDetailContainer>
+          <QuizDetailHeader>
+            <Button
+              type="primary"
+              ghost
+              icon={<LeftOutlined />}
+              onClick={() => navigate(-1)}
+            >
+              {i18n.t('common.back')}
+            </Button>
+          </QuizDetailHeader>
 
-        <QuizDetailTitleGradient level={1}>
-          {i18n.t('quizDetail.docTitle', { title: quizTitle })}
-        </QuizDetailTitleGradient>
-        {isRandom10 && (
-          <div style={{ marginBottom: 16 }}>
-            <Space>
-              <Tag color="blue">{i18n.t('quizDetail.random10Tag')}</Tag>
-              <Tooltip title={i18n.t('quizDetail.regenerateTooltip')}>
-                <Button size="small" onClick={buildSubset}>
-                  {i18n.t('quizDetail.regenerateBtn')}
+          <QuizDetailTitleGradient level={1}>
+            {i18n.t('quizDetail.docTitle', { title: quizTitle })}
+          </QuizDetailTitleGradient>
+          {isRandom10 && (
+            <div style={{ marginBottom: 16 }}>
+              <Space>
+                <Tag color="blue">{i18n.t('quizDetail.random10Tag')}</Tag>
+                <Tooltip title={i18n.t('quizDetail.regenerateTooltip')}>
+                  <Button size="small" onClick={buildSubset}>
+                    {i18n.t('quizDetail.regenerateBtn')}
+                  </Button>
+                </Tooltip>
+                <Button size="small" onClick={() => navigate(location.pathname)}>
+                  {i18n.t('quizDetail.switchToFullMode')}
                 </Button>
-              </Tooltip>
-              <Button size="small" onClick={() => navigate(location.pathname)}>
-                {i18n.t('quizDetail.switchToFullMode')}
-              </Button>
-            </Space>
-          </div>
-        )}
-
-        <QuizDetailProgressWrap>
-          <QuizDetailProgressBar>
-            <QuizDetailProgressInner style={{ width: `${progressPct}%` }} />
-          </QuizDetailProgressBar>
-          <QuizDetailProgressText>
-            {i18n.t('quizDetail.progressText', { completed, total })}
-          </QuizDetailProgressText>
-        </QuizDetailProgressWrap>
-
-        <QuizDetailShell>
-          {loading && <div style={{ marginBottom: 12 }}>{i18n.t('quizDetail.loading')}</div>}
-          {error && (
-            <div style={{ color: "red", marginBottom: 12 }}>{error}</div>
-          )}
-          {finished ? (
-            <QuestionCard style={{ background: "#f7e9d6", border: "none" }}>
-              <Space direction="vertical" style={{ width: "100%" }} size={16}>
-                <Title
-                  level={3}
-                  style={{ margin: 0, textAlign: "center", color: "#5a3b2e" }}
-                >
-                  {i18n.t('quizDetail.completedTitle')}
-                </Title>
-                <Text style={{ fontSize: 16 }}>
-                  {i18n.t('quizDetail.score', { correct: correctCount, total, percent: total ? Math.round((correctCount / total) * 100) : 0 })}
-                </Text>
-                <Space wrap>
-                  <Button type="primary" onClick={buildSubset}>
-                    {i18n.t('quizDetail.retry')}
-                  </Button>
-                  {isRandom10 ? (
-                    <Button onClick={buildSubset}>{i18n.t('quizDetail.regenerateBtn')}</Button>
-                  ) : (
-                    <Button
-                      onClick={() =>
-                        navigate(location.pathname + "?mode=random10")
-                      }
-                    >
-                      {i18n.t('quizDetail.switchToRandom10')}
-                    </Button>
-                  )}
-                  <Button onClick={() => navigate(-1)}>
-                    {i18n.t('quizDetail.backToList')}
-                  </Button>
-                </Space>
               </Space>
-            </QuestionCard>
-          ) : !question ? (
-            <QuestionCard style={{ background: "#f7e9d6", border: "none" }}>
-              <Text>{i18n.t('quizDetail.noQuestions')}</Text>
-            </QuestionCard>
-          ) : (
-            <>
-              <QuestionCard styles={{ body: { padding: 16 } }}>
-                <Title
-                  level={4}
-                  style={{ color: "white", margin: 0, textAlign: "center" }}
-                >
-                  {question.text}
-                </Title>
-              </QuestionCard>
-
-              <Row gutter={[24, 24]}>
-                {shuffledAnswers.map((a, i) => {
-                  const isActive = selected === a.key;
-                  const isCorrect = submitted && a.key === correctKey;
-                  const isWrong =
-                    submitted && a.key === selected && a.key !== correctKey;
-
-                  return (
-                    <Col xs={24} md={12} key={a.key}>
-                      <AnswerCard
-                        hoverable
-                        onClick={() => !submitted && setSelected(a.key)}
-                        styles={{ body: { padding: 16 } }}
-                        $selected={!submitted && isActive}
-                        $correct={isCorrect}
-                        $wrong={isWrong}
-                      >
-                        <div style={{ display: "flex", alignItems: "center" }}>
-                          <Badge label={i + 1} />
-                          <Text style={{ fontSize: 16 }}> {a.text} </Text>
-                        </div>
-                      </AnswerCard>
-                    </Col>
-                  );
-                })}
-              </Row>
-
-              <QuizDetailActions>
-                <Space>
-                {!submitted ? (
-                  <Button
-                    type="primary"
-                    disabled={!selected}
-                    onClick={onSubmit}
-                  >
-                    {i18n.t('quizDetail.submit')}
-                  </Button>
-                ) : (
-                  <>
-                    <QuizDetailFeedback>
-                      {selected === correctKey ? i18n.t('quizDetail.correct') : i18n.t('quizDetail.incorrect')}
-                    </QuizDetailFeedback>
-                    <Button type="primary" onClick={onNext}>
-                      {index + 1 >= total ? i18n.t('quizDetail.finish') : i18n.t('quizDetail.nextQuestion')}
-                    </Button>
-                  </>
-                )}
-                </Space>
-              </QuizDetailActions>
-            </>
+            </div>
           )}
-        </QuizDetailShell>
-      </QuizDetailContainer>
-    </QuizDetailPageWrap>
+
+          <QuizDetailProgressWrap>
+            <QuizDetailProgressBar>
+              <QuizDetailProgressInner style={{ width: `${progressPct}%` }} />
+            </QuizDetailProgressBar>
+            <QuizDetailProgressText>
+              {i18n.t('quizDetail.progressText', { completed, total })}
+            </QuizDetailProgressText>
+          </QuizDetailProgressWrap>
+
+          <QuizDetailShell>
+            {loading && <div style={{ marginBottom: 12 }}>{i18n.t('quizDetail.loading')}</div>}
+            {error && (
+              <div style={{ color: "red", marginBottom: 12 }}>{error}</div>
+            )}
+            {finished ? (
+              <QuestionCard style={{ background: "#f7e9d6", border: "none" }}>
+                <Space direction="vertical" style={{ width: "100%" }} size={16}>
+                  <Title
+                    level={3}
+                    style={{ margin: 0, textAlign: "center", color: "#5a3b2e" }}
+                  >
+                    {i18n.t('quizDetail.completedTitle')}
+                  </Title>
+                  <Text style={{ fontSize: 16 }}>
+                    {i18n.t('quizDetail.score', { correct: correctCount, total, percent: total ? Math.round((correctCount / total) * 100) : 0 })}
+                  </Text>
+                  <Space wrap>
+                    <Button type="primary" onClick={buildSubset}>
+                      {i18n.t('quizDetail.retry')}
+                    </Button>
+                    {isRandom10 ? (
+                      <Button onClick={buildSubset}>{i18n.t('quizDetail.regenerateBtn')}</Button>
+                    ) : (
+                      <Button
+                        onClick={() =>
+                          navigate(location.pathname + "?mode=random10")
+                        }
+                      >
+                        {i18n.t('quizDetail.switchToRandom10')}
+                      </Button>
+                    )}
+                    <Button onClick={() => navigate(-1)}>
+                      {i18n.t('quizDetail.backToList')}
+                    </Button>
+                  </Space>
+                </Space>
+              </QuestionCard>
+            ) : !question ? (
+              <QuestionCard style={{ background: "#f7e9d6", border: "none" }}>
+                <Text>{i18n.t('quizDetail.noQuestions')}</Text>
+              </QuestionCard>
+            ) : (
+              <>
+                <QuestionCard styles={{ body: { padding: 16 } }}>
+                  <Title
+                    level={4}
+                    style={{ color: "white", margin: 0, textAlign: "center" }}
+                  >
+                    {question.text}
+                  </Title>
+                </QuestionCard>
+
+                <Row gutter={[24, 24]}>
+                  {shuffledAnswers.map((a, i) => {
+                    const isActive = selected === a.key;
+                    const isCorrect = submitted && a.key === correctKey;
+                    const isWrong =
+                      submitted && a.key === selected && a.key !== correctKey;
+
+                    return (
+                      <Col xs={24} md={12} key={a.key}>
+                        <AnswerCard
+                          hoverable
+                          onClick={() => !submitted && setSelected(a.key)}
+                          styles={{ body: { padding: 16 } }}
+                          $selected={!submitted && isActive}
+                          $correct={isCorrect}
+                          $wrong={isWrong}
+                        >
+                          <div style={{ display: "flex", alignItems: "center" }}>
+                            <Badge label={i + 1} />
+                            <Text style={{ fontSize: 16 }}> {a.text} </Text>
+                          </div>
+                        </AnswerCard>
+                      </Col>
+                    );
+                  })}
+                </Row>
+
+                <QuizDetailActions>
+                  <Space>
+                    {!submitted ? (
+                      <Button
+                        type="primary"
+                        disabled={!selected}
+                        onClick={onSubmit}
+                      >
+                        {i18n.t('quizDetail.submit')}
+                      </Button>
+                    ) : (
+                      <>
+                        <QuizDetailFeedback>
+                          {selected === correctKey ? i18n.t('quizDetail.correct') : i18n.t('quizDetail.incorrect')}
+                        </QuizDetailFeedback>
+                        <Button type="primary" onClick={onNext}>
+                          {index + 1 >= total ? i18n.t('quizDetail.finish') : i18n.t('quizDetail.nextQuestion')}
+                        </Button>
+                      </>
+                    )}
+                  </Space>
+                </QuizDetailActions>
+              </>
+            )}
+          </QuizDetailShell>
+        </QuizDetailContainer>
+      </QuizDetailPageWrap>
+    </>
   );
 }

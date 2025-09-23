@@ -82,7 +82,7 @@ export const SectionNote = styled.span`
 	color: #3a8e00;
 `;
 
-export const Body = styled.p`
+export const Body = styled.div`
 	margin: 0;
 	color: #5a3b19;
 	font-size: clamp(14px, 1.5vw, 16px);

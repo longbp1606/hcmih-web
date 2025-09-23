@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Pagination } from "antd";
-import { mockNewsMultilang } from "@/data/news/mockNewsMultilang";
 import { useTranslation } from "@/lang/LanguageProvider";
 import background from '@/assets/background.png';
 import styled from 'styled-components';
+import routes from '@/config/routes';
+import { getIdeologyContent, type ContentParagraphItem, type TopicKey } from '@/pages/Content/Content.data';
+import { useAppSelector } from '@/hooks/useStore';
 
 export const PageBg = styled.div`
 	background: url(${background}) no-repeat center/cover;
@@ -13,50 +15,76 @@ export const PageBg = styled.div`
 	z-index: 0;
 `;
 
-// type cho dữ liệu
-interface Item {
-  id: number;
-  title: {
-    vi: string;
-    en: string;
-    ja: string;
-  };
-  desc: {
-    vi: string;
-    en: string;
-    ja: string;
-  };
-  date?: string;
-  img: string;
-  source: string;
-  content?: {
-    vi: string;
-    en: string;
-    ja: string;
-  };
-  url?: string;
-}
+type ResultItem = {
+  topic: TopicKey;
+  index: number; // index within the topic's content array
+  title: string;
+  snippet: string;
+  route: string;
+  topicLabel: string;
+};
 
 export default function Search() {
+  const globalQuery = useAppSelector((s) => s.search.query);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 15;
 
   const { locale, i18n } = useTranslation();
 
-  // dùng data từ file mock
-  const data: Item[] = mockNewsMultilang;
+  useEffect(() => {
+    // Initialize from redux when page loads or when global query changes
+    setSearchTerm(globalQuery ?? "");
+  }, [globalQuery]);
 
-  // lọc theo từ khóa với ngôn ngữ hiện tại
-  const filteredData = data.filter((item) =>
-    item.title[locale as "vi" | "en" | "ja"]
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase())
-  );
+  const norm = (s: string) => s.toLowerCase();
+  const term = norm(searchTerm.trim());
+  const hasTerm = term.length > 0;
+
+  const topicKeys: TopicKey[] = ["nationalIndependence", "nationalRevolution"];
+
+  const results: ResultItem[] = useMemo(() => {
+  if (!term) return [];
+
+    const res: ResultItem[] = [];
+    for (const topic of topicKeys) {
+      const items: ContentParagraphItem[] = getIdeologyContent(locale, topic);
+      const topicLabel = i18n.t(`ideology.items.${topic}`, { defaultValue: topic });
+      items.forEach((item, index) => {
+        const titleHit = norm(item.title).includes(term);
+        let paraHitIndex = -1;
+        if (!titleHit) {
+          paraHitIndex = item.paragraphs.findIndex(p => norm(p).includes(term));
+        }
+        if (titleHit || paraHitIndex >= 0) {
+          const source = titleHit ? item.title : item.paragraphs[Math.max(0, paraHitIndex)];
+          // Build a short snippet around the first occurrence
+          const pos = norm(source).indexOf(term);
+          const start = Math.max(0, pos - 60);
+          const end = Math.min(source.length, pos + term.length + 120);
+          const snippet = `${start > 0 ? '…' : ''}${source.slice(start, end)}${end < source.length ? '…' : ''}`;
+          const route = routes.public.ideologyContent
+            .replace(':key', topic)
+            .replace(':index', String(index));
+
+          res.push({
+            topic,
+            index,
+            title: item.title,
+            snippet,
+            route,
+            topicLabel,
+          });
+        }
+      });
+    }
+    // Optional: sort by topic then index, or by title
+    return res;
+  }, [locale, i18n, term]);
 
   // chia trang
   const startIndex = (currentPage - 1) * pageSize;
-  const paginatedData = filteredData.slice(startIndex, startIndex + pageSize);
+  const paginatedData = results.slice(startIndex, startIndex + pageSize);
 
   return (
     <>
@@ -80,39 +108,68 @@ export default function Search() {
           />
         </div>
 
-        {/* Danh sách item */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-          {paginatedData.map((item) => (
-            <Link
-              key={item.id}
-              to={`/news/${item.id}`}
-              className="bg-orange-100 p-4 rounded-xl shadow hover:bg-orange-200 transition"
-            >
-              <div className="flex items-center gap-3">
-                <span className="bg-[#d0a66e] text-[#995900] font-bold px-3 py-1 rounded-lg">
-                  {item.id}
-                </span>
-                <h3 className="font-semibold text-[#995900]">
-                  {item.title[locale as "vi" | "en" | "ja"]}
-                </h3>
+        {/* Empty state or results */}
+        {!hasTerm ? (
+          <div className="flex flex-col items-center justify-center text-center text-[#995900] bg-orange-50/70 border border-orange-200 rounded-xl p-8 max-w-2xl mx-auto">
+            <div className="text-5xl mb-3" aria-hidden>
+              🔎
+            </div>
+            <p className="text-lg">
+              {i18n.t('search.emptyState', { defaultValue: 'Enter a keyword above to search ideology content.' })}
+            </p>
+          </div>
+        ) : (
+          <>
+            {results.length === 0 ? (
+              <div className="flex flex-col items-center justify-center text-center text-[#995900] bg-orange-50/70 border border-orange-200 rounded-xl p-8 max-w-2xl mx-auto">
+                <div className="text-5xl mb-3" aria-hidden>
+                  ❗
+                </div>
+                <p className="text-lg">
+                  {i18n.t('search.noResults', { defaultValue: 'No results found. Try a different keyword.' })}
+                </p>
               </div>
-              <p className="mt-2 text-[#995900] text-sm line-clamp-2">
-                {item.desc[locale as "vi" | "en" | "ja"]}
-              </p>
-            </Link>
-          ))}
-        </div>
+            ) : (
+              <>
+                {/* Danh sách kết quả */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                  {paginatedData.map((item, idx) => (
+                    <Link
+                      key={`${item.topic}-${item.index}-${idx}`}
+                      to={item.route}
+                      className="bg-orange-100 p-4 rounded-xl shadow hover:bg-orange-200 transition"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="bg-[#d0a66e] text-[#995900] font-bold px-3 py-1 rounded-lg">
+                          {item.topicLabel}
+                        </span>
+                        <h3 className="font-semibold text-[#995900] line-clamp-2">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="mt-2 text-[#995900] text-sm line-clamp-3">
+                        {item.snippet}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
 
-        {/* Pagination */}
-        <div className="flex justify-center">
-          <Pagination
-            current={currentPage}
-            pageSize={pageSize}
-            total={filteredData.length}
-            onChange={(page) => setCurrentPage(page)}
-            showSizeChanger={false}
-          />
-        </div>
+                {/* Pagination (only when needed) */}
+                {results.length > pageSize && (
+                  <div className="flex justify-center">
+                    <Pagination
+                      current={currentPage}
+                      pageSize={pageSize}
+                      total={results.length}
+                      onChange={(page) => setCurrentPage(page)}
+                      showSizeChanger={false}
+                    />
+                  </div>
+                )}
+              </>
+            )}
+          </>
+        )}
       </div>
     </>
   );

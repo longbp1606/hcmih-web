@@ -27,6 +27,7 @@ export const Title = styled.h1`
 	color: #b21b0a;
 	font-weight: 900;
 	font-size: clamp(22px, 4vw, 36px);
+	text-align: center;
 `;
 
 export const SubTitle = styled.h2`
@@ -46,7 +47,7 @@ export const ContentCard = styled.article`
 `;
 
 export const HeroImage = styled.div`
-	height: 240px;
+	height: 400px;
 	border-radius: 10px;
 	background: #f3f3f3;
 	border: 2px dashed #d2d2d2;

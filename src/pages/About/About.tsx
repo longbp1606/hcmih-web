@@ -9,7 +9,6 @@ import {
     ListWrap,
     Section,
     SectionHeading,
-    SectionNote,
     Title,
     ValueItem,
     ValueList,
@@ -31,34 +30,56 @@ const About = () => {
                         <Section>
                             <SectionHeading $index={1}>
                                 {i18n.t('about.mission.title', { defaultValue: 'Sứ mệnh' })}
-                                <SectionNote>{i18n.t('about.mission.note', { defaultValue: '(sử dụng thông điệp và giá trị bạn đã cung cấp)' })}</SectionNote>
                             </SectionHeading>
-                            <Body>{i18n.t('about.mission.body', { defaultValue: 'Mô tả sứ mệnh: xây dựng một cổng học liệu hiện đại, trực quan và đáng tin cậy về tư tưởng Hồ Chí Minh, kết nối học thuật và ứng dụng thực tế.' })}</Body>
+                            <Body>
+                                {i18n
+                                    .t('about.mission.body', { defaultValue: 'Mô tả sứ mệnh: xây dựng một cổng học liệu hiện đại, trực quan và đáng tin cậy về tư tưởng Hồ Chí Minh, kết nối học thuật và ứng dụng thực tế.' })
+                                    .split('\n')
+                                    .map((p, idx) => (
+                                        <Paragraph key={`mission-${idx}`} style={{ marginBottom: 12 }}>{p}</Paragraph>
+                                    ))}
+                            </Body>
                         </Section>
 
                         <Section>
                             <SectionHeading $index={2}>
                                 {i18n.t('about.objective.title', { defaultValue: 'Mục tiêu' })}
-                                <SectionNote>{i18n.t('about.objective.note', { defaultValue: '(đối tượng: học sinh, giáo viên, nghiên cứu sinh, công chúng)' })}</SectionNote>
                             </SectionHeading>
-                            <Body>{i18n.t('about.objective.body', { defaultValue: 'Cung cấp kiến thức chuẩn xác, có hệ thống; hỗ trợ nghiên cứu, giảng dạy và tự học với trải nghiệm thân thiện.' })}</Body>
+                            <Body>
+                                {i18n
+                                    .t('about.objective.body', { defaultValue: 'Cung cấp kiến thức chuẩn xác, có hệ thống; hỗ trợ nghiên cứu, giảng dạy và tự học với trải nghiệm thân thiện.' })
+                                    .split('\n')
+                                    .map((p, idx) => (
+                                        <Paragraph key={`objective-${idx}`} style={{ marginBottom: 12 }}>{p}</Paragraph>
+                                    ))}
+                            </Body>
                         </Section>
 
                         <Section>
                             <SectionHeading $index={3}>
                                 {i18n.t('about.method.title', { defaultValue: 'Phương pháp' })}
-                                <SectionNote>{i18n.t('about.method.note', { defaultValue: '(kết hợp học thuật + công nghệ — mô tả ngắn cách soát xét, kiểm chứng nguồn, duyệt nội dung.)' })}</SectionNote>
                             </SectionHeading>
-                            <Body>{i18n.t('about.method.body', { defaultValue: 'Tiếp cận dựa trên nguồn tài liệu tin cậy, tổng hợp - đối chiếu - kiểm chứng, cùng quy trình biên tập rõ ràng. Ứng dụng công nghệ để trực quan hóa và tương tác.' })}</Body>
+                            <Body>
+                                {i18n
+                                    .t('about.method.body', { defaultValue: 'Tiếp cận dựa trên nguồn tài liệu tin cậy, tổng hợp - đối chiếu - kiểm chứng, cùng quy trình biên tập rõ ràng. Ứng dụng công nghệ để trực quan hóa và tương tác.' })
+                                    .split('\n')
+                                    .map((p, idx) => (
+                                        <Paragraph key={`method-${idx}`} style={{ marginBottom: 12 }}>{p}</Paragraph>
+                                    ))}
+                            </Body>
                         </Section>
 
                         <Section>
                             <SectionHeading $index={4}>
                                 {i18n.t('about.value.title', { defaultValue: 'Giá trị thực tiễn' })}
-                                <SectionNote>{i18n.t('about.value.note', { defaultValue: '(kết hợp học thuật + công nghệ — mô tả ngắn cách soát xét, kiểm chứng nguồn, duyệt nội dung.)' })}</SectionNote>
                             </SectionHeading>
                             <Body>
-                                {i18n.t('about.value.body', { defaultValue: 'Mang lại tri thức dễ tiếp cận; hỗ trợ giảng dạy, học tập; góp phần lan tỏa giá trị tư tưởng Hồ Chí Minh tới cộng đồng.' })}
+                                {i18n
+                                    .t('about.value.body', { defaultValue: 'Mang lại tri thức dễ tiếp cận; hỗ trợ giảng dạy, học tập; góp phần lan tỏa giá trị tư tưởng Hồ Chí Minh tới cộng đồng.' })
+                                    .split('\n')
+                                    .map((p, idx) => (
+                                        <Paragraph key={`value-${idx}`} style={{ marginBottom: 12 }}>{p}</Paragraph>
+                                    ))}
                             </Body>
 
                             <ValueList>

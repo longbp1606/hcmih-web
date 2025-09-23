@@ -17,6 +17,7 @@ import {
   QuizArrow,
   QuizChipRow,
   QuizChip,
+  PageBg,
 } from "./Quizes.styled";
 
 type Quiz = {
@@ -55,9 +56,11 @@ export default function QuizesPage() {
   const current = useMemo(() => data.slice(0, 2), [data]);
 
   return (
-    <QuizPage>
+    <>
+      <PageBg />
+      <QuizPage>
       <QuizContainer>
-        <div style={{ marginBottom: 8 }}>
+        <div style={{ marginBottom: 8, position: 'relative', zIndex: 1 }}>
           <Link to={config.routes.public.learning + '#quiz'} style={{ fontSize: 13 }}>
             {i18n.t('common.backTo', { target: i18n.t('navigation.learning') })}
           </Link>
@@ -167,5 +170,6 @@ export default function QuizesPage() {
         </QuizCardsRow>
       </QuizContainer>
     </QuizPage>
+    </>
   );
 }

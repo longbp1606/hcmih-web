@@ -1,4 +1,4 @@
-import { HomeWrapper, HeroSection, HeroTitle, FilmStrip, HeaderBackground, SummarySection, SectionTitle, TopicsGrid, TopicCard, TopicIndex, TopicTitle, TopicDesc, ResearchSection, ResearchInner, ResearchTitle, SearchBar, SearchInput, SearchButton, TagsWrap, Tag, TimelineSection, TimelineTitle, TimelineWrap, TimelineList, TimelineRow, ImageCircle, TextBox, PeriodRange, PeriodDesc, AxisDot, ExploreSection, ExploreTitle, ExploreGrid, ExploreCard, ExploreImage, ExploreLabel } from './Home.styled'
+import { HomeWrapper, HeroSection, HeroTitle, HeroSubtitle, FilmStrip, HeaderBackground, SummarySection, SectionTitle, TopicsGrid, TopicCard, TopicIndex, TopicTitle, TopicDesc, ResearchSection, ResearchInner, ResearchTitle, SearchBar, SearchInput, SearchButton, TagsWrap, Tag, TimelineSection, TimelineTitle, TimelineWrap, TimelineList, TimelineRow, ImageCircle, TextBox, PeriodRange, PeriodDesc, AxisDot, ExploreSection, ExploreTitle, ExploreGrid, ExploreCard, ExploreImage, ExploreLabel } from './Home.styled'
 import { useDocumentTitle } from '@/hooks'
 import { useTranslation } from '@/lang/LanguageProvider';
 import historyFilmImage from '../../assets/history-film.png';
@@ -7,6 +7,8 @@ import newsImage from '@/assets/tintuc.png';
 import quizImage from '@/assets/caudo.png';
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '@/hooks/useStore';
+import { setQuery as setSearchQuery } from '@/store/searchSlice';
 
 const Home = () => {
     const { i18n } = useTranslation();
@@ -14,6 +16,7 @@ const Home = () => {
     useDocumentTitle(`${i18n.t('appName')} | ${i18n.t('navigation.home')}`);
 
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
     const [query, setQuery] = useState('');
     const [scrollY, setScrollY] = useState(0);
     const tags = useMemo(() => {
@@ -25,12 +28,9 @@ const Home = () => {
         e.preventDefault();
         const q = query.trim();
         if (!q) return;
-        // If a search page exists later, navigate to it with query param. Fallback: alert or no-op.
-        try {
-            navigate(`/search?q=${encodeURIComponent(q)}`);
-        } catch {
-            // No search route; safely ignore for now.
-        }
+        // Save to redux and navigate to search page
+        dispatch(setSearchQuery(q));
+        navigate('/search');
     };
 
     const onTagClick = (tag: string) => {
@@ -58,9 +58,14 @@ const Home = () => {
             <HomeWrapper>
                 <HeaderBackground />
                 <HeroSection>
-                    <HeroTitle>
-                        {i18n.t('home.heroTitle', { defaultValue: 'Hệ tri thức Hồ Chí Minh' })}
-                    </HeroTitle>
+                    <div>
+                        <HeroTitle>
+                            {i18n.t('home.heroQuote', { defaultValue: 'Không gì quý giá hơn độc lập, tự do' })}
+                        </HeroTitle>
+                        <HeroSubtitle>
+                            {i18n.t('home.heroSubtitle', { defaultValue: 'Hồ Chí Minh • 17/07/1966' })}
+                        </HeroSubtitle>
+                    </div>
                 </HeroSection>
                 <FilmStrip src={historyFilmImage} alt="History Film" style={{ bottom: `${filmBottom}px` }} />
 

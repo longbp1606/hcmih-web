@@ -80,11 +80,11 @@ export const HeroSection = styled.section`
 `;
 
 export const HeroTitle = styled.h1`
-    margin: 0;
+    margin-right: 100px;
     max-width: 800px;
     text-align: right; /* right aligned text */
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.3;
     letter-spacing: 0.2px;
     font-size: clamp(28px, 4vw + 1rem, 64px);
     
@@ -93,6 +93,19 @@ export const HeroTitle = styled.h1`
     background-clip: text;
     color: transparent;
     text-shadow: 0 0 18px rgba(255, 191, 0, 0.25);
+    z-index: 10;
+`;
+
+export const HeroSubtitle = styled.p`
+    margin: 8px 0 0;
+    max-width: 800px;
+    text-align: right;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    font-size: clamp(14px, 1.1vw + 0.5rem, 20px);
+    color: #995900;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
     z-index: 10;
 `;
 

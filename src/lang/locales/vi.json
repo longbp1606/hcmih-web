@@ -92,6 +92,8 @@
     },
     "home": {
         "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
+        "heroQuote": "Không gì quý giá hơn độc lập, tự do",
+        "heroSubtitle": "Hồ Chí Minh • 17/07/1966",
         "featuredTitle": "Các chủ đề nổi bật",
         "topics": {
             "history": {
@@ -111,8 +113,8 @@
                 "desc": "Các mốc sự kiện quan trọng, gắn với bối cảnh lịch sử Việt Nam và thế giới."
             },
             "works": {
-                "title": "Tác phẩm tiêu biểu",
-                "desc": "Giới thiệu các tác phẩm, thư từ và văn kiện quan trọng."
+                "title": "Tin tức",
+                "desc": "Tổng hợp những bản tin liên quan đến tư tưởng Hồ Chí Minh về độc lập dân tộc"
             },
             "learning": {
                 "title": "Học & tương tác",
@@ -169,7 +171,9 @@
     },
     "search": {
         "title": "Tra cứu",
-        "placeholder": "Nhập từ khóa tìm kiếm..."
+        "placeholder": "Nhập từ khóa tìm kiếm...",
+        "emptyState": "Nhập từ khóa ở trên để tra cứu nội dung tư tưởng.",
+        "noResults": "Không tìm thấy kết quả. Hãy thử từ khóa khác."
     },
     "content": {
         "relatedTitle": "Nội dung liên quan"
@@ -184,41 +188,50 @@
             "nationalIndependence": [
                 {
                     "title": "Độc lập, tự do là quyền thiêng liêng, bất khả xâm phạm của tất cả các dân tộc",
-                    "desc": "Lịch sử dựng nước và giữ nước của dân tộc Việt Nam từ ngàn xưa đến nay gắn liền với truyền thống yêu nước, đấu tranh chống giặc ngoại xâm. Điều đó nói lên một khát khao to lớn của dân tộc ta là, luôn mong muốn có được một nền độc lập cho dân tộc, tự do cho nhân dân và đó cũng là một giá trị tinh thần thiêng liêng, bất hủ của dân tộc mà Hồ Chí Minh là hiện thân cho tinh thần ấy. Người nói rằng, cái mà tôi cần nhất trên đời là đồng bào tôi được tự do, Tổ quốc tôi được độc lập."
+                    "desc": "Lịch sử dựng nước và giữ nước của dân tộc Việt Nam từ ngàn xưa đến nay gắn liền với truyền thống yêu nước, đấu tranh chống giặc ngoại xâm. Điều đó nói lên một khát khao to lớn của dân tộc ta là, luôn mong muốn có được một nền độc lập cho dân tộc, tự do cho nhân dân và đó cũng là một giá trị tinh thần thiêng liêng, bất hủ của dân tộc mà Hồ Chí Minh là hiện thân cho tinh thần ấy. Người nói rằng, cái mà tôi cần nhất trên đời là đồng bào tôi được tự do, Tổ quốc tôi được độc lập.",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640135/12-6-22_hochiminh_ssec_ute96s.jpg"
                 },
                 {
                     "title": "Độc lập dân tộc phải gắn liền tự do, cơm no, áo ấm và hạnh phúc của nhân dân",
-                    "desc": "Theo Hồ Chí Minh, độc lập dân tộc phải gắn với tự do của nhân dân. Người đánh giá cao học thuyết “Tam dân” của Tôn Trung Sơn về độc lập và tự do: dân tộc độc lập, dân quyền tự do và dân sinh hạnh phúc. Và bằng lý lẽ đầy thuyết phục, khi viện dẫn bản Tuyên ngôn Nhân quyền và Dân quyền của Cách mạng Pháp năm 1791 — “Người ta sinh ra tự do và bình đẳng về quyền lợi, và phải luôn được tự do và bình đẳng về quyền lợi” — Hồ Chí Minh khẳng định dân tộc Việt Nam đương nhiên cũng phải được tự do và bình đẳng về quyền lợi. “Đó là lẽ phải không ai chối cãi được”."
+                    "desc": "Theo Hồ Chí Minh, độc lập dân tộc phải gắn với tự do của nhân dân. Người đánh giá cao học thuyết “Tam dân” của Tôn Trung Sơn về độc lập và tự do: dân tộc độc lập, dân quyền tự do và dân sinh hạnh phúc. Và bằng lý lẽ đầy thuyết phục, khi viện dẫn bản Tuyên ngôn Nhân quyền và Dân quyền của Cách mạng Pháp năm 1791 — “Người ta sinh ra tự do và bình đẳng về quyền lợi, và phải luôn được tự do và bình đẳng về quyền lợi” — Hồ Chí Minh khẳng định dân tộc Việt Nam đương nhiên cũng phải được tự do và bình đẳng về quyền lợi. “Đó là lẽ phải không ai chối cãi được”.",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640137/bac_ho_dqmlqv.jpg"
                 },
                 {
                     "title": "Độc lập dân tộc phải là nền độc lập thật sự, hoàn toàn và triệt để",
-                    "desc": "Độc lập, tự do không chỉ là mục tiêu mà còn là điều kiện để mang lại hạnh phúc cho nhân dân."
+                    "desc": "Độc lập, tự do không chỉ là mục tiêu mà còn là điều kiện để mang lại hạnh phúc cho nhân dân.",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640135/210828_hcm1_qnt6dn.jpg"
                 },
                 {
                     "title": "Độc lập dân tộc gắn liền với thống nhất và toàn vẹn lãnh thổ.",
-                    "desc": "Độc lập, tự do không chỉ là mục tiêu mà còn là điều kiện để mang lại hạnh phúc cho nhân dân."
+                    "desc": "Độc lập, tự do không chỉ là mục tiêu mà còn là điều kiện để mang lại hạnh phúc cho nhân dân.",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640135/100153_Cac_chauThiYu_Nien_tYng_hoa_ChY_TYch_HY_Chi_Minh__20-02-1961_isim7z.jpg"
                 }
             ],
             "nationalRevolution": [
                 {
                     "title": "Cách mạng giải phóng dân tộc muốn thắng lợi phải đi theo con đường cách mạng vô sản",
-                    "desc": "Từ khi thực dân Pháp tiến hành xâm lược và đặt ách thống trị nước ta, vấn đề sống còn của dân tộc được đặt ra là phải đấu tranh để giải phóng dân tộc khỏi ách thực dân đế quốc. Hàng loạt những phong trào yêu nước chống thực dân đã nổ ra nhưng không thành công, sự thất bại của những phong trào yêu nước trong thời kỳ này đã nói lên sự khủng hoảng, bế tắc về giai cấp lãnh đạo và đường lối cách mạng. Vượt qua tầm nhìn của các bậc tiền bối, Hồ Chí Minh có chí hướng là muốn tìm kiếm con đường cứu nước, giải phóng dân tộc ở phương Tây;"
+                    "desc": "Từ khi thực dân Pháp tiến hành xâm lược và đặt ách thống trị nước ta, vấn đề sống còn của dân tộc được đặt ra là phải đấu tranh để giải phóng dân tộc khỏi ách thực dân đế quốc. Hàng loạt những phong trào yêu nước chống thực dân đã nổ ra nhưng không thành công, sự thất bại của những phong trào yêu nước trong thời kỳ này đã nói lên sự khủng hoảng, bế tắc về giai cấp lãnh đạo và đường lối cách mạng. Vượt qua tầm nhìn của các bậc tiền bối, Hồ Chí Minh có chí hướng là muốn tìm kiếm con đường cứu nước, giải phóng dân tộc ở phương Tây;",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640464/54-2560x1440_f1spqq.jpg"
                 },
                 {
                     "title": "Cách mạng giải phóng dân tộc, trong điều kiện của Việt Nam, muốn thắng lợi phải do Đảng Cộng sản lãnh đạo",
-                    "desc": "Về tầm quan trọng của tổ chức Đảng đối với cách mạng, chủ nghĩa Mác và Lênin chỉ rõ: Đảng cộng sản là nhân tố chủ quan để giai cấp công nhân hoàn thành sứ mệnh lịch sử của mình. Giai cấp công nhân phải tổ chức ra chính đảng; đảng đó phải thuyết phục, giác ngộ và tập hợp đông đảo quần chúng, huấn luyện quần chúng và đưa quần chúng ra đấu tranh. Hồ Chí Minh tiếp thu lý luận của chủ nghĩa Mác-Lênin và rất chú trọng đến việc thành lập đảng cộng sản, khẳng định vai trò to lớn của Đảng đối với cách mạng giải phóng dân tộc theo con đường cách mạng vô sản."
+                    "desc": "Về tầm quan trọng của tổ chức Đảng đối với cách mạng, chủ nghĩa Mác và Lênin chỉ rõ: Đảng cộng sản là nhân tố chủ quan để giai cấp công nhân hoàn thành sứ mệnh lịch sử của mình. Giai cấp công nhân phải tổ chức ra chính đảng; đảng đó phải thuyết phục, giác ngộ và tập hợp đông đảo quần chúng, huấn luyện quần chúng và đưa quần chúng ra đấu tranh. Hồ Chí Minh tiếp thu lý luận của chủ nghĩa Mác-Lênin và rất chú trọng đến việc thành lập đảng cộng sản, khẳng định vai trò to lớn của Đảng đối với cách mạng giải phóng dân tộc theo con đường cách mạng vô sản.",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640464/tu-tuong-ho-chi-minh-ve-cach-mang-giai-phong-dan-toc-474014_kahiws.jpg"
                 },
                 {
                     "title": "Cách mạng giải phóng dân tộc phải dựa trên lực lượng đại đoàn kết toàn dân tộc, lấy liên minh công - nông làm nền tảng",
-                    "desc": "Các nhà lý luận kinh điển của chủ nghĩa Mác - Lênin khẳng định rằng: cách mạng là sự nghiệp của quần chúng nhân dân; quần chúng nhân dân là chủ thể sáng tạo ra lịch sử. V.I.Lênin viết: “Không có sự đồng tình ủng hộ của đại đa số nhân dân lao động đối với đội tiên phong của mình tức là đối với giai cấp vô sản, thì cách mạng vô sản không thể thực hiện được”"
+                    "desc": "Các nhà lý luận kinh điển của chủ nghĩa Mác - Lênin khẳng định rằng: cách mạng là sự nghiệp của quần chúng nhân dân; quần chúng nhân dân là chủ thể sáng tạo ra lịch sử. V.I.Lênin viết: “Không có sự đồng tình ủng hộ của đại đa số nhân dân lao động đối với đội tiên phong của mình tức là đối với giai cấp vô sản, thì cách mạng vô sản không thể thực hiện được”",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640463/16213922792193_dbweqz.jpg"
                 },
                 {
                     "title": "Cách mạng giải phóng dân tộc cần chủ động, sáng tạo, có khả năng giành thắng lợi trước cách mạng vô sản ở chính quốc",
-                    "desc": "Do chưa đánh giá hết tiềm lực và khả năng to lớn của cách mạng thuộc địa nên Quốc tế Cộng sản có lúc xem nhẹ vai trò của cách mạng thuộc địa, coi cách mạng thuộc địa phụ thuộc vào cách mạng vô sản ở chính quốc. Đại hội VI Quốc tế Cộng sản năm 1928 đã thông qua Những luận cương về phong trào cách mạng trong các nước thuộc địa và nửa thuộc địa, trong đó có đoạn viết rằng: chỉ có thể thực hiện hoàn toàn công cuộc giải phóng các nước thuộc địa khi giai cấp vô sản giành được thắng lợi ở các nước tư bản tiên tiến. Quan điểm này có tác động không tốt, làm giảm đi tính chủ động, sáng tạo của nhân dân các nước thuộc địa trong công cuộc đấu tranh chống thực dân, đế quốc, giành độc lập cho dân tộc."
+                    "desc": "Do chưa đánh giá hết tiềm lực và khả năng to lớn của cách mạng thuộc địa nên Quốc tế Cộng sản có lúc xem nhẹ vai trò của cách mạng thuộc địa, coi cách mạng thuộc địa phụ thuộc vào cách mạng vô sản ở chính quốc. Đại hội VI Quốc tế Cộng sản năm 1928 đã thông qua Những luận cương về phong trào cách mạng trong các nước thuộc địa và nửa thuộc địa, trong đó có đoạn viết rằng: chỉ có thể thực hiện hoàn toàn công cuộc giải phóng các nước thuộc địa khi giai cấp vô sản giành được thắng lợi ở các nước tư bản tiên tiến. Quan điểm này có tác động không tốt, làm giảm đi tính chủ động, sáng tạo của nhân dân các nước thuộc địa trong công cuộc đấu tranh chống thực dân, đế quốc, giành độc lập cho dân tộc.",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640464/a-b%C3%A1c-h%E1%BB%8Dp_xjiehl.jpg"
                 },
                 {
                     "title": "Cách mạng giải phóng dân tộc phải được tiến hành bằng phương pháp bạo lực cách mạng",
-                    "desc": "Trong bộ Tư bản, quyển I, tập thứ nhất, xuất bản lần đầu tiên năm 1867, C.Mác viết: “Bạo lực là bả đỡ của một chế độ xã hội cũ đang thai nghén một chế độ mới”². Năm 1878, trong tác phẩm Chống Đuyrinh, Ph.Ăngghen nhắc lại: “Bạo lực còn đóng một vai trò khác trong lịch sử, vai trò cách mạng; nói theo C.Mác, bạo lực còn là bà đỡ cho mọi xã hội cũ đang thai nghén một xã hội mới; bạo lực là công cụ mà sự vận động xã hội dùng để tự mở đường cho mình và đập tan"
+                    "desc": "Trong bộ Tư bản, quyển I, tập thứ nhất, xuất bản lần đầu tiên năm 1867, C.Mác viết: “Bạo lực là bả đỡ của một chế độ xã hội cũ đang thai nghén một chế độ mới”². Năm 1878, trong tác phẩm Chống Đuyrinh, Ph.Ăngghen nhắc lại: “Bạo lực còn đóng một vai trò khác trong lịch sử, vai trò cách mạng; nói theo C.Mác, bạo lực còn là bà đỡ cho mọi xã hội cũ đang thai nghén một xã hội mới; bạo lực là công cụ mà sự vận động xã hội dùng để tự mở đường cho mình và đập tan",
+                    "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758640463/tu_tuong_ho_chi_minh_ve_cach_mang_giai_phong_dan_toc_va_thuoc_dia_16581922112021_cy47as.jpg"
                 }
             ]
         }
@@ -227,23 +240,19 @@
         "title": "Về Hồ Chí Minh Ideology Hub",
         "mission": {
             "title": "Sứ mệnh",
-            "note": "(sử dụng thông điệp và giá trị bạn đã cung cấp)",
-            "body": "Xây dựng cổng học liệu hiện đại, trực quan và đáng tin cậy về tư tưởng Hồ Chí Minh; kết nối học thuật với ứng dụng thực tiễn."
+            "body": "Xây dựng cổng học liệu hiện đại, trực quan và đáng tin cậy về tư tưởng Hồ Chí Minh; kết nối học thuật với ứng dụng thực tiễn.\n\nTạo môi trường học tập mở, thân thiện, giúp người học dễ tiếp cận tri thức chuẩn xác, có hệ thống và được trình bày rõ ràng.\n\nThúc đẩy việc gìn giữ, lan tỏa giá trị tư tưởng Hồ Chí Minh trong bối cảnh mới, góp phần bồi đắp lý tưởng, đạo đức và năng lực công dân."
         },
         "objective": {
             "title": "Mục tiêu",
-            "note": "(đối tượng: học sinh, giáo viên, nghiên cứu sinh, công chúng)",
-            "body": "Cung cấp tri thức chuẩn xác, có hệ thống; hỗ trợ nghiên cứu, giảng dạy và tự học với trải nghiệm thân thiện."
+            "body": "Cung cấp tri thức chuẩn xác, có hệ thống; hỗ trợ nghiên cứu, giảng dạy và tự học với trải nghiệm thân thiện.\n\nPhục vụ nhiều đối tượng: học sinh, sinh viên, giáo viên, nhà nghiên cứu và công chúng quan tâm.\n\nTích hợp nội dung cơ bản – nâng cao, có ví dụ minh họa, trích dẫn và gợi ý tài liệu để đi sâu."
         },
         "method": {
             "title": "Phương pháp",
-            "note": "(kết hợp học thuật + công nghệ — mô tả ngắn cách soát xét, kiểm chứng nguồn, duyệt nội dung.)",
-            "body": "Tiếp cận dựa trên nguồn tư liệu tin cậy; tổng hợp - đối chiếu - kiểm chứng; quy trình biên tập rõ ràng; ứng dụng công nghệ để trực quan hóa và tương tác."
+            "body": "Tiếp cận dựa trên nguồn tư liệu tin cậy; tổng hợp – đối chiếu – kiểm chứng; quy trình biên tập rõ ràng.\n\nÁp dụng công nghệ để trực quan hóa (sơ đồ, dòng thời gian, thẻ nội dung), tối ưu trải nghiệm đa thiết bị.\n\nCập nhật định kỳ, mở góp ý từ cộng đồng học thuật để không ngừng hoàn thiện chất lượng."
         },
         "value": {
             "title": "Giá trị thực tiễn",
-            "note": "(những giá trị mang lại cho người học, nhà giáo, cộng đồng)",
-            "body": "Kiến tạo tri thức dễ tiếp cận, hỗ trợ dạy và học, lan tỏa giá trị tư tưởng Hồ Chí Minh tới cộng đồng.",
+            "body": "Kiến tạo tri thức dễ tiếp cận, hỗ trợ dạy và học, lan tỏa giá trị tư tưởng Hồ Chí Minh tới cộng đồng.\n\nGiúp người học hình thành bức tranh tổng thể – có chiều sâu; hỗ trợ giáo viên với nội dung trực quan, minh chứng rõ ràng.\n\nKhuyến khích tinh thần tự học, tư duy phản biện và ứng dụng thực tiễn qua hoạt động tương tác (quiz, bài tập, thảo luận).",
             "cards": {
                 "modernUI": {
                     "title": "Giao diện trực quan",
