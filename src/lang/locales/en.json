@@ -9,30 +9,36 @@
   },
   "common": {
     "back": "Back",
-    "backTo": "← Back to %{target}"
+    "backTo": "← Back to %{target}",
+    "viewDetail": "View detail"
   },
   "timeline": {
     "title": "Timeline",
     "periods": [
       {
         "range": "1890–1911",
-        "desc": "Formation of patriotism and revolutionary aspiration."
+        "desc": "Forming patriotic thought and the aspiration for national independence, rooted in family, homeland, and national culture.",
+        "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-1_edzjcu.png"
       },
       {
         "range": "1911–1920",
-        "desc": "Searching for the path to national liberation."
+        "desc": "Seeking a path to national salvation, approaching Marxism–Leninism, and affirming the path of the proletarian revolution.",
+        "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601559/timeline-2_qoldw4.png"
       },
       {
         "range": "1921–1930",
-        "desc": "Fundamental formation of Ho Chi Minh's thought on Vietnam's revolution: both scientific and practical."
+        "desc": "Disseminating Marxism–Leninism, founding the Party, and affirming the path of independence inseparable from socialism.",
+        "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-3_olcpbr.png"
       },
       {
         "range": "1930–1945",
-        "desc": "A period of trials, steadfast in viewpoint; upholding the ideas of independence, freedom, and fundamental national rights."
+        "desc": "Leading the revolution, preparing for and winning the August Revolution, establishing the Democratic Republic of Vietnam.",
+        "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-4_r2ygdf.png"
       },
       {
         "range": "1945–1969",
-        "desc": "New development in the thought of resistance and nation-building."
+        "desc": "Nation-building and defense; developing the thought of national independence linked with peace and international cooperation.",
+        "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-5_aem1jj.png"
       }
     ],
     "explore": {
@@ -162,8 +168,91 @@
     }
   }
   ,
+  "ideology": {
+    "title": "Ho Chi Minh’s Thought on National Independence",
+    "items": {
+      "nationalIndependence": "National independence",
+      "nationalRevolution": "National liberation revolution"
+    },
+    "contents": {
+      "nationalIndependence": [
+        {
+          "title": "Independence and freedom are the sacred, inviolable rights of all peoples",
+          "desc": "Vietnam’s long history of nation-building and defense is inseparable from the tradition of patriotism and resistance against foreign aggression. It expresses our people’s profound aspiration for national independence and the freedom of the people — a sacred, imperishable value embodied by Ho Chi Minh. He said: ‘What I desire most in life is that my compatriots have freedom and my Fatherland independence.’"
+        },
+        {
+          "title": "National independence must be tied to the people’s freedom, subsistence, and happiness",
+          "desc": "According to Ho Chi Minh, national independence must go hand in hand with the people’s freedom. He highly valued Sun Yat-sen’s ‘Three Principles of the People’ on independence and freedom: national independence, people’s rights (freedom), and people’s livelihood (well-being). Citing the French Declaration of the Rights of Man and of the Citizen (1791) — ‘All men are born free and equal in rights, and must always remain free and equal in rights’ — Ho Chi Minh affirmed that the Vietnamese nation must also be free and equal in rights. ‘That is a truth no one can deny.’"
+        },
+        {
+          "title": "Independence must be genuine, complete, and thorough",
+          "desc": "Independence and freedom are not only goals but also conditions to bring happiness to the people."
+        },
+        {
+          "title": "Independence goes hand in hand with national unity and territorial integrity",
+          "desc": "Independence and freedom are not only goals but also conditions to bring happiness to the people."
+        }
+      ],
+      "nationalRevolution": [
+        {
+          "title": "To triumph, the national liberation revolution must follow the path of the proletarian revolution",
+          "desc": "Since the French invasion and colonial rule, the Vietnamese nation faced the existential task of liberating itself from imperialist domination. Numerous patriotic movements arose but failed; their failure revealed a crisis and deadlock regarding revolutionary leadership and line. Surpassing the horizons of his predecessors, Ho Chi Minh set out to seek a path to national salvation in the West."
+        },
+        {
+          "title": "In Vietnam’s conditions, the national liberation revolution must be led by the Communist Party",
+          "desc": "Marxism–Leninism stresses the decisive role of the Communist Party: it is the subjective factor enabling the working class to fulfill its historic mission. The working class must have its political party; that party must persuade, enlighten, organize, train, and lead the masses into struggle. Ho Chi Minh absorbed Marxist–Leninist theory and attached great importance to founding the Communist Party, affirming its pivotal role in the national liberation revolution along the proletarian path."
+        },
+        {
+          "title": "Rely on great national unity, with the worker–peasant alliance as the foundation",
+          "desc": "Classical Marxist–Leninist theory affirms: revolution is the cause of the masses; the people are the creators of history. V. I. Lenin wrote: ‘Without the sympathy and support of the vast majority of the working people for its vanguard — the proletariat — the proletarian revolution cannot be carried out.’"
+        },
+        {
+          "title": "Be proactive and creative; colonial revolutions can win before the proletarian revolution in the metropole",
+          "desc": "At times, the Communist International underestimated the colonial revolution, viewing it as dependent on the proletarian revolution in the metropole. The Sixth Comintern Congress (1928) adopted theses on revolutionary movements in colonies and semi-colonies stating that complete liberation would only be possible after the proletariat triumphed in advanced capitalist countries. This view had adverse effects, diminishing the initiative and creativity of colonial peoples in their struggle for independence."
+        },
+        {
+          "title": "Carry out the national liberation revolution by the method of revolutionary violence",
+          "desc": "In Capital (Vol. I, 1867), Karl Marx wrote: ‘Force is the midwife of every old society pregnant with a new one.’ In 1878, in Anti-Dühring, Friedrich Engels reiterated: ‘Force also plays another role in history — a revolutionary role; in Marx’s words, it is the midwife of every old society pregnant with a new one; force is the instrument whereby social movement forces its way and shatters obsolete forms.’"
+        }
+      ]
+    }
+  }
+  ,
+  "about": {
+    "title": "About Ho Chi Minh Ideology Hub",
+    "mission": {
+      "title": "Mission",
+      "note": "(use the message and values you provided)",
+      "body": "Build a modern, visual, and trustworthy learning hub on Ho Chi Minh’s thought, connecting scholarship with real-world applications."
+    },
+    "objective": {
+      "title": "Objectives",
+      "note": "(audiences: students, teachers, researchers, the public)",
+      "body": "Provide accurate, structured knowledge; support research, teaching, and self-study with a friendly experience."
+    },
+    "method": {
+      "title": "Method",
+      "note": "(academia + technology — briefly describe review, source verification, and editorial process)",
+      "body": "A source-driven approach: synthesize–cross-check–verify with a clear editorial workflow; leverage technology for visualization and interactivity."
+    },
+    "value": {
+      "title": "Practical Value",
+      "note": "(value delivered to learners, educators, and community)",
+      "body": "Make knowledge accessible; assist teaching and learning; spread the values of Ho Chi Minh’s thought across the community.",
+      "cards": {
+        "modernUI": { "title": "Modern, Visual UI", "desc": "Clean design, readable typography, responsive across devices." },
+        "reliable": { "title": "Reliable Sources", "desc": "Curated materials with cross-references and citations." },
+        "interactive": { "title": "Interactive Learning", "desc": "Quizzes, hands-on activities, mind maps, and more." },
+        "community": { "title": "Community Impact", "desc": "Connect learners, teachers, and researchers; foster knowledge sharing." }
+      }
+    }
+  }
+  ,
   "search": {
     "title": "Search",
     "placeholder": "Enter search keywords..."
+  },
+  "content": {
+    "relatedTitle": "Related Content"
   }
 }

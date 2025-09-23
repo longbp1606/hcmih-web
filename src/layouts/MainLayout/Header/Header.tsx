@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     HeaderContainer,
     Logo,
@@ -17,6 +17,7 @@ import config from '@/config';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const { pathname } = useLocation();
     const { i18n } = useTranslation();
 
@@ -27,17 +28,17 @@ const Header = () => {
         matchers?: string[]; // additional path prefixes that should activate this item
         onClick?: () => void; // custom behavior
     }> = [
-        { label: i18n.t('navigation.home'), href: config.routes.public.home, matchers: ['/'] },
-        { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
-        { label: i18n.t('navigation.search'), href: '/search', matchers: ['/search', '/tra-cuu'] },
-        { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
-        // Learning: go to the dedicated page; quizzes live in its #quiz section
-        { 
-          label: i18n.t('navigation.learning'), 
-          href: config.routes.public.learning, 
-          matchers: ['/hoc-tuong-tac', '/quizes'],
-        }
-    ];
+            { label: i18n.t('navigation.home'), href: config.routes.public.home, matchers: ['/'] },
+            { label: i18n.t('navigation.about'), href: config.routes.public.about },
+            { label: i18n.t('navigation.search'), href: '/search', matchers: ['/search', '/tra-cuu'] },
+            { label: i18n.t('navigation.ideology'), href: config.routes.public.ideology },
+            // Learning: go to the dedicated page; quizzes live in its #quiz section
+            {
+                label: i18n.t('navigation.learning'),
+                href: config.routes.public.learning,
+                matchers: [config.routes.public.learning, '/quizes'],
+            }
+        ];
 
     // Active logic that supports redirects/aliases and nested routes
     const isActivePath = (currentPath: string, itemHref: string, extraMatchers?: string[]) => {
@@ -54,12 +55,21 @@ const Header = () => {
         });
     };
 
+    useEffect(() => {
+        const onScroll = () => {
+            setScrolled(window.scrollY > 8);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     return (
-        <HeaderContainer>
+        <HeaderContainer $scrolled={scrolled}>
             <Logo>
                 <Image src={logo} alt="Logo" preview={false} width={120} />
             </Logo>
@@ -70,11 +80,11 @@ const Header = () => {
                         key={index}
                         href={item.href}
                         onClick={(e: React.MouseEvent) => {
-                          // default navigation via anchor; if we ever need custom behavior, use navigate
-                          if (item.onClick) {
-                            e.preventDefault();
-                            item.onClick();
-                          }
+                            // default navigation via anchor; if we ever need custom behavior, use navigate
+                            if (item.onClick) {
+                                e.preventDefault();
+                                item.onClick();
+                            }
                         }}
                         $isActive={isActivePath(pathname, item.href, item.matchers)}
                     >
@@ -97,11 +107,11 @@ const Header = () => {
                         href={item.href}
                         $isActive={isActivePath(pathname, item.href, item.matchers)}
                         onClick={(e: React.MouseEvent) => {
-                          setIsMobileMenuOpen(false);
-                          if (item.onClick) {
-                            e.preventDefault();
-                            item.onClick();
-                          }
+                            setIsMobileMenuOpen(false);
+                            if (item.onClick) {
+                                e.preventDefault();
+                                item.onClick();
+                            }
                         }}
                     >
                         {item.label}

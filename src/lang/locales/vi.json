@@ -1,168 +1,267 @@
 {
-  "appName": "HCMIH",
-  "navigation": {
-    "home": "Trang chủ",
-    "about": "Giới thiệu",
-    "search": "Tra cứu",
-    "ideology": "Hệ thống tư tưởng",
-    "learning": "Học & Tương tác"
-  },
-  "common": {
-    "back": "Quay lại",
-    "backTo": "← Quay về %{target}"
-  },
-  "timeline": {
-    "title": "Lược sử",
-    "periods": [
-      {
-        "range": "Từ 1890–1911",
-        "desc": "Thời kỳ hình thành tư tưởng yêu nước và chí hướng cách mạng."
-      },
-      {
-        "range": "Từ 1911–1920",
-        "desc": "Thời kỳ tìm tòi con đường cứu nước giải phóng dân tộc."
-      },
-      {
-        "range": "Từ 1921–1930",
-        "desc": "Thời kỳ hình thành cơ bản tư tưởng Hồ Chí Minh"
-      },
-      {
-        "range": "Từ 1930–1945",
-        "desc": "Thời kỳ thử thách, kiên trì giữ vững quan điểm"
-      },
-      {
-        "range": "Từ 1945–1969",
-        "desc": "Thời kỳ phát triển mới về tư tưởng kháng chiến và kiến quốc."
-      }
-    ],
-    "explore": {
-      "title": "Bắt đầu khám phá",
-      "items": {
+    "appName": "HCMIH",
+    "navigation": {
+        "home": "Trang chủ",
+        "about": "Giới thiệu",
+        "search": "Tra cứu",
+        "ideology": "Hệ thống tư tưởng",
+        "learning": "Học & Tương tác"
+    },
+    "common": {
+        "back": "Quay lại",
+        "backTo": "← Quay về %{target}",
+        "viewDetail": "Xem chi tiết"
+    },
+    "timeline": {
+        "title": "Lược sử",
+        "periods": [
+            {
+                "range": "Từ 1890–1911",
+                "desc": "Hình thành tư tưởng yêu nước, khát vọng độc lập dân tộc từ truyền thống gia đình, quê hương và văn hóa dân tộc",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-1_edzjcu.png"
+            },
+            {
+                "range": "Từ 1911–1920",
+                "desc": "Đi tìm đường cứu nước, tiếp cận chủ nghĩa Mác – Lênin và khẳng định con đường cách mạng vô sản.",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601559/timeline-2_qoldw4.png"
+            },
+            {
+                "range": "Từ 1921–1930",
+                "desc": "Truyền bá chủ nghĩa Mác – Lênin, thành lập Đảng, khẳng định con đường độc lập gắn liền CNXH",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-3_olcpbr.png"
+            },
+            {
+                "range": "Từ 1930–1945",
+                "desc": "Lãnh đạo cách mạng, chuẩn bị và giành thắng lợi Cách mạng Tháng Tám, lập ra nước Việt Nam Dân chủ Cộng hòa.",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-4_r2ygdf.png"
+            },
+            {
+                "range": "Từ 1945–1969",
+                "desc": "Xây dựng, bảo vệ Tổ quốc; phát triển tư tưởng độc lập dân tộc gắn hòa bình, hợp tác quốc tế.",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-5_aem1jj.png"
+            }
+        ],
+        "explore": {
+            "title": "Bắt đầu khám phá",
+            "items": {
+                "content": "Nội dung",
+                "news": "Tin tức",
+                "quiz": "Câu đố"
+            }
+        }
+    },
+    "footer": {
+        "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
+    },
+    "quizzes": {
+        "title": "Danh sách Quiz",
+        "subtitle": "Chọn một bài kiểm tra ngắn để bắt đầu",
+        "loading": "Đang tải danh sách quiz...",
+        "loadError": "Không thể tải danh sách quiz",
+        "meta": "• %{count} câu hỏi • ~%{minutes} phút",
+        "start": "Bắt đầu",
+        "excerpt": "Gồm khoảng %{count} câu hỏi trắc nghiệm về tư tưởng, lịch sử và kiến thức tổng quát. Thời gian dự kiến %{min}-%{max} phút.",
+        "chips": {
+            "basic": "Cơ bản",
+            "hcmThesis": "Tư tưởng HCM",
+            "questionsCount": "%{count} câu"
+        },
+        "random10Button": "%{count} câu ngẫu nhiên"
+    },
+    "quizDetail": {
+        "loading": "Đang tải quiz...",
+        "notFound": "Quiz không tồn tại",
+        "loadError": "Không thể tải quiz",
+        "docTitle": "Quiz: %{title}",
+        "random10Tag": "Chế độ 10 câu ngẫu nhiên",
+        "regenerateTooltip": "Lấy lại 10 câu hỏi khác",
+        "regenerateBtn": "Đổi bộ câu hỏi",
+        "switchToFullMode": "Chuyển sang chế độ đầy đủ",
+        "progressText": "%{completed}/%{total} hoàn thành",
+        "completedTitle": "Hoàn thành bài Quiz!",
+        "score": "Điểm số: %{correct} / %{total} đúng (%{percent}%)",
+        "retry": "Làm lại",
+        "switchToRandom10": "Chuyển sang 10 câu ngẫu nhiên",
+        "backToList": "Quay lại danh sách",
+        "noQuestions": "Không có câu hỏi.",
+        "submit": "Nộp bài",
+        "correct": "Chính xác! 🎉",
+        "incorrect": "Chưa đúng.",
+        "finish": "Hoàn thành",
+        "nextQuestion": "Câu tiếp theo"
+    },
+    "home": {
+        "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
+        "featuredTitle": "Các chủ đề nổi bật",
+        "topics": {
+            "history": {
+                "title": "Cuộc đời & sự nghiệp",
+                "desc": "Khám phá cuộc đời, gia đình và con đường cách mạng của Chủ tịch Hồ Chí Minh."
+            },
+            "ideology": {
+                "title": "Hệ thống tư tưởng",
+                "desc": "Các luận điểm cốt lõi, giá trị và sự vận dụng trong thời đại mới."
+            },
+            "quotes": {
+                "title": "Danh ngôn & trích dẫn",
+                "desc": "Tập hợp những câu nói, bài viết tiêu biểu, dễ tìm và trích dẫn."
+            },
+            "timeline": {
+                "title": "Dòng thời gian",
+                "desc": "Các mốc sự kiện quan trọng, gắn với bối cảnh lịch sử Việt Nam và thế giới."
+            },
+            "works": {
+                "title": "Tác phẩm tiêu biểu",
+                "desc": "Giới thiệu các tác phẩm, thư từ và văn kiện quan trọng."
+            },
+            "learning": {
+                "title": "Học & tương tác",
+                "desc": "Bài học tương tác, trắc nghiệm, sơ đồ tư duy và hoạt động trải nghiệm."
+            }
+        }
+    },
+    "research": {
+        "title": "Tra cứu nhanh",
+        "searchPlaceholder": "Nhập từ khóa (ví dụ: tư tưởng, độc lập, dân chủ…)",
+        "searchButton": "Tìm kiếm",
+        "tags": [
+            "Tư tưởng",
+            "Độc lập",
+            "Dân chủ",
+            "Đạo đức",
+            "Văn hóa",
+            "Thanh niên",
+            "Cách mạng",
+            "Nhân dân"
+        ]
+    },
+    "language": {
+        "vietnamese": "Tiếng Việt",
+        "english": "Tiếng Anh",
+        "japanese": "Tiếng Nhật",
+        "switchTo": "Chuyển sang"
+    },
+    "learning": {
+        "title": "Học & Tương tác",
         "content": "Nội dung",
         "news": "Tin tức",
-        "quiz": "Câu đố"
-      }
-    }
-  },
-  "footer": {
-    "copyright": "Bản quyền © 2025 HCMIH. Tất cả quyền được bảo lưu."
-  },
-  "quizzes": {
-    "title": "Danh sách Quiz",
-    "subtitle": "Chọn một bài kiểm tra ngắn để bắt đầu",
-    "loading": "Đang tải danh sách quiz...",
-    "loadError": "Không thể tải danh sách quiz",
-    "meta": "• %{count} câu hỏi • ~%{minutes} phút",
-    "start": "Bắt đầu",
-    "excerpt": "Gồm khoảng %{count} câu hỏi trắc nghiệm về tư tưởng, lịch sử và kiến thức tổng quát. Thời gian dự kiến %{min}-%{max} phút.",
-    "chips": {
-      "basic": "Cơ bản",
-      "hcmThesis": "Tư tưởng HCM",
-      "questionsCount": "%{count} câu"
+        "quiz": "Câu đố",
+        "alt": {
+            "content": "Nội dung",
+            "news": "Tin tức",
+            "quiz": "Câu đố"
+        }
     },
-    "random10Button": "%{count} câu ngẫu nhiên"
-  },
-  "quizDetail": {
-    "loading": "Đang tải quiz...",
-    "notFound": "Quiz không tồn tại",
-    "loadError": "Không thể tải quiz",
-    "docTitle": "Quiz: %{title}",
-    "random10Tag": "Chế độ 10 câu ngẫu nhiên",
-    "regenerateTooltip": "Lấy lại 10 câu hỏi khác",
-    "regenerateBtn": "Đổi bộ câu hỏi",
-    "switchToFullMode": "Chuyển sang chế độ đầy đủ",
-    "progressText": "%{completed}/%{total} hoàn thành",
-    "completedTitle": "Hoàn thành bài Quiz!",
-    "score": "Điểm số: %{correct} / %{total} đúng (%{percent}%)",
-    "retry": "Làm lại",
-    "switchToRandom10": "Chuyển sang 10 câu ngẫu nhiên",
-    "backToList": "Quay lại danh sách",
-    "noQuestions": "Không có câu hỏi.",
-    "submit": "Nộp bài",
-    "correct": "Chính xác! 🎉",
-    "incorrect": "Chưa đúng.",
-    "finish": "Hoàn thành",
-    "nextQuestion": "Câu tiếp theo"
-  },
-  "home": {
-    "heroTitle": "Tiếp cận tư tưởng Hồ Chí Minh theo cách hiện đại, trực quan và dễ hiểu.",
-    "featuredTitle": "Các chủ đề nổi bật",
-    "topics": {
-      "history": {
-        "title": "Cuộc đời & sự nghiệp",
-        "desc": "Khám phá cuộc đời, gia đình và con đường cách mạng của Chủ tịch Hồ Chí Minh."
-      },
-      "ideology": {
-        "title": "Hệ thống tư tưởng",
-        "desc": "Các luận điểm cốt lõi, giá trị và sự vận dụng trong thời đại mới."
-      },
-      "quotes": {
-        "title": "Danh ngôn & trích dẫn",
-        "desc": "Tập hợp những câu nói, bài viết tiêu biểu, dễ tìm và trích dẫn."
-      },
-      "timeline": {
-        "title": "Dòng thời gian",
-        "desc": "Các mốc sự kiện quan trọng, gắn với bối cảnh lịch sử Việt Nam và thế giới."
-      },
-      "works": {
-        "title": "Tác phẩm tiêu biểu",
-        "desc": "Giới thiệu các tác phẩm, thư từ và văn kiện quan trọng."
-      },
-      "learning": {
-        "title": "Học & tương tác",
-        "desc": "Bài học tương tác, trắc nghiệm, sơ đồ tư duy và hoạt động trải nghiệm."
-      }
+    "news": {
+        "title": "Tin tức",
+        "relatedNews": "Tin tức liên quan",
+        "readOriginal": "Xem bài viết gốc",
+        "content": "Nội dung chi tiết",
+        "date": "Ngày đăng",
+        "source": "Nguồn",
+        "backToNews": "Quay lại danh sách tin tức",
+        "noNewsFound": "Không tìm thấy tin tức!",
+        "pagination": {
+            "previous": "Trước",
+            "next": "Tiếp theo",
+            "page": "Trang"
+        }
+    },
+    "search": {
+        "title": "Tra cứu",
+        "placeholder": "Nhập từ khóa tìm kiếm..."
+    },
+    "content": {
+        "relatedTitle": "Nội dung liên quan"
+    },
+    "ideology": {
+        "title": "Nội dung Tư tưởng Hồ Chí Minh về độc lập dân tộc",
+        "items": {
+            "nationalIndependence": "Vấn đề độc lập dân tộc",
+            "nationalRevolution": "Cách mạng giải phóng dân tộc"
+        },
+        "contents": {
+            "nationalIndependence": [
+                {
+                    "title": "Độc lập, tự do là quyền thiêng liêng, bất khả xâm phạm của tất cả các dân tộc",
+                    "desc": "Lịch sử dựng nước và giữ nước của dân tộc Việt Nam từ ngàn xưa đến nay gắn liền với truyền thống yêu nước, đấu tranh chống giặc ngoại xâm. Điều đó nói lên một khát khao to lớn của dân tộc ta là, luôn mong muốn có được một nền độc lập cho dân tộc, tự do cho nhân dân và đó cũng là một giá trị tinh thần thiêng liêng, bất hủ của dân tộc mà Hồ Chí Minh là hiện thân cho tinh thần ấy. Người nói rằng, cái mà tôi cần nhất trên đời là đồng bào tôi được tự do, Tổ quốc tôi được độc lập."
+                },
+                {
+                    "title": "Độc lập dân tộc phải gắn liền tự do, cơm no, áo ấm và hạnh phúc của nhân dân",
+                    "desc": "Theo Hồ Chí Minh, độc lập dân tộc phải gắn với tự do của nhân dân. Người đánh giá cao học thuyết “Tam dân” của Tôn Trung Sơn về độc lập và tự do: dân tộc độc lập, dân quyền tự do và dân sinh hạnh phúc. Và bằng lý lẽ đầy thuyết phục, khi viện dẫn bản Tuyên ngôn Nhân quyền và Dân quyền của Cách mạng Pháp năm 1791 — “Người ta sinh ra tự do và bình đẳng về quyền lợi, và phải luôn được tự do và bình đẳng về quyền lợi” — Hồ Chí Minh khẳng định dân tộc Việt Nam đương nhiên cũng phải được tự do và bình đẳng về quyền lợi. “Đó là lẽ phải không ai chối cãi được”."
+                },
+                {
+                    "title": "Độc lập dân tộc phải là nền độc lập thật sự, hoàn toàn và triệt để",
+                    "desc": "Độc lập, tự do không chỉ là mục tiêu mà còn là điều kiện để mang lại hạnh phúc cho nhân dân."
+                },
+                {
+                    "title": "Độc lập dân tộc gắn liền với thống nhất và toàn vẹn lãnh thổ.",
+                    "desc": "Độc lập, tự do không chỉ là mục tiêu mà còn là điều kiện để mang lại hạnh phúc cho nhân dân."
+                }
+            ],
+            "nationalRevolution": [
+                {
+                    "title": "Cách mạng giải phóng dân tộc muốn thắng lợi phải đi theo con đường cách mạng vô sản",
+                    "desc": "Từ khi thực dân Pháp tiến hành xâm lược và đặt ách thống trị nước ta, vấn đề sống còn của dân tộc được đặt ra là phải đấu tranh để giải phóng dân tộc khỏi ách thực dân đế quốc. Hàng loạt những phong trào yêu nước chống thực dân đã nổ ra nhưng không thành công, sự thất bại của những phong trào yêu nước trong thời kỳ này đã nói lên sự khủng hoảng, bế tắc về giai cấp lãnh đạo và đường lối cách mạng. Vượt qua tầm nhìn của các bậc tiền bối, Hồ Chí Minh có chí hướng là muốn tìm kiếm con đường cứu nước, giải phóng dân tộc ở phương Tây;"
+                },
+                {
+                    "title": "Cách mạng giải phóng dân tộc, trong điều kiện của Việt Nam, muốn thắng lợi phải do Đảng Cộng sản lãnh đạo",
+                    "desc": "Về tầm quan trọng của tổ chức Đảng đối với cách mạng, chủ nghĩa Mác và Lênin chỉ rõ: Đảng cộng sản là nhân tố chủ quan để giai cấp công nhân hoàn thành sứ mệnh lịch sử của mình. Giai cấp công nhân phải tổ chức ra chính đảng; đảng đó phải thuyết phục, giác ngộ và tập hợp đông đảo quần chúng, huấn luyện quần chúng và đưa quần chúng ra đấu tranh. Hồ Chí Minh tiếp thu lý luận của chủ nghĩa Mác-Lênin và rất chú trọng đến việc thành lập đảng cộng sản, khẳng định vai trò to lớn của Đảng đối với cách mạng giải phóng dân tộc theo con đường cách mạng vô sản."
+                },
+                {
+                    "title": "Cách mạng giải phóng dân tộc phải dựa trên lực lượng đại đoàn kết toàn dân tộc, lấy liên minh công - nông làm nền tảng",
+                    "desc": "Các nhà lý luận kinh điển của chủ nghĩa Mác - Lênin khẳng định rằng: cách mạng là sự nghiệp của quần chúng nhân dân; quần chúng nhân dân là chủ thể sáng tạo ra lịch sử. V.I.Lênin viết: “Không có sự đồng tình ủng hộ của đại đa số nhân dân lao động đối với đội tiên phong của mình tức là đối với giai cấp vô sản, thì cách mạng vô sản không thể thực hiện được”"
+                },
+                {
+                    "title": "Cách mạng giải phóng dân tộc cần chủ động, sáng tạo, có khả năng giành thắng lợi trước cách mạng vô sản ở chính quốc",
+                    "desc": "Do chưa đánh giá hết tiềm lực và khả năng to lớn của cách mạng thuộc địa nên Quốc tế Cộng sản có lúc xem nhẹ vai trò của cách mạng thuộc địa, coi cách mạng thuộc địa phụ thuộc vào cách mạng vô sản ở chính quốc. Đại hội VI Quốc tế Cộng sản năm 1928 đã thông qua Những luận cương về phong trào cách mạng trong các nước thuộc địa và nửa thuộc địa, trong đó có đoạn viết rằng: chỉ có thể thực hiện hoàn toàn công cuộc giải phóng các nước thuộc địa khi giai cấp vô sản giành được thắng lợi ở các nước tư bản tiên tiến. Quan điểm này có tác động không tốt, làm giảm đi tính chủ động, sáng tạo của nhân dân các nước thuộc địa trong công cuộc đấu tranh chống thực dân, đế quốc, giành độc lập cho dân tộc."
+                },
+                {
+                    "title": "Cách mạng giải phóng dân tộc phải được tiến hành bằng phương pháp bạo lực cách mạng",
+                    "desc": "Trong bộ Tư bản, quyển I, tập thứ nhất, xuất bản lần đầu tiên năm 1867, C.Mác viết: “Bạo lực là bả đỡ của một chế độ xã hội cũ đang thai nghén một chế độ mới”². Năm 1878, trong tác phẩm Chống Đuyrinh, Ph.Ăngghen nhắc lại: “Bạo lực còn đóng một vai trò khác trong lịch sử, vai trò cách mạng; nói theo C.Mác, bạo lực còn là bà đỡ cho mọi xã hội cũ đang thai nghén một xã hội mới; bạo lực là công cụ mà sự vận động xã hội dùng để tự mở đường cho mình và đập tan"
+                }
+            ]
+        }
+    },
+    "about": {
+        "title": "Về Hồ Chí Minh Ideology Hub",
+        "mission": {
+            "title": "Sứ mệnh",
+            "note": "(sử dụng thông điệp và giá trị bạn đã cung cấp)",
+            "body": "Xây dựng cổng học liệu hiện đại, trực quan và đáng tin cậy về tư tưởng Hồ Chí Minh; kết nối học thuật với ứng dụng thực tiễn."
+        },
+        "objective": {
+            "title": "Mục tiêu",
+            "note": "(đối tượng: học sinh, giáo viên, nghiên cứu sinh, công chúng)",
+            "body": "Cung cấp tri thức chuẩn xác, có hệ thống; hỗ trợ nghiên cứu, giảng dạy và tự học với trải nghiệm thân thiện."
+        },
+        "method": {
+            "title": "Phương pháp",
+            "note": "(kết hợp học thuật + công nghệ — mô tả ngắn cách soát xét, kiểm chứng nguồn, duyệt nội dung.)",
+            "body": "Tiếp cận dựa trên nguồn tư liệu tin cậy; tổng hợp - đối chiếu - kiểm chứng; quy trình biên tập rõ ràng; ứng dụng công nghệ để trực quan hóa và tương tác."
+        },
+        "value": {
+            "title": "Giá trị thực tiễn",
+            "note": "(những giá trị mang lại cho người học, nhà giáo, cộng đồng)",
+            "body": "Kiến tạo tri thức dễ tiếp cận, hỗ trợ dạy và học, lan tỏa giá trị tư tưởng Hồ Chí Minh tới cộng đồng.",
+            "cards": {
+                "modernUI": {
+                    "title": "Giao diện trực quan",
+                    "desc": "Thiết kế hiện đại, dễ đọc, hoạt động tốt trên nhiều thiết bị."
+                },
+                "reliable": {
+                    "title": "Nguồn tin cậy",
+                    "desc": "Tài liệu chọn lọc, đối chiếu, có trích dẫn rõ ràng."
+                },
+                "interactive": {
+                    "title": "Tương tác & học tập",
+                    "desc": "Quiz, trải nghiệm, sơ đồ tư duy và các hoạt động thực hành."
+                },
+                "community": {
+                    "title": "Cộng đồng & lan tỏa",
+                    "desc": "Kết nối người học, giáo viên, nhà nghiên cứu; chia sẻ và cùng phát triển tri thức."
+                }
+            }
+        }
     }
-  },
-  "research": {
-    "title": "Tra cứu nhanh",
-    "searchPlaceholder": "Nhập từ khóa (ví dụ: tư tưởng, độc lập, dân chủ…)",
-    "searchButton": "Tìm kiếm",
-    "tags": [
-      "Tư tưởng",
-      "Độc lập",
-      "Dân chủ",
-      "Đạo đức",
-      "Văn hóa",
-      "Thanh niên",
-      "Cách mạng",
-      "Nhân dân"
-    ]
-  },
-  "language": {
-    "vietnamese": "Tiếng Việt",
-    "english": "Tiếng Anh",
-    "japanese": "Tiếng Nhật",
-    "switchTo": "Chuyển sang"
-  },
-  "learning": {
-    "title": "Học & Tương tác",
-    "content": "Nội dung",
-    "news": "Tin tức",
-    "quiz": "Câu đố",
-    "alt": {
-      "content": "Nội dung",
-      "news": "Tin tức",
-      "quiz": "Câu đố"
-    }
-  },
-  "news": {
-    "title": "Tin tức",
-    "relatedNews": "Tin tức liên quan",
-    "readOriginal": "Xem bài viết gốc",
-    "content": "Nội dung chi tiết",
-    "date": "Ngày đăng",
-    "source": "Nguồn",
-    "backToNews": "Quay lại danh sách tin tức",
-    "noNewsFound": "Không tìm thấy tin tức!",
-    "pagination": {
-      "previous": "Trước",
-      "next": "Tiếp theo",
-      "page": "Trang"
-    }
-  },
-  "search": {
-    "title": "Tra cứu",
-    "placeholder": "Nhập từ khóa tìm kiếm..."
-  }
 }

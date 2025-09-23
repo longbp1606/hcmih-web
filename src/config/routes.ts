@@ -1,7 +1,11 @@
 const routes = {
   public: {
     home: "/",
-    learning: "/hoc-tuong-tac",
+    about: "/about",
+    ideology: '/ideology',
+    ideologyDetail: '/ideology/:key',
+  ideologyContent: '/ideology/:key/content/:index',
+    learning: "/learn-and-interact",
     quizes: "/quizes",
     quizDetail: "/quizes/:id",
     news: "/news",

@@ -381,7 +381,7 @@ export const TextBox = styled.div<{ side: 'left' | 'right' }>`
     &::after {
         content: '';
         position: absolute;
-        top: 30px;
+        top: 42px;
         ${props => props.side === 'left' ? 'right: -150px;' : 'left: -150px;'}
         width: clamp(60px, 10vw, 120px);
         border-top: 2px dashed rgba(255,185,70,0.7);
