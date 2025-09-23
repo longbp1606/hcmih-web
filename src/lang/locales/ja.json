@@ -1,149 +1,255 @@
 {
-  "appName": "HCMIH",
-  "navigation": {
-    "home": "ホーム",
-    "about": "紹介",
-    "search": "検索",
-    "ideology": "思想体系",
-    "learning": "学習と交流"
-  },
-  "common": {
-    "back": "戻る",
-    "backTo": "← %{target}へ戻る"
-  },
-  "timeline": {
-    "title": "略史",
-    "periods": [
-      { "range": "1890–1911", "desc": "愛国心と革命志向が形成された時期。" },
-      { "range": "1911–1920", "desc": "民族解放の道を模索した時期。" },
-      {
-        "range": "1921–1930",
-        "desc": "ベトナム革命に関するホー・チ・ミン思想の基本的形成：科学的かつ実践的。"
-      },
-      {
-        "range": "1930–1945",
-        "desc": "試練の時代。独立・自由・民族の基本的権利の思想を掲げ、信念を貫く。"
-      },
-      { "range": "1945–1969", "desc": "抗戦と建国思想の新たな発展。" }
-    ],
-    "explore": {
-      "title": "探索を始める",
-      "items": {
+    "appName": "HCMIH",
+    "navigation": {
+        "home": "ホーム",
+        "about": "紹介",
+        "search": "検索",
+        "ideology": "思想体系",
+        "learning": "学習と交流"
+    },
+    "common": {
+        "back": "戻る",
+        "backTo": "← %{target}へ戻る",
+        "viewDetail": "詳細を見る"
+    },
+    "timeline": {
+        "title": "略史",
+        "periods": [
+            {
+                "range": "1890–1911",
+                "desc": "家族・郷里・民族文化に根差した愛国思想と民族独立への志が形成された時期。",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-1_edzjcu.png"
+            },
+            {
+                "range": "1911–1920",
+                "desc": "救国の道を探求し、マルクス＝レーニン主義に接近し、無産階級革命の路線を確立した時期。",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601559/timeline-2_qoldw4.png"
+            },
+            {
+                "range": "1921–1930",
+                "desc": "マルクス＝レーニン主義を普及し、党を結成し、独立と社会主義を不可分とする進路を確立。",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-3_olcpbr.png"
+            },
+            {
+                "range": "1930–1945",
+                "desc": "革命を指導し、八月革命を準備・勝利させ、ベトナム民主共和国を樹立。",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-4_r2ygdf.png"
+            },
+            {
+                "range": "1945–1969",
+                "desc": "建国と国防を進め、民族独立を平和・国際協力と結びつける思想を発展。",
+                "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-5_aem1jj.png"
+            }
+        ],
+        "explore": {
+            "title": "探索を始める",
+            "items": {
+                "content": "コンテンツ",
+                "news": "ニュース",
+                "quiz": "クイズ"
+            }
+        }
+    },
+    "footer": {
+        "copyright": "著作権 © 2025 HCMIH. 全著作権所有。"
+    },
+    "quizzes": {
+        "title": "クイズ一覧",
+        "subtitle": "短いテストを選んで始めましょう",
+        "loading": "クイズを読み込み中...",
+        "loadError": "クイズの読み込みに失敗しました",
+        "meta": "• 問題数 %{count} • 約%{minutes}分",
+        "start": "開始",
+        "excerpt": "思想・歴史・一般知識に関する選択式問題が約%{count}問。想定時間は%{min}〜%{max}分。",
+        "chips": {
+            "basic": "基礎",
+            "hcmThesis": "HCM思想",
+            "questionsCount": "%{count}問"
+        },
+        "random10Button": "%{count}問ランダム"
+    },
+    "quizDetail": {
+        "loading": "クイズを読み込み中...",
+        "notFound": "クイズが見つかりません",
+        "loadError": "クイズを読み込めません",
+        "docTitle": "クイズ: %{title}",
+        "random10Tag": "ランダム10問モード",
+        "regenerateTooltip": "別の10問を取得",
+        "regenerateBtn": "問題を入れ替え",
+        "switchToFullMode": "全問モードへ切り替え",
+        "progressText": "%{completed}/%{total} 完了",
+        "completedTitle": "クイズ完了！",
+        "score": "スコア: 正解 %{correct} / %{total}（%{percent}%）",
+        "retry": "やり直す",
+        "switchToRandom10": "ランダム10問へ",
+        "backToList": "一覧に戻る",
+        "noQuestions": "問題がありません。",
+        "submit": "提出",
+        "correct": "正解！ 🎉",
+        "incorrect": "不正解です。",
+        "finish": "終了",
+        "nextQuestion": "次の問題"
+    },
+    "home": {
+        "heroTitle": "ホー・チ・ミンの思想に、現代的で直感的、そして分かりやすい形で触れる。",
+        "featuredTitle": "注目のトピック",
+        "topics": {
+            "history": {
+                "title": "生涯と業績",
+                "desc": "ホー・チ・ミン主席の生涯、家族、革命の歩みをたどる。"
+            },
+            "ideology": {
+                "title": "思想体系",
+                "desc": "核心的な主張、価値観、そして現代への応用。"
+            },
+            "quotes": {
+                "title": "名言・引用",
+                "desc": "代表的な言葉や文章を厳選して収録。引用しやすく整理。"
+            },
+            "timeline": {
+                "title": "タイムライン",
+                "desc": "ベトナムと世界の歴史に沿った重要な節目。"
+            },
+            "works": {
+                "title": "主要な著作",
+                "desc": "著作、書簡、重要文書を紹介。"
+            },
+            "learning": {
+                "title": "学習と交流",
+                "desc": "双方向の学習、クイズ、マインドマップ、体験型アクティビティ。"
+            }
+        }
+    },
+    "research": {
+        "title": "クイック検索",
+        "searchPlaceholder": "キーワードを入力（例：思想、独立、民主…）",
+        "searchButton": "検索",
+        "tags": [
+            "思想",
+            "独立",
+            "民主",
+            "倫理",
+            "文化",
+            "青年",
+            "革命",
+            "人民"
+        ]
+    },
+    "language": {
+        "vietnamese": "ベトナム語",
+        "english": "英語",
+        "japanese": "日本語",
+        "switchTo": "切り替え"
+    },
+    "learning": {
+        "title": "学習と交流",
         "content": "コンテンツ",
         "news": "ニュース",
-        "quiz": "クイズ"
-      }
-    }
-  },
-  "footer": {
-    "copyright": "著作権 © 2025 HCMIH. 全著作権所有。"
-  },
-  "quizzes": {
-    "title": "クイズ一覧",
-    "subtitle": "短いテストを選んで始めましょう",
-    "loading": "クイズを読み込み中...",
-    "loadError": "クイズの読み込みに失敗しました",
-    "meta": "• 問題数 %{count} • 約%{minutes}分",
-    "start": "開始",
-    "excerpt": "思想・歴史・一般知識に関する選択式問題が約%{count}問。想定時間は%{min}〜%{max}分。",
-    "chips": {
-      "basic": "基礎",
-      "hcmThesis": "HCM思想",
-      "questionsCount": "%{count}問"
+        "quiz": "クイズ",
+        "alt": {
+            "content": "コンテンツ",
+            "news": "ニュース",
+            "quiz": "クイズ"
+        }
     },
-    "random10Button": "%{count}問ランダム"
-  },
-  "quizDetail": {
-    "loading": "クイズを読み込み中...",
-    "notFound": "クイズが見つかりません",
-    "loadError": "クイズを読み込めません",
-    "docTitle": "クイズ: %{title}",
-    "random10Tag": "ランダム10問モード",
-    "regenerateTooltip": "別の10問を取得",
-    "regenerateBtn": "問題を入れ替え",
-    "switchToFullMode": "全問モードへ切り替え",
-    "progressText": "%{completed}/%{total} 完了",
-    "completedTitle": "クイズ完了！",
-    "score": "スコア: 正解 %{correct} / %{total}（%{percent}%）",
-    "retry": "やり直す",
-    "switchToRandom10": "ランダム10問へ",
-    "backToList": "一覧に戻る",
-    "noQuestions": "問題がありません。",
-    "submit": "提出",
-    "correct": "正解！ 🎉",
-    "incorrect": "不正解です。",
-    "finish": "終了",
-    "nextQuestion": "次の問題"
-  },
-  "home": {
-    "heroTitle": "ホー・チ・ミンの思想に、現代的で直感的、そして分かりやすい形で触れる。",
-    "featuredTitle": "注目のトピック",
-    "topics": {
-      "history": {
-        "title": "生涯と業績",
-        "desc": "ホー・チ・ミン主席の生涯、家族、革命の歩みをたどる。"
-      },
-      "ideology": {
-        "title": "思想体系",
-        "desc": "核心的な主張、価値観、そして現代への応用。"
-      },
-      "quotes": {
-        "title": "名言・引用",
-        "desc": "代表的な言葉や文章を厳選して収録。引用しやすく整理。"
-      },
-      "timeline": {
-        "title": "タイムライン",
-        "desc": "ベトナムと世界の歴史に沿った重要な節目。"
-      },
-      "works": {
-        "title": "主要な著作",
-        "desc": "著作、書簡、重要文書を紹介。"
-      },
-      "learning": {
-        "title": "学習と交流",
-        "desc": "双方向の学習、クイズ、マインドマップ、体験型アクティビティ。"
-      }
+    "news": {
+        "title": "ニュース",
+        "relatedNews": "関連ニュース",
+        "readOriginal": "元記事を読む",
+        "content": "詳細内容",
+        "date": "公開日",
+        "source": "出典",
+        "backToNews": "ニュース一覧に戻る",
+        "noNewsFound": "ニュースが見つかりません！",
+        "pagination": {
+            "previous": "前へ",
+            "next": "次へ",
+            "page": "ページ"
+        }
+    },
+    "about": {
+        "title": "Hồ Chí Minh Ideology Hub について",
+        "mission": {
+            "title": "使命",
+            "note": "（提供いただいたメッセージと価値観を反映）",
+            "body": "ホー・チ・ミンの思想に関する信頼できる学習ハブを、現代的で視覚的にわかりやすい形で構築し、学術と実社会の橋渡しを行います。"
+        },
+        "objective": {
+            "title": "目的",
+            "note": "（対象：学生、教員、研究者、一般）",
+            "body": "正確で体系的な知識を提供し、研究・教育・自学自習をフレンドリーな体験で支援します。"
+        },
+        "method": {
+            "title": "方法",
+            "note": "（学術＋テクノロジー：査読・出典検証・編集プロセスの概要）",
+            "body": "信頼できる資料に基づくアプローチ：統合・照合・検証と明確な編集フロー。テクノロジーで可視化とインタラクションを強化します。"
+        },
+        "value": {
+            "title": "実用的価値",
+            "note": "（学習者・教育者・コミュニティにもたらす価値）",
+            "body": "知識へのアクセスを容易にし、教育・学習を支援し、ホー・チ・ミン思想の価値をコミュニティへ広めます。",
+            "cards": {
+                "modernUI": { "title": "直感的なUI", "desc": "モダンなデザインで読みやすく、デバイスに応じて最適化。" },
+                "reliable": { "title": "信頼できる出典", "desc": "厳選・照合・引用の明確な資料群。" },
+                "interactive": { "title": "双方向学習", "desc": "クイズ、体験型アクティビティ、マインドマップなど。" },
+                "community": { "title": "コミュニティへの波及", "desc": "学習者・教員・研究者をつなぎ、知の共有を促進。" }
+            }
+        }
+    },
+    "search": {
+        "title": "検索",
+        "placeholder": "検索キーワードを入力..."
+    },
+    "content": {
+        "relatedTitle": "関連コンテンツ"
+    },
+    "ideology": {
+        "title": "ホー・チ・ミン思想における民族独立",
+        "items": {
+            "nationalIndependence": "民族独立の課題",
+            "nationalRevolution": "民族解放革命"
+        },
+        "contents": {
+            "nationalIndependence": [
+                {
+                    "title": "独立・自由はすべての民族にとって神聖不可侵の権利",
+                    "desc": "建国・護国の長い歴史は、愛国の伝統と対外侵略への抵抗と切り離せません。そこには民族の独立と国民の自由への熱い希求が表れており、ホー・チ・ミンはその精神の体現者です。彼はこう述べました——『私がこの世で最も望むものは、同胞に自由を、祖国に独立を』。"
+                },
+                {
+                    "title": "民族独立は国民の自由・衣食住・幸福と結びついてこそ本義となる",
+                    "desc": "ホー・チ・ミンによれば、民族独立は人民の自由と不可分です。彼は孫文の『三民主義』における独立と自由（民族・民権・民生）を高く評価しました。さらに、1791年のフランス『人権宣言』——『人は生まれながらにして自由であり、権利において平等である』——を引用し、ベトナム民族も当然自由で権利において平等であると断言しました。『それは誰も否定できない真理である』。"
+                },
+                {
+                    "title": "民族独立は真に、完全に、徹底して達成されねばならない",
+                    "desc": "独立・自由は目標であると同時に、人民に幸福をもたらす条件でもある。"
+                },
+                {
+                    "title": "民族独立は統一と領土の完全性と結びつく",
+                    "desc": "独立・自由は目標であると同時に、人民に幸福をもたらす条件でもある。"
+                }
+            ],
+            "nationalRevolution": [
+                {
+                    "title": "勝利のために、民族解放革命は無産階級革命の道を歩まねばならない",
+                    "desc": "フランスの侵略と植民地支配ののち、民族の死活をかけた課題は帝国主義支配からの解放でした。多くの愛国運動が起こったものの成功せず、指導階級と革命路線の危機・行き詰まりが明らかになりました。ホー・チ・ミンは先人の視野を超え、西洋で救国の道を探求しました。"
+                },
+                {
+                    "title": "ベトナムの条件では、民族解放革命は共産党の指導のもとでこそ勝利する",
+                    "desc": "マルクス＝レーニン主義は、共産党が労働者階級の歴史的使命を成就させる主観的要因であると強調します。労働者階級は自らの政党を持ち、その党は大衆を啓発・組織・訓練し、闘争へと導かねばなりません。ホー・チ・ミンはこの理論を受け継ぎ、共産党の結成を重視し、無産階級的路線に沿った民族解放革命における党の中核的役割を確認しました。"
+                },
+                {
+                    "title": "大衆的民族大団結に依拠し、労農同盟を基礎とする",
+                    "desc": "古典的マルクス＝レーニン主義は断言します——革命は大衆の事業であり、人民こそ歴史の創造者である。レーニンはこう記しています——『前衛、すなわち無産階級に対する勤労人民大多数の同情と支持なくして、無産階級革命は遂行しえない』。"
+                },
+                {
+                    "title": "主体的・創造的に展開し、宗主国の無産階級革命に先んじて勝利しうる",
+                    "desc": "コミンテルンは時に植民地革命を過小評価し、それを宗主国の無産階級革命に従属するとみなしました。1928年の第6回大会は、植民地・半植民地の革命運動に関するテーゼを採択し、『完全な解放は先進資本主義国における無産階級の勝利後にのみ可能である』と述べました。これは属国人民の主体性・創造性を損ない、独立獲得の闘争に不利な影響を及ぼしました。"
+                },
+                {
+                    "title": "民族解放革命は革命的暴力の方法によって遂行されるべきである",
+                    "desc": "マルクスは『資本論』第1巻（1867）で『暴力は新社会をはらむ旧社会の産婆である』と述べ、エンゲルスは『反デューリング論』（1878）でこれを反復しました——『暴力は歴史において革命的役割を果たす。マルクスの言を借りれば、暴力は新社会をはらむすべての旧社会の産婆であり、社会運動が自らの道を切り開き、旧態を打ち破る道具である』。"
+                }
+            ]
+        }
     }
-  },
-  "research": {
-    "title": "クイック検索",
-    "searchPlaceholder": "キーワードを入力（例：思想、独立、民主…）",
-    "searchButton": "検索",
-    "tags": ["思想", "独立", "民主", "倫理", "文化", "青年", "革命", "人民"]
-  },
-  "language": {
-    "vietnamese": "ベトナム語",
-    "english": "英語",
-    "japanese": "日本語",
-    "switchTo": "切り替え"
-  },
-  "learning": {
-    "title": "学習と交流",
-    "content": "コンテンツ",
-    "news": "ニュース",
-    "quiz": "クイズ",
-    "alt": {
-      "content": "コンテンツ",
-      "news": "ニュース",
-      "quiz": "クイズ"
-    }
-  },
-  "news": {
-    "title": "ニュース",
-    "relatedNews": "関連ニュース",
-    "readOriginal": "元記事を読む",
-    "content": "詳細内容",
-    "date": "公開日",
-    "source": "出典",
-    "backToNews": "ニュース一覧に戻る",
-    "noNewsFound": "ニュースが見つかりません！",
-    "pagination": {
-      "previous": "前へ",
-      "next": "次へ",
-      "page": "ページ"
-    }
-  },  "search": {
-    "title": "検索",
-    "placeholder": "検索キーワードを入力..."
-}
 }

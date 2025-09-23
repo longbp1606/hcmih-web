@@ -17,10 +17,10 @@ const Footer = () => {
   const { i18n } = useTranslation();
   
   const navItems = [
-    { label: i18n.t('navigation.home'), href: '/' },
-    { label: i18n.t('navigation.about'), href: '/gioi-thieu' },
-    { label: i18n.t('navigation.search'), href: '/search', matchers: ['/search', '/tra-cuu'] },
-    { label: i18n.t('navigation.ideology'), href: '/he-thong-tu-tuong' },
+    { label: i18n.t('navigation.home'), href: config.routes.public.home },
+    { label: i18n.t('navigation.about'), href: config.routes.public.about },
+    { label: i18n.t('navigation.search'), href: config.routes.public.search },
+    { label: i18n.t('navigation.ideology'), href: config.routes.public.ideology },
     { label: i18n.t('navigation.learning'), href: config.routes.public.learning }
   ];
 

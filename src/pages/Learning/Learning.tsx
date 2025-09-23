@@ -6,6 +6,7 @@ import { useTranslation } from '@/lang/LanguageProvider';
 import contentImg from '@/assets/noidung.png';
 import newsImg from '@/assets/tintuc.png';
 import quizImg from '@/assets/caudo.png';
+import { PageBg } from './Learning.styled';
 
 const LearningPage: React.FC = () => {
   const { i18n } = useTranslation();
@@ -26,13 +27,8 @@ const LearningPage: React.FC = () => {
 
   // page background gradient + soft vignette
   const pageStyle: React.CSSProperties = {
-    minHeight: '100vh',
+    minHeight: 'calc(100vh - 312px)', // account for header+footer
     padding: '48px 24px',
-    background: [
-      'radial-gradient(1200px 400px at 50% -200px, rgba(0,0,0,0.08), rgba(0,0,0,0) 70%)', // top vignette
-      'radial-gradient(1200px 400px at 50% 110%, rgba(0,0,0,0.10), rgba(0,0,0,0) 70%)', // bottom vignette
-      'linear-gradient(180deg, #E8D5B5 0%, #D6BE98 100%)',
-    ].join(', '),
   };
 
   const containerStyle: React.CSSProperties = {
@@ -76,69 +72,72 @@ const LearningPage: React.FC = () => {
   };
 
   return (
-    <div style={pageStyle}>
-      <div style={containerStyle}>
-        <Typography.Title level={1} style={titleStyle}>
-          {i18n.t('learning.title')}
-        </Typography.Title>
+    <>
+      <PageBg />
+      <div style={pageStyle}>
+        <div style={containerStyle}>
+          <Typography.Title level={1} style={titleStyle}>
+            {i18n.t('learning.title')}
+          </Typography.Title>
 
-        <Row gutter={[24, 24]}>
-          <Col xs={24} md={8}>
-            <Card
-              hoverable
-              style={cardStyle}
-              bodyStyle={{ padding: 16 }}
-              cover={
-                <div style={coverWrap}>
-                  <img src={contentImg} alt={i18n.t('learning.alt.content')} style={imgStyle} />
-                </div>
-              }
-              onClick={() => navigate('/noi-dung')}
-            >
-              <Typography.Text strong style={labelStyle}>
-                {i18n.t('learning.content')}
-              </Typography.Text>
-            </Card>
-          </Col>
+          <Row gutter={[24, 24]}>
+            <Col xs={24} md={8}>
+              <Card
+                hoverable
+                style={cardStyle}
+                bodyStyle={{ padding: 16 }}
+                cover={
+                  <div style={coverWrap}>
+                    <img src={contentImg} alt={i18n.t('learning.alt.content')} style={imgStyle} />
+                  </div>
+                }
+                onClick={() => navigate('/noi-dung')}
+              >
+                <Typography.Text strong style={labelStyle}>
+                  {i18n.t('learning.content')}
+                </Typography.Text>
+              </Card>
+            </Col>
 
-          <Col xs={24} md={8}>
-            <Card
-              hoverable
-              style={cardStyle}
-              bodyStyle={{ padding: 16 }}
-              cover={
-                <div style={coverWrap}>
-                  <img src={newsImg} alt={i18n.t('learning.alt.news')} style={imgStyle} />
-                </div>
-              }
-              onClick={() => navigate('/news')}
-            >
-              <Typography.Text strong style={labelStyle}>
-                {i18n.t('learning.news')}
-              </Typography.Text>
-            </Card>
-          </Col>
+            <Col xs={24} md={8}>
+              <Card
+                hoverable
+                style={cardStyle}
+                bodyStyle={{ padding: 16 }}
+                cover={
+                  <div style={coverWrap}>
+                    <img src={newsImg} alt={i18n.t('learning.alt.news')} style={imgStyle} />
+                  </div>
+                }
+                onClick={() => navigate('/news')}
+              >
+                <Typography.Text strong style={labelStyle}>
+                  {i18n.t('learning.news')}
+                </Typography.Text>
+              </Card>
+            </Col>
 
-          <Col xs={24} md={8}>
-            <Card
-              hoverable
-              style={cardStyle}
-              bodyStyle={{ padding: 16 }}
-              cover={
-                <div style={coverWrap}>
-                  <img src={quizImg} alt={i18n.t('learning.alt.quiz')} style={imgStyle} />
-                </div>
-              }
-              onClick={() => navigate('/quizes')}
-            >
-              <Typography.Text strong style={labelStyle}>
-                {i18n.t('learning.quiz')}
-              </Typography.Text>
-            </Card>
-          </Col>
-        </Row>
+            <Col xs={24} md={8}>
+              <Card
+                hoverable
+                style={cardStyle}
+                bodyStyle={{ padding: 16 }}
+                cover={
+                  <div style={coverWrap}>
+                    <img src={quizImg} alt={i18n.t('learning.alt.quiz')} style={imgStyle} />
+                  </div>
+                }
+                onClick={() => navigate('/quizes')}
+              >
+                <Typography.Text strong style={labelStyle}>
+                  {i18n.t('learning.quiz')}
+                </Typography.Text>
+              </Card>
+            </Col>
+          </Row>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header<{ $scrolled?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: ${p => p.$scrolled ? 'rgba(255, 255, 255, 0.1)' : 'transparent'};
+  backdrop-filter: ${p => p.$scrolled ? 'blur(10px)' : 'none'};
+  -webkit-backdrop-filter: ${p => p.$scrolled ? 'blur(10px)' : 'none'};
+  border-bottom: 1px solid ${p => p.$scrolled ? 'rgba(255, 255, 255, 0.2)' : 'transparent'};
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: background 0.25s ease, backdrop-filter 0.25s ease, -webkit-backdrop-filter 0.25s ease, border-color 0.25s ease;
 `;
 
 export const Navigation = styled.nav`

@@ -2,9 +2,9 @@ import { HomeWrapper, HeroSection, HeroTitle, FilmStrip, HeaderBackground, Summa
 import { useDocumentTitle } from '@/hooks'
 import { useTranslation } from '@/lang/LanguageProvider';
 import historyFilmImage from '../../assets/history-film.png';
-import hochiminhImg from '../../assets/hochiminh.png';
-import vietnamImg from '../../assets/vietnam.png';
-import japanImg from '../../assets/japan.png';
+import ideologyImage from '@/assets/noidung.png';
+import newsImage from '@/assets/tintuc.png';
+import quizImage from '@/assets/caudo.png';
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -117,7 +117,7 @@ const Home = () => {
                     <TimelineWrap>
                         <TimelineList>
                             {(
-                                (i18n.t('timeline.periods') as unknown as Array<{ range: string; desc: string }>)
+                                (i18n.t('timeline.periods') as unknown as Array<{ range: string; desc: string, image?: string }>)
                             ).map((p, idx) => {
                                 const side = idx % 2 === 0 ? 'left' : 'right';
                                 return (
@@ -128,11 +128,11 @@ const Home = () => {
                                                     <PeriodRange>{p.range}</PeriodRange>
                                                     <PeriodDesc>{p.desc}</PeriodDesc>
                                                 </TextBox>
-                                                <ImageCircle style={{ backgroundImage: `url(${hochiminhImg})` }} />
+                                                <ImageCircle style={{ backgroundImage: `url(${p.image})` }} />
                                             </>
                                         ) : (
                                             <>
-                                                <ImageCircle style={{ backgroundImage: `url(${hochiminhImg})` }} />
+                                                <ImageCircle style={{ backgroundImage: `url(${p.image})` }} />
                                                 <TextBox side={side}>
                                                     <PeriodRange>{p.range}</PeriodRange>
                                                     <PeriodDesc>{p.desc}</PeriodDesc>
@@ -149,16 +149,16 @@ const Home = () => {
                     <ExploreSection>
                         <ExploreTitle>{i18n.t('timeline.explore.title', { defaultValue: 'Bắt đầu khám phá' })}</ExploreTitle>
                         <ExploreGrid>
-                            <ExploreCard>
-                                <ExploreImage src={vietnamImg} alt="content"/>
+                            <ExploreCard onClick={() => navigate('/ideology')}>
+                                <ExploreImage src={ideologyImage} alt="content"/>
                                 <ExploreLabel>{i18n.t('timeline.explore.items.content')}</ExploreLabel>
                             </ExploreCard>
-                            <ExploreCard>
-                                <ExploreImage src={hochiminhImg} alt="news"/>
+                            <ExploreCard onClick={() => navigate('/news')}>
+                                <ExploreImage src={newsImage} alt="news"/>
                                 <ExploreLabel>{i18n.t('timeline.explore.items.news')}</ExploreLabel>
                             </ExploreCard>
-                            <ExploreCard>
-                                <ExploreImage src={japanImg} alt="quiz"/>
+                            <ExploreCard onClick={() => navigate('/quizes')}>
+                                <ExploreImage src={quizImage} alt="quiz"/>
                                 <ExploreLabel>{i18n.t('timeline.explore.items.quiz')}</ExploreLabel>
                             </ExploreCard>
                         </ExploreGrid>

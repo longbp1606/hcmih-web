@@ -1,7 +1,15 @@
 import styled from 'styled-components';
+import background from '@/assets/background.png';
+
+export const PageBg = styled.div`
+	background: url(${background}) no-repeat center/cover;
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+`;
 
 export const PageWrap = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 312px);
   background: linear-gradient(180deg, #edd8b8 0%, #cda87a 100%);
   padding: 48px 24px 80px;
 `;
