@@ -31,12 +31,12 @@
         "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-3_olcpbr.png"
       },
       {
-        "range": "1930–1945",
-        "desc": "Leading the revolution, preparing for and winning the August Revolution, establishing the Democratic Republic of Vietnam.",
+        "range": "1930–1941",
+        "desc": "Overcoming trials; upholding a correct and creative line and methods of the Vietnamese revolution.",
         "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-4_r2ygdf.png"
       },
       {
-        "range": "1945–1969",
+        "range": "1941–1969",
         "desc": "Nation-building and defense; developing the thought of national independence linked with peace and international cooperation.",
         "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-5_aem1jj.png"
       }
@@ -113,8 +113,8 @@
         "desc": "Key milestones aligned with Vietnam and world history."
       },
       "works": {
-        "title": "Notable Works",
-        "desc": "Highlighted works, letters, and important documents."
+        "title": "News",
+        "desc": "Curated news related to Ho Chi Minh’s thought on national independence."
       },
       "learning": {
         "title": "Learning & Interaction",

@@ -31,12 +31,12 @@
                 "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601558/timeline-3_olcpbr.png"
             },
             {
-                "range": "1930–1945",
-                "desc": "革命を指導し、八月革命を準備・勝利させ、ベトナム民主共和国を樹立。",
+                "range": "1930–1941",
+                "desc": "試練を乗り越え、ベトナム革命の路線と方法を正しく創造的に堅持。",
                 "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-4_r2ygdf.png"
             },
             {
-                "range": "1945–1969",
+                "range": "1941–1969",
                 "desc": "建国と国防を進め、民族独立を平和・国際協力と結びつける思想を発展。",
                 "image": "https://res.cloudinary.com/dzwfahgui/image/upload/v1758601557/timeline-5_aem1jj.png"
             }
@@ -113,8 +113,8 @@
                 "desc": "ベトナムと世界の歴史に沿った重要な節目。"
             },
             "works": {
-                "title": "主要な著作",
-                "desc": "著作、書簡、重要文書を紹介。"
+                "title": "ニュース",
+                "desc": "民族独立に関するホー・チ・ミン思想のニュースを厳選。"
             },
             "learning": {
                 "title": "学習と交流",
