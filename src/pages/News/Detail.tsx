@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "../../lang/LanguageProvider";
 import { getLocalizedNews, getLocalizedNewsById } from "../../data/news/newsUtils";
+import config from "@/config";
 
 export default function NewsDetail() {
   const { id } = useParams();
@@ -270,7 +271,7 @@ export default function NewsDetail() {
               {relatedNews.map((relatedItem) => (
                 <div
                   key={relatedItem.id}
-                  onClick={() => navigate(`/news/${relatedItem.id}`)}
+                  onClick={() => navigate(config.routes.public.news + "/" + relatedItem.id)}
                   style={{
                     border: "2px solid #daa520",
                     borderRadius: 15,

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "../../lang/LanguageProvider";
 import { getLocalizedNews } from "../../data/news/newsUtils";
+import config from "@/config";
 
 export default function NewsPage() {
   const { i18n, locale } = useTranslation();
@@ -73,7 +74,7 @@ export default function NewsPage() {
               cursor: "pointer",
               transition: "box-shadow 0.2s",
             }}
-            onClick={() => (window.location.href = `/news/${news.id}`)}
+            onClick={() => (window.location.href = config.routes.public.news + "/" + news.id)}
             title={news.title}
           >
             <div
